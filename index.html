@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home – Spirit-filled Church in Ikorodu Lagos | RCCG Gospel Light Assembly, Ikorodu</title>
+  <meta name="description" content="RCCG Gospel Light Assembly is a Spirit-filled Zonal Headquarters church in Adamo, Ikorodu, Lagos. Join us every Sunday 8AM for worship, prayer, and fellowship."/>
+  <meta name="keywords" content="RCCG, Gospel Light Assembly, Church Ikorodu, Adamo Ikorodu, Pentecostal Church Lagos, RCCG Zonal HQ"/>
+  <meta property="og:title" content="Home – Spirit-filled Church in Ikorodu Lagos"/>
+  <meta property="og:description" content="RCCG Gospel Light Assembly is a Spirit-filled Zonal Headquarters church in Adamo, Ikorodu, Lagos. Join us every Sunday 8AM for worship, prayer, and fellowship."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="images/Rccglogo.png"/>
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:title" content="Home – Spirit-filled Church in Ikorodu Lagos"/>
+  <meta name="twitter:description" content="RCCG Gospel Light Assembly is a Spirit-filled Zonal Headquarters church in Adamo, Ikorodu, Lagos. Join us every Sunday 8AM for worship, prayer, and fellowship."/>
+  <link rel="manifest" href="manifest.json"/>
+  <meta name="theme-color" content="#060d1a"/>
+  <link rel="icon" href="images/Rccglogo.png" type="image/png"/>
+  <link rel="apple-touch-icon" href="images/Rccglogo.png"/>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@700;800&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+<!-- ── LOADER ──────────────────────────── -->
+<div id="loader">
+  <img src="images/Rccglogo.png" alt="RCCG" class="loader-logo"/>
+  <div class="loader-church-name loader-shimmer-text">Gospel Light Assembly</div>
+  <div class="loader-tagline">Where the Light of God is Forever Shining</div>
+  <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+</div>
+
+<!-- ── ANNOUNCEMENT POPUP ──────────────── -->
+<div id="popup-overlay" onclick="closePopup()"></div>
+<div id="announcement-popup">
+  <div class="popup-badge">📢 Announcement</div>
+  <div class="popup-title">Welcome to Gospel Light Assembly!</div>
+  <div class="popup-body">Join us this Sunday for a Spirit-filled service starting at <strong style="color:var(--gold-light)">8:00 AM</strong>. All are welcome — bring a friend, bring your family!<br/><br/>📍 Lejina Phase 2, Adamo, Ikorodu, Lagos</div>
+  <button class="popup-close" onclick="closePopup()">Got it, See You Sunday! ✝️</button>
+</div>
+
+<!-- ── TICKER ──────────────────────────── -->
+<div class="ticker-wrap">
+  <div class="ticker-track">
+    <span class="ticker-item"><span>✦</span> "I am the light of the world" — John 8:12</span>
+    <span class="ticker-item"><span>✦</span> Sunday Service · 8:00 AM · All Welcome</span>
+    <span class="ticker-item"><span>✦</span> Digging Deep (Bible Study) · Tuesdays 5:30 PM</span>
+    <span class="ticker-item"><span>✦</span> Faith Clinic · Thursdays 5:30 PM</span>
+    <span class="ticker-item"><span>✦</span> Evangelism Outreach · Saturdays 4:30 PM</span>
+    <span class="ticker-item"><span>✦</span> RCCG Zonal Headquarters · Zonal Headquarters</span>
+    <span class="ticker-item"><span>✦</span> Where the Light of God is Forever Shining</span>
+    <!-- duplicate for seamless loop -->
+    <span class="ticker-item"><span>✦</span> "I am the light of the world" — John 8:12</span>
+    <span class="ticker-item"><span>✦</span> Sunday Service · 8:00 AM · All Welcome</span>
+    <span class="ticker-item"><span>✦</span> Digging Deep (Bible Study) · Tuesdays 5:30 PM</span>
+    <span class="ticker-item"><span>✦</span> Faith Clinic · Thursdays 5:30 PM</span>
+    <span class="ticker-item"><span>✦</span> Evangelism Outreach · Saturdays 4:30 PM</span>
+    <span class="ticker-item"><span>✦</span> RCCG Zonal Headquarters · Zonal Headquarters</span>
+    <span class="ticker-item"><span>✦</span> Where the Light of God is Forever Shining</span>
+  </div>
+</div>
+
+<!-- ── NAVBAR ──────────────────────────── -->
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">
+      <img src="images/Rccglogo.png" alt="RCCG Logo" class="rccg-logo"/>
+      <div class="brand-text">
+        <span class="brand-main">RCCG Gospel Light Assembly</span>
+        <span class="brand-sub">Zonal Headquarters · Ikorodu</span>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+
+      <li><a href="index.html" class="active">Home</a></li>
+
+      <li class="has-dropdown" onclick="toggleDropdown(this)">
+        <a href="about.html">About</a>
+        <ul class="nav-dropdown">
+          <span class="dropdown-label">Our Church</span>
+          <li><a href="about.html"><span class="dropdown-icon">⛪</span>About Us</a></li>
+          <li><a href="pastor.html"><span class="dropdown-icon">✉️</span>Pastor's Letter</a></li>
+          <li><a href="history.html"><span class="dropdown-icon">📜</span>Our History</a></li>
+        </ul>
+      </li>
+
+      <li><a href="sermons.html">Sermons</a></li>
+
+      <li class="has-dropdown" onclick="toggleDropdown(this)">
+        <a href="ministries.html">Ministries</a>
+        <ul class="nav-dropdown">
+          <span class="dropdown-label">Serve & Grow</span>
+          <li><a href="ministries.html"><span class="dropdown-icon">🙌</span>All Ministries</a></li>
+          <li><a href="units.html"><span class="dropdown-icon">👥</span>Our Units & Teams</a></li>
+          <li><a href="youth.html"><span class="dropdown-icon">🎤</span>Youth Ministry</a></li>
+        </ul>
+      </li>
+
+      <li class="has-dropdown" onclick="toggleDropdown(this)">
+        <a href="events.html">Events</a>
+        <ul class="nav-dropdown">
+          <span class="dropdown-label">What's On</span>
+          <li><a href="events.html"><span class="dropdown-icon">📅</span>Events & Programmes</a></li>
+          <li><a href="bulletin.html"><span class="dropdown-icon">🖨️</span>Weekly Bulletin</a></li>
+        </ul>
+      </li>
+
+      <li><a href="gallery.html">Gallery</a></li>
+
+      <li class="has-dropdown" onclick="toggleDropdown(this)">
+        <a href="contact.html">Contact</a>
+        <ul class="nav-dropdown">
+          <span class="dropdown-label">Reach Us</span>
+          <li><a href="contact.html"><span class="dropdown-icon">📍</span>Contact & Directions</a></li>
+          <li><a href="give.html"><span class="dropdown-icon">💛</span>Give & Tithe</a></li>
+          <li><a href="stewardship.html"><span class="dropdown-icon">📋</span>Stewardship & Receipts</a></li>
+        </ul>
+      </li>
+
+    </ul>
+    <div class="nav-right">
+      <button class="theme-toggle" onclick="toggleTheme()" title="Toggle dark mode">🌙</button>
+      <button class="nav-toggle" onclick="toggleNav()">&#9776;</button>
+      <a href="give.html" class="btn-gold">Give 🙏</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ── HERO ────────────────────────────── -->
+<section class="hero">
+  <canvas id="particle-canvas" class="hero-particles"></canvas>
+  <div class="hero-gradient"></div>
+  <div class="hero-cross">✝</div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Redeemed Christian Church of God · Zonal Headquarters</div>
+    <h1 class="hero-title">
+      Gospel<br/>
+      <span class="gold">Light</span><br/>
+      <span class="outline">Assembly</span>
+    </h1>
+    <p class="hero-sub">A warm, Spirit-filled family in the heart of Ikorodu.<br/>You are loved. You are expected. You belong here.</p>
+    <div class="hero-tagline-badge">✨ "Where the Light of God is Forever Shining"</div>
+    <div class="hero-actions">
+      <a href="about.html" class="btn-primary">We'd Love to Meet You →</a>
+      <a href="sermons.html" class="btn-outline">▶ Watch Sermons</a>
+    </div>
+
+    <!-- Hero Stats -->
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="hero-stat-num">7+</span>
+        <span class="hero-stat-label">Years of Impact</span>
+      </div>
+      <div class="hero-stat-divider"></div>
+      <div class="hero-stat">
+        <span class="hero-stat-num">4×</span>
+        <span class="hero-stat-label">Weekly Services</span>
+      </div>
+      <div class="hero-stat-divider"></div>
+      <div class="hero-stat">
+        <span class="hero-stat-num">197</span>
+        <span class="hero-stat-label">RCCG Countries</span>
+      </div>
+      <div class="hero-stat-divider"></div>
+      <div class="hero-stat">
+        <span class="hero-stat-num">∞</span>
+        <span class="hero-stat-label">God's Love For You</span>
+      </div>
+    </div>
+
+  </div>
+  <div class="hero-scroll-hint">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- ── SERVICE TIMES ────────────────────── -->
+<section class="service-strip">
+  <div class="strip-inner">
+    <a href="events.html" class="strip-item">
+      <span class="strip-icon">📖</span>
+      <div class="strip-text"><strong>Digging Deep</strong><span>Tuesdays · 5:30 – 6:30 PM</span></div>
+    </a>
+    <a href="events.html" class="strip-item">
+      <span class="strip-icon">🙏</span>
+      <div class="strip-text"><strong>Faith Clinic</strong><span>Thursdays · 5:30 – 6:30 PM</span></div>
+    </a>
+    <a href="events.html" class="strip-item">
+      <span class="strip-icon">🌍</span>
+      <div class="strip-text"><strong>Evangelism</strong><span>Saturdays · 4:30 – 5:30 PM</span></div>
+    </a>
+    <a href="events.html" class="strip-item">
+      <span class="strip-icon">✝️</span>
+      <div class="strip-text"><strong>Sunday Service</strong><span>Sundays · 8:00 AM</span></div>
+    </a>
+  </div>
+</section>
+
+<!-- ── COUNTDOWN ───────────────────────── -->
+<div class="countdown-strip">
+  <span class="countdown-label">⏳ Next Sunday Service Starts In</span>
+  <div class="countdown-boxes">
+    <div class="countdown-box"><div class="countdown-num" id="cd-days">00</div><span class="countdown-unit">Days</span></div>
+    <div class="countdown-box"><div class="countdown-num" id="cd-hours">00</div><span class="countdown-unit">Hours</span></div>
+    <div class="countdown-box"><div class="countdown-num" id="cd-mins">00</div><span class="countdown-unit">Minutes</span></div>
+    <div class="countdown-box"><div class="countdown-num" id="cd-secs">00</div><span class="countdown-unit">Seconds</span></div>
+  </div>
+</div>
+
+<!-- ── WELCOME ─────────────────────────── -->
+<section class="inner-section">
+  <div class="container welcome-grid">
+    <div class="welcome-text reveal">
+      <span class="section-label">Our Church</span>
+      <h2>You Are Welcome<br/>Just As You Are</h2>
+      <p>RCCG Gospel Light Assembly is a Spirit-filled family in Lejina Phase 2, Ikorodu — a place where the broken are healed, the weary find rest, and lives are transformed by the power of God's Word.</p>
+      <p>Whether you've walked with God for decades or are taking your very first step of faith — there is a seat with your name on it. Come and experience the warmth of this family.</p>
+      <a href="about.html" class="btn-primary" style="margin-top:.5rem;">Learn About Us →</a>
+    </div>
+    <div class="reveal" style="transition-delay:.15s">
+      <div class="pastor-card">
+        <img loading="lazy" src="images/Pastor's Photo.JPG" alt="Pastor Adebayo Erinle" style="width:100%; height:260px; object-fit:cover; object-position:top;"/>
+        <div class="pastor-info">
+          <p class="pastor-name">Pastor Adebayo Erinle</p>
+          <p class="pastor-role">Parish Pastor · RCCG Gospel Light Assembly</p>
+          <div class="pastor-contact"><a href="tel:2348140972012">📞 +234 814 097 2012</a><a href="mailto:rccggospellightassembly26@gmail.com">✉️ rccggospellightassembly26@gmail.com</a></div>
+          <p class="pastor-quote">"Come, let us walk together in the light of the Lord — there is room for everyone."</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FEATURES ────────────────────────── -->
+<section class="inner-section alt">
+  <div class="container">
+    <span class="section-label center">What We Offer</span>
+    <h2 class="center">Grow. Connect. Serve.</h2>
+    <div class="features-grid">
+      <div class="feature-card reveal"><div class="feature-icon">📚</div><h3>Digging Deep</h3><p>Deep, expository Bible teaching every Tuesday. Come and dig into the Word with us at 5:30 PM.</p></div>
+      <div class="feature-card reveal" style="transition-delay:.1s"><div class="feature-icon">🔥</div><h3>Faith Clinic</h3><p>A powerful Thursday gathering of faith, intercession, and miraculous encounters at 5:30 PM.</p></div>
+      <div class="feature-card reveal" style="transition-delay:.2s"><div class="feature-icon">🌍</div><h3>Evangelism</h3><p>We take the gospel to the streets of Ikorodu every Saturday, reaching our community with love.</p></div>
+      <div class="feature-card reveal" style="transition-delay:.1s"><div class="feature-icon">👨‍👩‍👧</div><h3>Family Ministry</h3><p>Programmes strengthening marriages, raising godly children, and building healthy families.</p></div>
+      <div class="feature-card reveal" style="transition-delay:.2s"><div class="feature-icon">🎵</div><h3>Worship & Praise</h3><p>Uplifting, Spirit-filled worship that ushers you into God's glorious presence every service.</p></div>
+      <div class="feature-card reveal" style="transition-delay:.3s"><div class="feature-icon">🤝</div><h3>Community Outreach</h3><p>Serving the needy, widows, and youth of Ikorodu in meaningful and practical ways.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="ornament-divider"><span class="ornament-symbol">✦</span></div>
+<!-- ── UNITS PREVIEW ───────────────────── -->
+<section class="units-section">
+  <div class="container">
+    <span class="section-label center" style="color:var(--gold)">Our Units</span>
+    <h2 class="center" style="color:var(--white)">Every Gift Has a Place Here</h2>
+    <div class="units-grid">
+      <div class="unit-card reveal">
+        <div class="unit-icon">🎤</div>
+        <h3>Youth Ministry</h3>
+        <span class="unit-head-label">Unit Head / Minister in Charge</span>
+        <p class="unit-head-name">Pst. Adebayo Erinle</p>
+        <p>A vibrant community of young people discovering purpose, growing in faith, and impacting Ikorodu for Christ.</p>
+      </div>
+      <div class="unit-card reveal" style="transition-delay:.15s">
+        <div class="unit-icon">📹</div>
+        <h3>Media & Technical Unit</h3>
+        <span class="unit-head-label">Unit Head / Minister in Charge</span>
+        <p class="unit-head-name">Bro Ehis Ig </p>
+        <p>Powering every service with professional sound, visuals, live streaming, and digital media to extend our reach.</p>
+      </div>
+    </div>
+    <div class="center" style="margin-top:2.5rem;">
+      <a href="units.html" class="btn-gold-solid">Meet Our Units & Teams →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── TESTIMONIES ─────────────────────── -->
+<section class="testimonies-section inner-section">
+  <div class="container">
+    <span class="section-label center">Testimonies</span>
+    <h2 class="center">What God is Doing</h2>
+    <div class="testimonies-grid">
+      <div class="testimony-card reveal">
+        <div class="testimony-quote">"</div>
+        <p class="testimony-text">I came to Gospel Light broken and lost. Through the Word and the prayers of this church, God completely turned my life around. I found family here.</p>
+        <div class="testimony-author">
+          <div class="testimony-avatar">😊</div>
+          <div><p class="testimony-name">Bro. Tunde O.</p><span class="testimony-dept">Men's Fellowship</span></div>
+        </div>
+      </div>
+      <div class="testimony-card reveal" style="transition-delay:.1s">
+        <div class="testimony-quote">"</div>
+        <p class="testimony-text">The Faith Clinic changed my perspective on prayer entirely. God answered a prayer I had carried for three years. To God be all the glory!</p>
+        <div class="testimony-author">
+          <div class="testimony-avatar">🙏</div>
+          <div><p class="testimony-name">Sis. Blessing A.</p><span class="testimony-dept">Women's Fellowship</span></div>
+        </div>
+      </div>
+      <div class="testimony-card reveal" style="transition-delay:.2s">
+        <div class="testimony-quote">"</div>
+        <p class="testimony-text">As a young person, the Youth Ministry gave me direction, community, and most importantly — a deeper relationship with God. I am forever grateful.</p>
+        <div class="testimony-author">
+          <div class="testimony-avatar">⭐</div>
+          <div><p class="testimony-name">Deborah E.</p><span class="testimony-dept">Youth Ministry</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SERMONS PREVIEW ─────────────────── -->
+<section class="inner-section alt">
+  <div class="container">
+    <span class="section-label">From the Pulpit</span>
+    <h2>Recent Messages</h2>
+    <div class="sermons-grid">
+      <div class="sermon-card reveal"><div class="sermon-thumb" style="position:relative;overflow:hidden;">
+      <div style="position:absolute;inset:0;background:linear-gradient(135deg,#0a1628,#1a3a6e);"></div>
+      <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(201,168,76,.12),transparent 70%);"></div>
+      <div style="position:relative;z-index:1;font-size:2.8rem;filter:drop-shadow(0 2px 8px rgba(201,168,76,.4));">🎙️</div>
+      <div style="position:absolute;bottom:.5rem;left:50%;transform:translateX(-50%);font-family:'Barlow',sans-serif;font-size:.6rem;color:rgba(255,255,255,.3);letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;">Audio Message</div>
+    </div><div class="sermon-info"><span class="sermon-date">March 2026 · Sunday</span><h4>Walking in the Light of His Word</h4><p>Pastor Adebayo Erinle</p><a href="sermons.html" class="sermon-link">Listen →</a></div></div>
+      <div class="sermon-card reveal" style="transition-delay:.1s"><div class="sermon-thumb" style="position:relative;overflow:hidden;">
+      <div style="position:absolute;inset:0;background:linear-gradient(135deg,#0a1628,#1a3a6e);"></div>
+      <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(201,168,76,.12),transparent 70%);"></div>
+      <div style="position:relative;z-index:1;font-size:2.8rem;filter:drop-shadow(0 2px 8px rgba(201,168,76,.4));">🎙️</div>
+      <div style="position:absolute;bottom:.5rem;left:50%;transform:translateX(-50%);font-family:'Barlow',sans-serif;font-size:.6rem;color:rgba(255,255,255,.3);letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;">Audio Message</div>
+    </div><div class="sermon-info"><span class="sermon-date">February 2026 · Sunday</span><h4>Faith That Moves Mountains</h4><p>Pastor Adebayo Erinle</p><a href="sermons.html" class="sermon-link">Listen →</a></div></div>
+      <div class="sermon-card reveal" style="transition-delay:.2s"><div class="sermon-thumb" style="position:relative;overflow:hidden;">
+      <div style="position:absolute;inset:0;background:linear-gradient(135deg,#0a1628,#1a3a6e);"></div>
+      <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(201,168,76,.12),transparent 70%);"></div>
+      <div style="position:relative;z-index:1;font-size:2.8rem;filter:drop-shadow(0 2px 8px rgba(201,168,76,.4));">🎙️</div>
+      <div style="position:absolute;bottom:.5rem;left:50%;transform:translateX(-50%);font-family:'Barlow',sans-serif;font-size:.6rem;color:rgba(255,255,255,.3);letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;">Audio Message</div>
+    </div><div class="sermon-info"><span class="sermon-date">January 2026 · Sunday</span><h4>A New Season of Glory</h4><p>Pastor Adebayo Erinle</p><a href="sermons.html" class="sermon-link">Listen →</a></div></div>
+    </div>
+    <div class="center" style="margin-top:2.5rem;"><a href="sermons.html" class="btn-primary">View All Sermons →</a></div>
+  </div>
+</section>
+
+<!-- ── PRAYER REQUEST ──────────────────── -->
+<section class="prayer-section">
+  <div class="container prayer-wrap">
+    <div class="reveal">
+      <span class="section-label">Prayer</span>
+      <h2>We Believe in<br/>the Power of Prayer</h2>
+      <p>You don't have to carry your burdens alone. Share your prayer request with us and our prayer team will stand in agreement with you before God.</p>
+      <p style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.1rem; color:var(--text);">"The effective, fervent prayer of a righteous man avails much." — James 5:16</p>
+    </div>
+    <div class="prayer-form reveal" style="transition-delay:.2s">
+      <h3 style="font-family:'Playfair Display',serif; color:var(--text); margin-bottom:1.5rem;">Submit a Prayer Request 🙏</h3>
+      <form onsubmit="handlePrayer(event)">
+        <div class="form-row-2">
+          <div class="form-group"><label>First Name</label><input type="text" placeholder="Your name" required/></div>
+          <div class="form-group"><label>Phone (optional)</label><input type="tel" placeholder="+234..."/></div>
+        </div>
+        <div class="form-group"><label>Prayer Category</label>
+          <select><option>Health & Healing</option><option>Family & Marriage</option><option>Finance & Career</option><option>Salvation</option><option>Spiritual Growth</option><option>Other</option></select>
+        </div>
+        <div class="form-group"><label>Your Prayer Request</label><textarea placeholder="Share your request here — all submissions are confidential..." required></textarea></div>
+        <button type="submit" class="btn-gold-solid" style="width:100%; justify-content:center;">Submit Prayer Request 🙏</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ── LIVE STREAM ─────────────────────── -->
+<section class="livestream-section">
+  <div class="container center">
+    <span class="live-badge">🔴 Live Stream</span>
+    <span class="section-label">Online Church</span>
+    <h2 style="color:var(--white);">Watch Us Live</h2>
+    <p style="color:rgba(255,255,255,.6); max-width:560px; margin:0 auto 1rem;">Can't make it in person? Join our services live on YouTube. Subscribe to never miss a message.</p>
+    <div class="video-wrap reveal">
+      <iframe
+        src="https://www.youtube.com/embed/live_stream?channel=UCB5fgwJ7MbjBVsQ5-opwPeg&autoplay=0"
+        title="Gospel Light Assembly Live Stream"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+    <p style="color:rgba(255,255,255,.4); font-size:.8rem; margin-top:1rem;">RCCG GOSPEL LIGHT ASSEMBLY YOUTUBE STREAM</p>
+  </div>
+</section>
+
+<!-- ── CTA BANNER ─────────────────────── -->
+<section class="cta-banner">
+  <div class="container center">
+    <span class="section-label" style="color:var(--gold)">Plan Your Visit</span>
+    <h2>Come Home This Sunday ✝️</h2>
+    <p>Doors open every Sunday at 8:00 AM. No perfect life required — just an open heart. Come as you are, leave transformed.</p>
+    <a href="contact.html" class="btn-gold-solid">Get Directions & Contact →</a>
+  </div>
+</section>
+
+<!-- ── FOOTER ──────────────────────────── -->
+
+<!-- ── SCRIPTURE STRIP ──────────────────── -->
+<section style="background:linear-gradient(90deg,var(--gold-dim),var(--gold),var(--gold-light),var(--gold),var(--gold-dim));padding:2.5rem 2rem;text-align:center;">
+  <div style="max-width:760px;margin:0 auto;">
+    <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.1rem,2vw,1.4rem);color:var(--blue-dark);margin-bottom:.4rem;line-height:1.65;">"For God so loved the world that He gave His one and only Son, that whoever believes in Him shall not perish but have eternal life."</p>
+    <span style="font-family:'Barlow Condensed',sans-serif;font-size:.72rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--blue-mid);">John 3:16 — The Heart of the Gospel</span>
+  </div>
+</section>
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-brand-col">
+      <div class="footer-brand-row">
+        <img src="images/Rccglogo.png" alt="RCCG Logo" class="footer-logo"/>
+        <div><strong>RCCG Gospel Light Assembly</strong><span>RCCG · Zonal Headquarters</span></div>
+      </div>
+      <p class="footer-brand-tagline">"Where the Light of God<br/>is Forever Shining"</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="about.html">About Us</a>
+      <a href="sermons.html">Sermons</a>
+      <a href="ministries.html">Ministries</a>
+      <a href="units.html">Our Units</a>
+      <a href="events.html">Events</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="pastor.html">Pastor's Letter</a>
+      <a href="history.html">Our History</a>
+      <a href="bulletin.html">Bulletin</a>
+    </div>
+    <div class="footer-col">
+      <h4>Programmes</h4>
+      <a href="events.html">Digging Deep – Tue 5:30 PM</a>
+      <a href="events.html">Faith Clinic – Thu 5:30 PM</a>
+      <a href="events.html">Evangelism – Sat 4:30 PM</a>
+      <a href="events.html">Sunday Service – 8:00 AM</a>
+    </div>
+
+      <div class="footer-social">
+        <h4>Follow Us</h4>
+        <div class="social-links">
+          <a href="https://facebook.com/RCCGglayaya" target="_blank" rel="noopener" aria-label="Facebook" class="social-btn fb">
+            <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="https://instagram.com/rccg_glayaya" target="_blank" rel="noopener" aria-label="Instagram" class="social-btn ig">
+            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="https://youtube.com/@RCCGGospelLightAssemblySermons" target="_blank" rel="noopener" aria-label="YouTube" class="social-btn yt">
+            <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+          <a href="https://wa.me/2348140972012" target="_blank" rel="noopener" aria-label="WhatsApp" class="social-btn wa">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+        </div>
+      </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p>📍 Lejina Phase 2, Lejina Town, Behind Baale's House, Adamo, Ikorodu, Lagos State</p>
+      <p>📞 +234 814 097 2012</p>
+      <p>✉️ rccggospellightassembly26@gmail.com</p>
+      <p>🌐 <a href="https://rccg.org" target="_blank" style="color:var(--gold)">rccg.org</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 RCCG Gospel Light Assembly. All rights reserved.</span>
+    <span><a href="give.html">Give Online</a> · <a href="contact.html">Contact</a> · <a href="https://rccg.org" target="_blank">RCCG Global</a></span>
+  </div>
+</footer>
+
+<!-- ── WHATSAPP FAB ───────────────────── -->
+
+<a href="https://wa.me/2348140972012" target="_blank" class="whatsapp-fab" title="Chat with us on WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+
+<!-- ── COOKIE CONSENT ────────────────────── -->
+<div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Cookie consent">
+  <div class="cookie-content">
+    <div class="cookie-icon">🍪</div>
+    <div class="cookie-text">
+      <strong>We use cookies</strong>
+      <p>We use cookies to improve your experience, remember your preferences, and analyse site usage. You can choose which cookies to allow.</p>
+    </div>
+    <div class="cookie-actions">
+      <button class="cookie-btn cookie-necessary" onclick="acceptCookies('necessary')">Necessary Only</button>
+      <button class="cookie-btn cookie-all" onclick="acceptCookies('all')">Accept All 🎉</button>
+    </div>
+    <button class="cookie-dismiss" onclick="acceptCookies('necessary')" aria-label="Close">✕</button>
+  </div>
+</div>
+<button id="back-to-top" aria-label="Back to top" title="Back to top">↑</button>
+<script src="main.js"></script>
+</body>
+</html>

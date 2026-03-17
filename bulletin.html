@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="This week's order of service and bulletin for RCCG Gospel Light Assembly, Adamo, Ikorodu."/>
+  <meta name="keywords" content="RCCG, Gospel Light Assembly, Church Ikorodu, Adamo Ikorodu"/>
+  <meta property="og:title" content="Weekly Bulletin"/>
+  <meta property="og:description" content="This week's order of service and bulletin for RCCG Gospel Light Assembly, Adamo, Ikorodu."/>
+  <meta property="og:type" content="website"/>
+  <meta name="theme-color" content="#060d1a"/>
+  <link rel="manifest" href="manifest.json"/>
+  <link rel="icon" href="images/Rccglogo.png"/>
+  <title>Weekly Bulletin | RCCG Gospel Light Assembly</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@700;800&display=swap" rel="stylesheet"/>
+</head>
+<body>
+<div id="loader">
+  <img src="images/Rccglogo.png" alt="RCCG" class="loader-logo"/>
+  <div class="loader-church-name loader-shimmer-text">Gospel Light Assembly</div>
+  <div class="loader-tagline">Where the Light of God is Forever Shining</div>
+  <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+</div>
+<div class="ticker-wrap"><div class="ticker-track">
+  <span class="ticker-item"><span>✦</span> RCCG Gospel Light Assembly · Zonal Headquarters · Adamo, Ikorodu</span>
+  <span class="ticker-item"><span>✦</span> "Where the Light of God is Forever Shining"</span>
+  <span class="ticker-item"><span>✦</span> Sunday Service · 8:00 AM · All Are Welcome</span>
+  <span class="ticker-item"><span>✦</span> RCCG Gospel Light Assembly · Zonal Headquarters · Adamo, Ikorodu</span>
+  <span class="ticker-item"><span>✦</span> "Where the Light of God is Forever Shining"</span>
+  <span class="ticker-item"><span>✦</span> Sunday Service · 8:00 AM · All Are Welcome</span>
+</div></div><nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">
+      <img src="images/Rccglogo.png" alt="RCCG Logo" class="rccg-logo"/>
+      <div class="brand-text">
+        <span class="brand-main">RCCG Gospel Light Assembly</span>
+        <span class="brand-sub">Zonal Headquarters · Ikorodu</span>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+
+      <li><a href="index.html">Home</a></li>
+
+      <li class="has-dropdown" onclick="toggleDropdown(this)">
+        <a href="about.html">About</a>
+        <ul class="nav-dropdown">
+          <span class="dropdown-label">Our Church</span>
+          <li><a href="about.html"><span class="dropdown-icon">⛪</span>About Us</a></li>
+          <li><a href="pastor.html"><span class="dropdown-icon">✉️</span>Pastor's Letter</a></li>
+          <li><a href="history.html"><span class="dropdown-icon">📜</span>Our History</a></li>
+        </ul>
+      </li>
+
+      <li><a href="sermons.html">Sermons</a></li>
+
+      <li class="has-dropdown" onclick="toggleDropdown(this)">
+        <a href="ministries.html">Ministries</a>
+        <ul class="nav-dropdown">
+          <span class="dropdown-label">Serve & Grow</span>
+          <li><a href="ministries.html"><span class="dropdown-icon">🙌</span>All Ministries</a></li>
+          <li><a href="units.html"><span class="dropdown-icon">👥</span>Our Units & Teams</a></li>
+          <li><a href="youth.html"><span class="dropdown-icon">🎤</span>Youth Ministry</a></li>
+        </ul>
+      </li>
+
+      <li class="has-dropdown" onclick="toggleDropdown(this)">
+        <a href="events.html" class="active">Events</a>
+        <ul class="nav-dropdown">
+          <span class="dropdown-label">What's On</span>
+          <li><a href="events.html"><span class="dropdown-icon">📅</span>Events & Programmes</a></li>
+          <li><a href="bulletin.html"><span class="dropdown-icon">🖨️</span>Weekly Bulletin</a></li>
+        </ul>
+      </li>
+
+      <li><a href="gallery.html">Gallery</a></li>
+
+      <li class="has-dropdown" onclick="toggleDropdown(this)">
+        <a href="contact.html">Contact</a>
+        <ul class="nav-dropdown">
+          <span class="dropdown-label">Reach Us</span>
+          <li><a href="contact.html"><span class="dropdown-icon">📍</span>Contact & Directions</a></li>
+          <li><a href="give.html"><span class="dropdown-icon">💛</span>Give & Tithe</a></li>
+          <li><a href="stewardship.html"><span class="dropdown-icon">📋</span>Stewardship & Receipts</a></li>
+        </ul>
+      </li>
+
+    </ul>
+    <div class="nav-right">
+      <button class="theme-toggle" onclick="toggleTheme()" title="Toggle dark mode">🌙</button>
+      <button class="nav-toggle" onclick="toggleNav()">&#9776;</button>
+      <a href="give.html" class="btn-gold">Give 🙏</a>
+    </div>
+  </div>
+</nav>
+<div class="page-header">
+  <span class="section-label">This Week</span>
+  <h1>Weekly Bulletin &<br/>Order of Service</h1>
+  <p>Sunday Service · 8:00 AM · Lejina Phase 2, Adamo, Ikorodu</p>
+</div>
+
+<!-- ── COUNTDOWN BAR ─────────────────────────── -->
+<div class="countdown-bar" id="countdown-bar">
+  <span class="countdown-bar-label">⏳ Next Sunday Service:</span>
+  <div class="countdown-bar-boxes">
+    <div class="countdown-bar-box"><span id="cd-days">00</span><small>Days</small></div>
+    <div class="countdown-bar-sep">:</div>
+    <div class="countdown-bar-box"><span id="cd-hours">00</span><small>Hours</small></div>
+    <div class="countdown-bar-sep">:</div>
+    <div class="countdown-bar-box"><span id="cd-mins">00</span><small>Mins</small></div>
+    <div class="countdown-bar-sep">:</div>
+    <div class="countdown-bar-box"><span id="cd-secs">00</span><small>Secs</small></div>
+  </div>
+</div>
+<section class="inner-section">
+  <div class="container">
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;margin-bottom:2.5rem;" class="reveal">
+      <div>
+        <span class="section-label">Current Issue</span>
+        <h2 style="margin-bottom:.25rem;">Order of Service</h2>
+        <p style="margin:0;font-size:.9rem;">Week of March 16, 2026</p>
+      </div>
+      <button class="print-btn" onclick="window.print()" style="align-self:flex-start;">🖨️ Print Bulletin</button>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;" class="reveal">
+      <!-- Order of Service -->
+      <div class="give-card" style="margin:0;max-width:100%;">
+        <h3 style="margin-bottom:1.5rem;">📋 Order of Service</h3>
+        <div class="bank-detail"><span>Opening Prayer</span><span>8:00 AM</span></div>
+        <div class="bank-detail"><span>Praise & Worship</span><span>8:05 AM</span></div>
+        <div class="bank-detail"><span>Welcome & Announcements</span><span>8:30 AM</span></div>
+        <div class="bank-detail"><span>Tithes & Offerings</span><span>8:40 AM</span></div>
+        <div class="bank-detail"><span>Special Number / Choir</span><span>8:50 AM</span></div>
+        <div class="bank-detail"><span>Scripture Reading</span><span>9:00 AM</span></div>
+        <div class="bank-detail" style="background:rgba(201,168,76,.06);font-weight:700;"><span style="color:var(--gold);">✝️ Sermon</span><span style="color:var(--gold);">9:10 AM</span></div>
+        <div class="bank-detail"><span>Altar Call</span><span>9:50 AM</span></div>
+        <div class="bank-detail"><span>Closing Prayer & Benediction</span><span>10:00 AM</span></div>
+      </div>
+
+      <!-- This Week's Info -->
+      <div style="display:flex;flex-direction:column;gap:1.25rem;">
+        <div class="give-card" style="margin:0;max-width:100%;padding:1.75rem;">
+          <h3 style="margin-bottom:1rem;">🎙️ This Sunday</h3>
+          <div class="bank-detail"><span>Sermon Topic</span><span style="font-style:italic;">— Update each Sunday —</span></div>
+          <div class="bank-detail"><span>Preacher</span><span>Pastor Adebayo Erinle</span></div>
+          <div class="bank-detail"><span>Memory Verse</span><span style="font-style:italic;">— Add this week's memory verse —</span></div>
+        </div>
+        <div class="give-card" style="margin:0;max-width:100%;padding:1.75rem;">
+          <h3 style="margin-bottom:1rem;">📢 Announcements</h3>
+          <p style="font-size:.88rem;margin-bottom:.75rem;">• Sunday service starts at 8:00 AM. All are welcome!</p>
+          <p style="font-size:.88rem;margin-bottom:.75rem;">• Midweek Bible Study (Digging Deep) — Tuesday 5:30 PM</p>
+          <p style="font-size:.88rem;margin:0;">• Faith Clinic (Prayer Service) — Thursday 5:30 PM</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Weekly Programme -->
+    <div class="give-card" style="max-width:100%;margin-top:2rem;" class="reveal">
+      <h3 style="margin-bottom:1.5rem;">📅 This Week's Programmes</h3>
+      <div class="bank-detail"><span>📖 Digging Deep (Bible Study)</span><span>Tuesday · 5:30 PM</span></div>
+      <div class="bank-detail"><span>🙏 Faith Clinic (Prayer Service)</span><span>Thursday · 5:30 PM</span></div>
+      <div class="bank-detail"><span>🌍 Evangelism Outreach</span><span>Saturday · 4:30 PM</span></div>
+      <div class="bank-detail" style="background:rgba(201,168,76,.06);"><span style="color:var(--gold);font-weight:700;">✝️ Sunday Service</span><span style="color:var(--gold);font-weight:700;">Sunday · 8:00 AM</span></div>
+    </div>
+
+    <p style="text-align:center;margin-top:2rem;font-size:.82rem;color:var(--text-muted);">
+      📍 Lejina Phase 2, Lejina Town, Behind Baale's House, Adamo, Ikorodu, Lagos State, Nigeria
+    </p>
+  </div>
+</section>
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-brand-col">
+      <div class="footer-brand-row">
+        <img src="images/Rccglogo.png" alt="RCCG Logo" class="footer-logo"/>
+        <div><strong>RCCG Gospel Light Assembly</strong><span>Zonal Headquarters · Ikorodu, Lagos</span></div>
+      </div>
+      <p class="footer-brand-tagline">"Where the Light of God<br/>is Forever Shining"</p>
+    </div>
+    <div class="footer-col"><h4>Quick Links</h4>
+      <a href="about.html">About Us</a><a href="sermons.html">Sermons</a>
+      <a href="ministries.html">Ministries</a><a href="units.html">Units</a>
+      <a href="events.html">Events</a><a href="gallery.html">Gallery</a>
+      <a href="pastor.html">Pastor's Letter</a>
+      <a href="history.html">Our History</a>
+      <a href="bulletin.html">Bulletin</a>
+    </div>
+    <div class="footer-col"><h4>Programmes</h4>
+      <a href="events.html">Digging Deep – Tue 5:30 PM</a>
+      <a href="events.html">Faith Clinic – Thu 5:30 PM</a>
+      <a href="events.html">Evangelism – Sat 4:30 PM</a>
+      <a href="events.html">Sunday Service – 8:00 AM</a>
+    </div>
+    <div class="footer-social"><h4>Follow Us</h4>
+      <div class="social-links">
+        <a href="https://facebook.com/RCCGglayaya" target="_blank" class="social-btn fb"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+        <a href="https://instagram.com/rccg_glayaya" target="_blank" class="social-btn ig"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+        <a href="https://youtube.com/@RCCGGospelLightAssemblySermons" target="_blank" class="social-btn yt"><svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+        <a href="https://wa.me/2348140972012" target="_blank" class="social-btn wa"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-col"><h4>Contact</h4>
+      <p>📍 Lejina Phase 2, Lejina Town, Behind Baale's House, Adamo, Ikorodu, Lagos State, Nigeria</p>
+      <p>📞 +234 814 097 2012</p><p>✉️ rccggospellightassembly26@gmail.com</p>
+      <p>🌐 <a href="https://rccg.org" target="_blank" style="color:var(--gold);">rccg.org</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 RCCG Gospel Light Assembly. All rights reserved.</span>
+    <span><a href="give.html">Give Online</a> · <a href="contact.html">Contact</a> · <a href="https://rccg.org" target="_blank">RCCG Global</a></span>
+  </div>
+</footer>
+<div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Cookie consent">
+  <div class="cookie-content">
+    <div class="cookie-icon">🍪</div>
+    <div class="cookie-text"><strong>We use cookies</strong><p>We use cookies to improve your experience and remember your preferences.</p></div>
+    <div class="cookie-actions">
+      <button class="cookie-btn cookie-necessary" onclick="acceptCookies('necessary')">Necessary Only</button>
+      <button class="cookie-btn cookie-all" onclick="acceptCookies('all')">Accept All 🎉</button>
+    </div>
+    <button class="cookie-dismiss" onclick="acceptCookies('necessary')" aria-label="Close">✕</button>
+  </div>
+</div>
+<button id="back-to-top" aria-label="Back to top" title="Back to top">↑</button>
+<a href="https://wa.me/2348140972012" target="_blank" class="whatsapp-fab" title="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<script src="main.js"></script>
+</body></html>

@@ -1,0 +1,47 @@
+{
+  "name": "RCCG Gospel Light Assembly",
+  "short_name": "Gospel Light",
+  "description": "Where the Light of God is Forever Shining — RCCG Zonal Headquarters, Adamo, Ikorodu, Lagos",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#060d1a",
+  "theme_color": "#c9a84c",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "images/Rccglogo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "images/Rccglogo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["lifestyle", "religion"],
+  "shortcuts": [
+    {
+      "name": "Sunday Service",
+      "url": "/events.html",
+      "description": "Service times and events"
+    },
+    {
+      "name": "Sermons",
+      "url": "/sermons.html",
+      "description": "Listen to sermons"
+    },
+    {
+      "name": "Give",
+      "url": "/give.html",
+      "description": "Give online"
+    },
+    {
+      "name": "Contact",
+      "url": "/contact.html",
+      "description": "Contact the church"
+    }
+  ]
+}
