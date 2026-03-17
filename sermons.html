@@ -54,6 +54,14 @@
         </ul>
       </li>
 
+      <li class="has-dropdown" onclick="toggleDropdown(this)"><a href="devotional.html">Resources</a>
+        <ul class="nav-dropdown"><span class="dropdown-label">Grow Daily</span>
+          <li><a href="devotional.html"><span class="dropdown-icon">📖</span>Open Heavens &amp; Prayer</a></li>
+          <li><a href="sunday-school.html"><span class="dropdown-icon">🎓</span>Sunday School</a></li>
+          <li><a href="hymnal.html"><span class="dropdown-icon">🎵</span>RCCG Hymnal</a></li>
+        </ul>
+      </li>
+
       <li class="has-dropdown" onclick="toggleDropdown(this)">
         <a href="events.html">Events</a>
         <ul class="nav-dropdown">
@@ -96,7 +104,7 @@
   </div>
 </div>
 <section class="inner-section"><div class="container"><span class="section-label">Latest Messages</span><h2>Recent Sermons</h2>
-<div class="sermons-grid" style="grid-template-columns:repeat(3,1fr);">
+<div class="sermons-grid">
 <div class="sermon-card reveal"><div class="sermon-thumb" style="position:relative;overflow:hidden;">
       <div style="position:absolute;inset:0;background:linear-gradient(135deg,#0a1628,#1a3a6e);"></div>
       <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(201,168,76,.12),transparent 70%);"></div>
@@ -177,7 +185,7 @@
   <div class="container">
     <span class="section-label">Daily Devotional</span>
     <h2>RCCG Open Heavens</h2>
-    <div style="display:grid; grid-template-columns:1fr 1fr; gap:2rem; align-items:start;">
+    <div class="oh-grid">
       <div class="open-heaven-widget" id="oh-widget">
         <div class="oh-badge">📖 Today's Reading</div>
         <span class="oh-date" id="oh-date">Loading...</span>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="RCCG Digital Hymnal — search and read hymns and choruses at Gospel Light Assembly, Adamo, Ikorodu."/>
+  <meta property="og:title" content="RCCG Hymnal | RCCG Gospel Light Assembly"/>
+  <meta name="theme-color" content="#060d1a"/>
+  <link rel="manifest" href="manifest.json"/>
+  <link rel="icon" href="images/Rccglogo.png"/>
+  <title>RCCG Hymnal | RCCG Gospel Light Assembly</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@700;800&display=swap" rel="stylesheet"/>
+</head>
+<body>
+<div id="loader">
+  <img src="images/Rccglogo.png" alt="RCCG" class="loader-logo"/>
+  <div class="loader-church-name loader-shimmer-text">Gospel Light Assembly</div>
+  <div class="loader-tagline">Where the Light of God is Forever Shining</div>
+  <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+</div>
+<div class="ticker-wrap"><div class="ticker-track">
+  <span class="ticker-item"><span>✦</span> RCCG Hymnal · Search · Read Lyrics · Worship God</span>
+  <span class="ticker-item"><span>✦</span> "Sing to the Lord a new song; sing to the Lord, all the earth" — Psalm 96:1</span>
+  <span class="ticker-item"><span>✦</span> RCCG Gospel Light Assembly · Adamo, Ikorodu · Sunday 8:00 AM</span>
+  <span class="ticker-item"><span>✦</span> RCCG Hymnal · Search · Read Lyrics · Worship God</span>
+</div></div>
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">
+      <img src="images/Rccglogo.png" alt="RCCG Logo" class="rccg-logo"/>
+      <div class="brand-text"><span class="brand-main">RCCG Gospel Light Assembly</span><span class="brand-sub">Zonal Headquarters · Ikorodu</span></div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li class="has-dropdown" onclick="toggleDropdown(this)"><a href="about.html">About</a>
+        <ul class="nav-dropdown"><span class="dropdown-label">Our Church</span>
+          <li><a href="about.html"><span class="dropdown-icon">⛪</span>About Us</a></li>
+          <li><a href="pastor.html"><span class="dropdown-icon">✉️</span>Pastor's Letter</a></li>
+          <li><a href="history.html"><span class="dropdown-icon">📜</span>Our History</a></li>
+        </ul>
+      </li>
+      <li><a href="sermons.html">Sermons</a></li>
+      <li class="has-dropdown" onclick="toggleDropdown(this)"><a href="ministries.html">Ministries</a>
+        <ul class="nav-dropdown"><span class="dropdown-label">Serve & Grow</span>
+          <li><a href="ministries.html"><span class="dropdown-icon">🙌</span>All Ministries</a></li>
+          <li><a href="units.html"><span class="dropdown-icon">👥</span>Our Units & Teams</a></li>
+          <li><a href="youth.html"><span class="dropdown-icon">🎤</span>Youth Ministry</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown active" onclick="toggleDropdown(this)"><a href="devotional.html" class="active">Resources</a>
+        <ul class="nav-dropdown"><span class="dropdown-label">Grow Daily</span>
+          <li><a href="devotional.html"><span class="dropdown-icon">📖</span>Open Heavens & Prayer</a></li>
+          <li><a href="sunday-school.html"><span class="dropdown-icon">🎓</span>Sunday School</a></li>
+          <li><a href="hymnal.html"><span class="dropdown-icon">🎵</span>RCCG Hymnal</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown" onclick="toggleDropdown(this)"><a href="events.html">Events</a>
+        <ul class="nav-dropdown"><span class="dropdown-label">What's On</span>
+          <li><a href="events.html"><span class="dropdown-icon">📅</span>Events & Programmes</a></li>
+          <li><a href="bulletin.html"><span class="dropdown-icon">🖨️</span>Weekly Bulletin</a></li>
+        </ul>
+      </li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li class="has-dropdown" onclick="toggleDropdown(this)"><a href="contact.html">Contact</a>
+        <ul class="nav-dropdown"><span class="dropdown-label">Reach Us</span>
+          <li><a href="contact.html"><span class="dropdown-icon">📍</span>Contact & Directions</a></li>
+          <li><a href="give.html"><span class="dropdown-icon">💛</span>Give & Tithe</a></li>
+          <li><a href="stewardship.html"><span class="dropdown-icon">📋</span>Stewardship</a></li>
+        </ul>
+      </li>
+    </ul>
+    <div class="nav-right">
+      <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+      <button class="nav-toggle" onclick="toggleNav()">&#9776;</button>
+      <a href="give.html" class="btn-gold">Give 🙏</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-header">
+  <span class="section-label">Songs of Praise & Worship</span>
+  <h1>RCCG Hymnal</h1>
+  <p>Search, read, and sing — classic hymns and choruses of the Redeemed Christian Church of God</p>
+</div>
+
+<div class="countdown-bar">
+  <span class="countdown-bar-label">⏳ Next Sunday Service:</span>
+  <div class="countdown-bar-boxes">
+    <div class="countdown-bar-box"><span id="cd-days">00</span><small>Days</small></div>
+    <div class="countdown-bar-sep">:</div>
+    <div class="countdown-bar-box"><span id="cd-hours">00</span><small>Hours</small></div>
+    <div class="countdown-bar-sep">:</div>
+    <div class="countdown-bar-box"><span id="cd-mins">00</span><small>Mins</small></div>
+    <div class="countdown-bar-sep">:</div>
+    <div class="countdown-bar-box"><span id="cd-secs">00</span><small>Secs</small></div>
+  </div>
+</div>
+
+<section class="inner-section">
+  <div class="container">
+    <!-- Search bar -->
+    <div class="hymnal-search-wrap">
+      <input type="text" id="hymnal-search" class="hymnal-search" placeholder="🔍  Search hymn title or first line..." oninput="searchHymns(this.value)" autocomplete="off"/>
+      <div class="hymnal-stats" id="hymnal-stats">Showing all <strong id="hymn-count">50</strong> hymns</div>
+    </div>
+
+    <!-- Category filters -->
+    <div class="hymnal-filters">
+      <button class="hf-btn active" onclick="filterHymns('all', this)">All</button>
+      <button class="hf-btn" onclick="filterHymns('praise', this)">Praise</button>
+      <button class="hf-btn" onclick="filterHymns('worship', this)">Worship</button>
+      <button class="hf-btn" onclick="filterHymns('salvation', this)">Salvation</button>
+      <button class="hf-btn" onclick="filterHymns('faith', this)">Faith</button>
+      <button class="hf-btn" onclick="filterHymns('prayer', this)">Prayer</button>
+      <button class="hf-btn" onclick="filterHymns('christmas', this)">Christmas</button>
+    </div>
+
+    <!-- Hymn grid -->
+    <div class="hymnal-grid" id="hymnal-grid"></div>
+
+    <!-- Hymn modal -->
+    <div id="hymn-modal" class="hymn-modal" onclick="if(event.target===this)closeHymn()">
+      <div class="hymn-modal-box">
+        <button class="hymn-modal-close" onclick="closeHymn()">✕</button>
+        <div class="hymn-modal-number" id="modal-number"></div>
+        <h2 class="hymn-modal-title" id="modal-title"></h2>
+        <div class="hymn-modal-category" id="modal-category"></div>
+        <div class="hymn-modal-lyrics" id="modal-lyrics"></div>
+        <div class="hymn-modal-actions">
+          <button onclick="shareHymn()" class="btn-primary">📲 Share</button>
+          <button onclick="printHymn()" class="print-btn">🖨️ Print</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-brand-col">
+      <div class="footer-brand-row">
+        <img src="images/Rccglogo.png" alt="RCCG" class="footer-logo"/>
+        <div><strong>RCCG Gospel Light Assembly</strong><span>Zonal Headquarters · Ikorodu, Lagos</span></div>
+      </div>
+      <p class="footer-brand-tagline">"Where the Light of God<br/>is Forever Shining"</p>
+    </div>
+    <div class="footer-col"><h4>Quick Links</h4>
+      <a href="index.html">Home</a><a href="devotional.html">Devotional</a>
+      <a href="sunday-school.html">Sunday School</a><a href="hymnal.html">Hymnal</a>
+      <a href="sermons.html">Sermons</a><a href="give.html">Give</a>
+    </div>
+    <div class="footer-col"><h4>Resources</h4>
+      <a href="devotional.html">Open Heavens</a>
+      <a href="devotional.html">Bible Verse of the Day</a>
+      <a href="devotional.html">Prayer Points</a>
+      <a href="sunday-school.html">Sunday School</a>
+      <a href="hymnal.html">RCCG Hymnal</a>
+    </div>
+    <div class="footer-social"><h4>Follow Us</h4>
+      <div class="social-links">
+        <a href="https://facebook.com/RCCGglayaya" target="_blank" class="social-btn fb"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+        <a href="https://instagram.com/rccg_glayaya" target="_blank" class="social-btn ig"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+        <a href="https://youtube.com/@RCCGGospelLightAssemblySermons" target="_blank" class="social-btn yt"><svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+        <a href="https://wa.me/2348140972012" target="_blank" class="social-btn wa"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-col"><h4>Contact</h4>
+      <p>📍 Lejina Phase 2, Adamo, Ikorodu, Lagos</p>
+      <p>📞 +234 814 097 2012</p>
+      <p>✉️ rccggospellightassembly26@gmail.com</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 RCCG Gospel Light Assembly. All rights reserved.</span>
+    <span><a href="give.html">Give Online</a> · <a href="contact.html">Contact</a> · <a href="https://rccg.org" target="_blank">RCCG Global</a></span>
+  </div>
+</footer>
+
+<a href="https://wa.me/2348140972012" target="_blank" class="whatsapp-fab" title="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<div id="cookie-banner" class="cookie-banner" role="dialog">
+  <div class="cookie-content">
+    <div class="cookie-icon">🍪</div>
+    <div class="cookie-text"><strong>We use cookies</strong><p>We use cookies to improve your experience.</p></div>
+    <div class="cookie-actions">
+      <button class="cookie-btn cookie-necessary" onclick="acceptCookies('necessary')">Necessary Only</button>
+      <button class="cookie-btn cookie-all" onclick="acceptCookies('all')">Accept All 🎉</button>
+    </div>
+    <button class="cookie-dismiss" onclick="acceptCookies('necessary')">✕</button>
+  </div>
+</div>
+<button id="back-to-top" aria-label="Back to top">↑</button>
+<script src="main.js"></script>
+<script>
+const HYMNS = [
+  { n:1,  title:'Holy, Holy, Holy',            cat:'worship',   lyrics:`Holy, holy, holy! Lord God Almighty!\nEarly in the morning our song shall rise to Thee;\nHoly, holy, holy! Merciful and mighty,\nGod in three persons, blessed Trinity!\n\nHoly, holy, holy! All the saints adore Thee,\nCasting down their golden crowns around the glassy sea;\nCherubim and seraphim falling down before Thee,\nWhich wert, and art, and evermore shalt be.\n\nHoly, holy, holy! Though the darkness hide Thee,\nThough the eye of sinful man Thy glory may not see,\nOnly Thou art holy; there is none beside Thee,\nPerfect in power, in love, and purity.\n\nHoly, holy, holy! Lord God Almighty!\nAll Thy works shall praise Thy name, in earth and sky and sea;\nHoly, holy, holy! Merciful and mighty,\nGod in three persons, blessed Trinity.` },
+  { n:2,  title:'Amazing Grace',                cat:'salvation', lyrics:`Amazing grace! How sweet the sound\nThat saved a wretch like me!\nI once was lost, but now am found,\nWas blind, but now I see.\n\n'Twas grace that taught my heart to fear,\nAnd grace my fears relieved;\nHow precious did that grace appear\nThe hour I first believed!\n\nThrough many dangers, toils and snares,\nI have already come;\n'Tis grace hath brought me safe thus far,\nAnd grace will lead me home.\n\nThe Lord has promised good to me,\nHis Word my hope secures;\nHe will my shield and portion be,\nAs long as life endures.\n\nWhen we've been there ten thousand years,\nBright shining as the sun,\nWe've no less days to sing God's praise\nThan when we'd first begun.` },
+  { n:3,  title:'Great Is Thy Faithfulness',    cat:'worship',   lyrics:`Great is Thy faithfulness, O God my Father,\nThere is no shadow of turning with Thee;\nThou changest not, Thy compassions they fail not;\nAs Thou hast been, Thou forever wilt be.\n\nChorus:\nGreat is Thy faithfulness!\nGreat is Thy faithfulness!\nMorning by morning new mercies I see;\nAll I have needed Thy hand hath provided;\nGreat is Thy faithfulness, Lord, unto me!\n\nSummer and winter and springtime and harvest,\nSun, moon and stars in their courses above\nJoin with all nature in manifold witness\nTo Thy great faithfulness, mercy and love.\n\nPardon for sin and a peace that endureth,\nThine own dear presence to cheer and to guide;\nStrength for today and bright hope for tomorrow,\nBlessings all mine, with ten thousand beside!` },
+  { n:4,  title:'To God Be the Glory',          cat:'praise',    lyrics:`To God be the glory, great things He hath taught us,\nGreat things He hath done, and great our rejoicing\nThrough Jesus the Son;\nBut purer and higher and greater will be\nOur wonder, our transport, when Jesus we see.\n\nChorus:\nPraise the Lord, praise the Lord,\nLet the earth hear His voice!\nPraise the Lord, praise the Lord,\nLet the people rejoice!\nO come to the Father through Jesus the Son,\nAnd give Him the glory, great things He hath done.\n\nTo God be the glory, great things He hath taught us,\nGreat things He hath done, and great our rejoicing\nThrough Jesus the Son.` },
+  { n:5,  title:'What a Friend We Have in Jesus', cat:'prayer',  lyrics:`What a friend we have in Jesus,\nAll our sins and griefs to bear!\nWhat a privilege to carry\nEverything to God in prayer!\nO what peace we often forfeit,\nO what needless pain we bear,\nAll because we do not carry\nEverything to God in prayer!\n\nHave we trials and temptations?\nIs there trouble anywhere?\nWe should never be discouraged:\nTake it to the Lord in prayer.\nCan we find a friend so faithful,\nWho will all our sorrows share?\nJesus knows our every weakness;\nTake it to the Lord in prayer.\n\nAre we weak and heavy-laden,\nCumbered with a load of care?\nPrecious Saviour, still our refuge:\nTake it to the Lord in prayer.\nDo thy friends despise, forsake thee?\nTake it to the Lord in prayer;\nIn His arms He'll take and shield thee,\nThou wilt find a solace there.` },
+  { n:6,  title:'Blessed Assurance',            cat:'faith',     lyrics:`Blessed assurance, Jesus is mine!\nO what a foretaste of glory divine!\nHeir of salvation, purchase of God,\nBorn of His Spirit, washed in His blood.\n\nChorus:\nThis is my story, this is my song,\nPraising my Saviour all the day long;\nThis is my story, this is my song,\nPraising my Saviour all the day long.\n\nPerfect submission, perfect delight,\nVisions of rapture now burst on my sight;\nAngels descending, bring from above\nEchoes of mercy, whispers of love.\n\nPerfect submission, all is at rest,\nI in my Saviour am happy and blest;\nWatching and waiting, looking above,\nFilled with His goodness, lost in His love.` },
+  { n:7,  title:'How Great Thou Art',           cat:'worship',   lyrics:`O Lord my God, when I in awesome wonder\nConsider all the worlds Thy hands have made,\nI see the stars, I hear the rolling thunder,\nThy power throughout the universe displayed.\n\nChorus:\nThen sings my soul, my Saviour God, to Thee:\nHow great Thou art, how great Thou art!\nThen sings my soul, my Saviour God, to Thee:\nHow great Thou art, how great Thou art!\n\nWhen through the woods and forest glades I wander\nAnd hear the birds sing sweetly in the trees,\nWhen I look down from lofty mountain grandeur\nAnd hear the brook and feel the gentle breeze.\n\nAnd when I think that God, His Son not sparing,\nSent Him to die, I scarce can take it in,\nThat on the cross, my burden gladly bearing,\nHe bled and died to take away my sin.\n\nWhen Christ shall come with shout of acclamation\nAnd take me home, what joy shall fill my heart!\nThen I shall bow in humble adoration\nAnd there proclaim, my God, how great Thou art!` },
+  { n:8,  title:'It Is Well With My Soul',      cat:'faith',     lyrics:`When peace like a river attendeth my way,\nWhen sorrows like sea billows roll;\nWhatever my lot, Thou hast taught me to say,\nIt is well, it is well with my soul.\n\nChorus:\nIt is well (it is well)\nWith my soul (with my soul)\nIt is well, it is well with my soul.\n\nThough Satan should buffet, though trials should come,\nLet this blest assurance control,\nThat Christ hath regarded my helpless estate,\nAnd hath shed His own blood for my soul.\n\nMy sin — oh the bliss of this glorious thought! —\nMy sin, not in part, but the whole,\nIs nailed to the cross and I bear it no more,\nPraise the Lord, praise the Lord, O my soul!\n\nAnd Lord, haste the day when the faith shall be sight,\nThe clouds be rolled back as a scroll,\nThe trump shall resound and the Lord shall descend,\nEven so — it is well with my soul!` },
+  { n:9,  title:'Abide With Me',                cat:'prayer',    lyrics:`Abide with me; fast falls the eventide;\nThe darkness deepens; Lord, with me abide;\nWhen other helpers fail and comforts flee,\nHelp of the helpless, O abide with me.\n\nSwift to its close ebbs out life's little day;\nEarth's joys grow dim, its glories pass away;\nChange and decay in all around I see;\nO Thou who changest not, abide with me.\n\nI need Thy presence every passing hour;\nWhat but Thy grace can foil the tempter's power?\nWho like Thyself my guide and strength can be?\nThrough cloud and sunshine, Lord, abide with me.\n\nHold Thou Thy cross before my closing eyes;\nShine through the gloom and point me to the skies;\nHeaven's morning breaks, and earth's vain shadows flee;\nIn life, in death, O Lord, abide with me.` },
+  { n:10, title:'Stand Up for Jesus',           cat:'faith',     lyrics:`Stand up, stand up for Jesus,\nYe soldiers of the cross;\nLift high His royal banner,\nIt must not suffer loss;\nFrom victory unto victory\nHis army He shall lead,\nTill every foe is vanquished\nAnd Christ is Lord indeed.\n\nStand up, stand up for Jesus,\nThe trumpet call obey;\nForth to the mighty conflict,\nIn this His glorious day;\nYe that are men now serve Him\nAgainst unnumbered foes;\nLet courage rise with danger,\nAnd strength to strength oppose.\n\nStand up, stand up for Jesus,\nStand in His strength alone;\nThe arm of flesh will fail you,\nYe dare not trust your own;\nPut on the gospel armour,\nEach piece put on with prayer;\nWhere duty calls, or danger,\nBe never wanting there.` },
+  { n:11, title:'O For a Thousand Tongues',     cat:'praise',    lyrics:`O for a thousand tongues to sing\nMy great Redeemer's praise,\nThe glories of my God and King,\nThe triumphs of His grace!\n\nMy gracious Master and my God,\nAssist me to proclaim,\nTo spread through all the earth abroad\nThe honours of Thy name.\n\nJesus! the name that charms our fears,\nThat bids our sorrows cease;\n'Tis music in the sinner's ears,\n'Tis life, and health, and peace.\n\nHe breaks the power of cancelled sin,\nHe sets the prisoner free;\nHis blood can make the foulest clean;\nHis blood availed for me.` },
+  { n:12, title:'Onward Christian Soldiers',    cat:'faith',     lyrics:`Onward, Christian soldiers,\nMarching as to war,\nWith the cross of Jesus\nGoing on before!\nChrist, the royal Master,\nLeads against the foe;\nForward into battle\nSee His banners go!\n\nChorus:\nOnward, Christian soldiers,\nMarching as to war,\nWith the cross of Jesus\nGoing on before!\n\nAt the sign of triumph\nSatan's host doth flee;\nOn, then, Christian soldiers,\nOn to victory!\nHell's foundations quiver\nAt the shout of praise;\nBrothers, lift your voices,\nLoud your anthems raise.` },
+  { n:13, title:'All Hail the Power of Jesus\'s Name', cat:'praise', lyrics:`All hail the power of Jesus' name!\nLet angels prostrate fall;\nBring forth the royal diadem,\nAnd crown Him Lord of all!\nBring forth the royal diadem,\nAnd crown Him Lord of all!\n\nCrown Him, ye martyrs of your God,\nWho from His altar call;\nExtol the stem of Jesse's rod,\nAnd crown Him Lord of all!\n\nYe seed of Israel's chosen race,\nYe ransomed from the fall,\nHail Him who saves you by His grace,\nAnd crown Him Lord of all!\n\nO that with yonder sacred throng\nWe at His feet may fall!\nWe'll join the everlasting song,\nAnd crown Him Lord of all!` },
+  { n:14, title:'Rock of Ages',                 cat:'salvation', lyrics:`Rock of Ages, cleft for me,\nLet me hide myself in Thee;\nLet the water and the blood,\nFrom Thy wounded side which flowed,\nBe of sin the double cure,\nSave from wrath and make me pure.\n\nNot the labours of my hands\nCan fulfil Thy law's demands;\nCould my zeal no respite know,\nCould my tears for ever flow,\nAll for sin could not atone;\nThou must save, and Thou alone.\n\nNothing in my hand I bring,\nSimply to the cross I cling;\nNaked, come to Thee for dress;\nHelpless, look to Thee for grace;\nFoul, I to the fountain fly;\nWash me, Saviour, or I die.\n\nWhile I draw this fleeting breath,\nWhen mine eyes shall close in death,\nWhen I soar to worlds unknown,\nSee Thee on Thy judgment throne,\nRock of Ages, cleft for me,\nLet me hide myself in Thee.` },
+  { n:15, title:'O Happy Day',                  cat:'salvation', lyrics:`O happy day that fixed my choice\nOn Thee, my Saviour and my God!\nWell may this glowing heart rejoice,\nAnd tell its raptures all abroad.\n\nChorus:\nHappy day, happy day,\nWhen Jesus washed my sins away!\nHe taught me how to watch and pray\nAnd live rejoicing every day;\nHappy day, happy day,\nWhen Jesus washed my sins away!\n\n'Tis done, the great transaction's done;\nI am the Lord's and He is mine;\nHe drew me and I followed on,\nCharmed to confess the voice divine.\n\nNow rest, my long-divided heart,\nFixed on this blissful centre, rest;\nNor ever from my Lord depart,\nWith Him of every good possessed.` },
+  { n:16, title:'Come Thou Fount',              cat:'worship',   lyrics:`Come, Thou Fount of every blessing,\nTune my heart to sing Thy grace;\nStreams of mercy, never ceasing,\nCall for songs of loudest praise.\nTeach me some melodious sonnet,\nSung by flaming tongues above;\nPraise the mount — I'm fixed upon it —\nMount of Thy redeeming love.\n\nHere I raise my Ebenezer;\nHither by Thy help I'm come;\nAnd I hope, by Thy good pleasure,\nSafely to arrive at home.\nJesus sought me when a stranger,\nWand'ring from the fold of God;\nHe, to rescue me from danger,\nInterposed His precious blood.\n\nO to grace how great a debtor\nDaily I'm constrained to be!\nLet Thy goodness, like a fetter,\nBind my wand'ring heart to Thee:\nProne to wander, Lord, I feel it,\nProne to leave the God I love;\nHere's my heart, O take and seal it,\nSeal it for Thy courts above.` },
+  { n:17, title:'O Come All Ye Faithful',       cat:'christmas', lyrics:`O come, all ye faithful, joyful and triumphant,\nO come ye, O come ye to Bethlehem;\nCome and behold Him, born the King of Angels;\nO come, let us adore Him,\nO come, let us adore Him,\nO come, let us adore Him,\nChrist the Lord!\n\nSing, choirs of angels, sing in exultation,\nSing all ye citizens of heaven above!\nGlory to God, glory in the highest;\nO come, let us adore Him...\n\nYea, Lord, we greet Thee, born this happy morning,\nJesus, to Thee be glory given!\nWord of the Father, now in flesh appearing;\nO come, let us adore Him...` },
+  { n:18, title:'Silent Night',                 cat:'christmas', lyrics:`Silent night, holy night,\nAll is calm, all is bright\nRound yon virgin mother and Child.\nHoly Infant, so tender and mild,\nSleep in heavenly peace,\nSleep in heavenly peace.\n\nSilent night, holy night,\nShepherds quake at the sight;\nGlories stream from heaven afar,\nHeavenly hosts sing Alleluia!\nChrist the Saviour is born,\nChrist the Saviour is born!\n\nSilent night, holy night,\nSon of God, love's pure light;\nRadiant beams from Thy holy face\nWith the dawn of redeeming grace,\nJesus, Lord, at Thy birth,\nJesus, Lord, at Thy birth.` },
+  { n:19, title:'Jesus Loves Me',              cat:'worship',   lyrics:`Jesus loves me, this I know,\nFor the Bible tells me so;\nLittle ones to Him belong,\nThey are weak but He is strong.\n\nChorus:\nYes, Jesus loves me!\nYes, Jesus loves me!\nYes, Jesus loves me!\nThe Bible tells me so.\n\nJesus loves me, He who died,\nHeaven's gate to open wide;\nHe will wash away my sin,\nLet His little child come in.\n\nJesus loves me, loves me still,\nThough I'm very weak and ill;\nFrom His shining throne on high\nComes to watch me where I lie.` },
+  { n:20, title:'Immortal, Invisible',         cat:'worship',   lyrics:`Immortal, invisible, God only wise,\nIn light inaccessible hid from our eyes,\nMost blessed, most glorious, the Ancient of Days,\nAlmighty, victorious, Thy great name we praise.\n\nUnresting, unhasting, and silent as light,\nNor wanting, nor wasting, Thou rulest in might;\nThy justice like mountains high soaring above\nThy clouds which are fountains of goodness and love.\n\nTo all life Thou givest, to both great and small;\nIn all life Thou livest, the true life of all;\nWe blossom and flourish as leaves on the tree,\nAnd wither and perish, but naught changeth Thee.\n\nThou reignest in glory; Thou dwellest in light;\nThine angels adore Thee, all veiling their sight;\nAll praise we would render; O help us to see\n'Tis only the splendour of light hideth Thee.` },
+  { n:21, title:'Nearer My God to Thee',       cat:'prayer',    lyrics:`Nearer, my God, to Thee,\nNearer to Thee!\nE'en though it be a cross\nThat raiseth me;\nStill all my song shall be,\nNearer, my God, to Thee,\nNearer, my God, to Thee,\nNearer to Thee!\n\nThough like the wanderer,\nThe sun gone down,\nDarkness be over me,\nMy rest a stone;\nYet in my dreams I'd be\nNearer, my God, to Thee,\nNearer, my God, to Thee,\nNearer to Thee!\n\nThere let the way appear\nSteps unto heaven;\nAll that Thou sendest me\nIn mercy given;\nAngels to beckon me\nNearer, my God, to Thee,\nNearer, my God, to Thee,\nNearer to Thee!` },
+  { n:22, title:'Crown Him With Many Crowns',  cat:'praise',    lyrics:`Crown Him with many crowns,\nThe Lamb upon His throne;\nHark! how the heavenly anthem drowns\nAll music but its own!\nAwake, my soul, and sing\nOf Him who died for thee,\nAnd hail Him as thy matchless King\nThrough all eternity.\n\nCrown Him the Lord of life,\nWho triumphed o'er the grave,\nAnd rose victorious in the strife\nFor those He came to save;\nHis glories now we sing\nWho died and rose on high,\nWho died eternal life to bring\nAnd lives that death may die.\n\nCrown Him the Lord of love;\nBehold His hands and side,\nRich wounds yet visible above\nIn beauty glorified;\nNo angel in the sky\nCan fully bear that sight,\nBut downward bends his burning eye\nAt mysteries so bright.` },
+  { n:23, title:'Joyful Joyful We Adore Thee', cat:'praise',    lyrics:`Joyful, joyful, we adore Thee,\nGod of glory, Lord of love;\nHearts unfold like flowers before Thee,\nOpening to the sun above.\nMelt the clouds of sin and sadness,\nDrive the dark of doubt away;\nGiver of immortal gladness,\nFill us with the light of day!\n\nAll Thy works with joy surround Thee,\nEarth and heaven reflect Thy rays,\nStars and angels sing around Thee,\nCentre of unbroken praise;\nField and forest, vale and mountain,\nFlowery meadow, flashing sea,\nChanting bird and flowing fountain\nCall us to rejoice in Thee.\n\nThou art giving and forgiving,\nEver blessing, ever blest,\nWell-spring of the joy of living,\nOcean depth of happy rest!\nThou our Father, Christ our Brother,\nAll who live in love are Thine;\nTeach us how to love each other,\nLift us to the joy divine.` },
+  { n:24, title:'At the Cross',                cat:'salvation', lyrics:`Alas! and did my Saviour bleed,\nAnd did my Sovereign die?\nWould He devote that sacred head\nFor such a worm as I?\n\nChorus:\nAt the cross, at the cross,\nWhere I first saw the light,\nAnd the burden of my heart rolled away,\nIt was there by faith I received my sight,\nAnd now I am happy all the day!\n\nWas it for crimes that I had done\nHe groaned upon the tree?\nAmazing pity! grace unknown!\nAnd love beyond degree!\n\nWell might the sun in darkness hide\nAnd shut his glories in,\nWhen Christ, the mighty Maker, died\nFor man the creature's sin.` },
+  { n:25, title:'Praise to the Lord Almighty', cat:'praise',    lyrics:`Praise to the Lord, the Almighty, the King of creation!\nO my soul, praise Him, for He is thy health and salvation!\nAll ye who hear, now to His temple draw near;\nPraise Him in glad adoration.\n\nPraise to the Lord, who over all things so wondrously reigneth,\nShelters thee under His wings, yea, so gently sustaineth!\nHast thou not seen how thy desires ever have been\nGranted in what He ordaineth?\n\nPraise to the Lord, who doth prosper thy work and defend thee;\nSurely His goodness and mercy here daily attend thee;\nPonder anew what the Almighty can do,\nIf with His love He befriend thee.\n\nPraise to the Lord, O let all that is in me adore Him!\nAll that hath life and breath, come now with praises before Him.\nLet the Amen sound from His people again;\nGladly for aye we adore Him.` },
+  { n:26, title:'This Little Light of Mine',   cat:'praise',    lyrics:`This little light of mine,\nI'm gonna let it shine;\nThis little light of mine,\nI'm gonna let it shine;\nThis little light of mine,\nI'm gonna let it shine,\nLet it shine, let it shine, let it shine.\n\nHide it under a bushel — No!\nI'm gonna let it shine;\nHide it under a bushel — No!\nI'm gonna let it shine;\nHide it under a bushel — No!\nI'm gonna let it shine,\nLet it shine, let it shine, let it shine.\n\nDon't let Satan blow it out!\nI'm gonna let it shine;\nDon't let Satan blow it out!\nI'm gonna let it shine;\nDon't let Satan blow it out!\nI'm gonna let it shine,\nLet it shine, let it shine, let it shine.` },
+  { n:27, title:'Blessed Be Your Name',        cat:'worship',   lyrics:`Blessed be Your name\nIn the land that is plentiful\nWhere Your streams of abundance flow\nBlessed be Your name\n\nBlessed be Your name\nWhen I'm found in the desert place\nThough I walk through the wilderness\nBlessed be Your name\n\nEvery blessing You pour out\nI'll turn back to praise\nWhen the darkness closes in, Lord\nStill I will say:\n\nChorus:\nBlessed be the name of the Lord\nBlessed be Your name\nBlessed be the name of the Lord\nBlessed be Your glorious name` },
+  { n:28, title:'He Lives in You',             cat:'worship',   lyrics:`Night\nAnd the spirit of life calling\nAnd a voice from the light saying\nDo not run, do not hide\n\nThere's a place where we together\nGive our praise to the Creator\nFaith and love giving life\n\nChorus:\nHe lives in you\nHe lives in me\nHe watches over everything we see\nInto the water, into the truth\nIn your reflection, He lives in you` },
+  { n:29, title:'Shine Jesus Shine',           cat:'praise',    lyrics:`Lord, the light of your love is shining\nIn the midst of the darkness shining\nJesus, Light of the World, shine upon us\nSet us free by the truth you now bring us\nShine on me, shine on me\n\nChorus:\nShine, Jesus, shine\nFill this land with the Father's glory\nBlaze, Spirit, blaze\nSet our hearts on fire\nFlow, river, flow\nFlood the nations with grace and mercy\nSend forth your word\nLord, and let there be light\n\nLord, I come to your awesome presence\nFrom the shadows into your radiance\nBy the blood I may enter your brightness\nSearch me, try me, consume all my darkness\nShine on me, shine on me` },
+  { n:30, title:'Hallelujah for the Lord',     cat:'praise',    lyrics:`Hallelujah! for the Lord our God the Almighty reigns.\nHallelujah! for the Lord our God the Almighty reigns.\n\nLet us rejoice and be glad and give the glory unto Him.\nHallelujah!\n\nFor the marriage of the Lamb has come,\nAnd His bride has made herself ready.\nHallelujah!` },
+  { n:31, title:'Jesus Is the Answer',         cat:'salvation', lyrics:`Jesus is the answer for the world today,\nAbove Him there's no other,\nJesus is the way.\n\nJesus is the answer for the world today,\nAbove Him there's no other,\nJesus is the way.\n\nIf you're searching for a reason to live,\nIf you need a hand that's willing to give,\nIf your life is empty and you don't know what to do,\nJesus is the answer just for you.` },
+  { n:32, title:'Lord I Lift Your Name on High', cat:'worship', lyrics:`Lord, I lift Your name on high\nLord, I love to sing Your praises\nI'm so glad You're in my life\nI'm so glad You came to save us\n\nYou came from heaven to earth\nTo show the way\nFrom the earth to the cross\nMy debt to pay\nFrom the cross to the grave\nFrom the grave to the sky\nLord, I lift Your name on high` },
+  { n:33, title:'Our God Is an Awesome God',   cat:'praise',    lyrics:`Our God is an awesome God\nHe reigns from heaven above\nWith wisdom, power and love\nOur God is an awesome God!\n\nOur God is an awesome God\nHe reigns from heaven above\nWith wisdom, power and love\nOur God is an awesome God!` },
+  { n:34, title:'I Surrender All',             cat:'prayer',    lyrics:`All to Jesus I surrender,\nAll to Him I freely give;\nI will ever love and trust Him,\nIn His presence daily live.\n\nChorus:\nI surrender all, I surrender all,\nAll to Thee, my blessed Saviour,\nI surrender all.\n\nAll to Jesus I surrender,\nHumbly at His feet I bow,\nWorldly pleasures all forsaken;\nTake me, Jesus, take me now.\n\nAll to Jesus I surrender,\nMake me, Saviour, wholly Thine;\nLet me feel the Holy Spirit,\nTruly know that Thou art mine.` },
+  { n:35, title:'Worthy Is the Lamb',          cat:'worship',   lyrics:`Thank You for the cross, Lord\nThank You for the price You paid\nBearing all my sin and shame\nIn love You came and gave amazing grace\n\nThank You for this love, Lord\nThank You for the nail-pierced hands\nWashed me in Your cleansing flow\nNow all I know, Your forgiveness and embrace\n\nChorus:\nWorthy is the Lamb\nSeated on the throne\nCrown You now with many crowns\nYou reign victorious\nHigh and lifted up\nJesus, Son of God\nThe Darling of Heaven crucified\nWorthy is the Lamb` },
+  { n:36, title:'Be Thou My Vision',           cat:'prayer',    lyrics:`Be Thou my Vision, O Lord of my heart;\nNaught be all else to me, save that Thou art;\nThou my best thought, by day or by night,\nWaking or sleeping, Thy presence my light.\n\nBe Thou my Wisdom, and Thou my true Word;\nI ever with Thee and Thou with me, Lord;\nThou my great Father, I Thy true son;\nThou in me dwelling, and I with Thee one.\n\nRiches I heed not, nor man's empty praise,\nThou mine inheritance, now and always;\nThou and Thou only, first in my heart,\nHigh King of heaven, my Treasure Thou art.` },
+  { n:37, title:'There Is Power in the Blood', cat:'salvation', lyrics:`Would you be free from the burden of sin?\nThere's power in the blood, power in the blood;\nWould you o'er evil a victory win?\nThere's wonderful power in the blood.\n\nChorus:\nThere is power, power, wonder-working power\nIn the blood of the Lamb;\nThere is power, power, wonder-working power\nIn the precious blood of the Lamb.\n\nWould you be free from your passion and pride?\nThere's power in the blood, power in the blood;\nCome for a cleansing to Calvary's tide?\nThere's wonderful power in the blood.` },
+  { n:38, title:'Majesty',                     cat:'worship',   lyrics:`Majesty, worship His Majesty,\nUnto Jesus be all glory, honor and praise.\nMajesty, kingdom authority,\nFlow from His throne unto His own,\nHis anthem raise.\n\nSo exalt, lift up on high the name of Jesus,\nMagnify, come glorify Christ Jesus the King.\nMajesty, worship His Majesty,\nJesus who died, now glorified,\nKing of all kings.` },
+  { n:39, title:'Take My Life and Let It Be',  cat:'prayer',    lyrics:`Take my life and let it be\nConsecrated, Lord, to Thee;\nTake my moments and my days,\nLet them flow in ceaseless praise.\n\nTake my hands and let them move\nAt the impulse of Thy love;\nTake my feet and let them be\nSwift and beautiful for Thee.\n\nTake my voice and let me sing,\nAlways, only for my King;\nTake my lips and let them be\nFilled with messages from Thee.\n\nTake my will and make it Thine,\nIt shall be no longer mine;\nTake my heart, it is Thine own,\nIt shall be Thy royal throne.` },
+  { n:40, title:'When I Survey the Wondrous Cross', cat:'worship', lyrics:`When I survey the wondrous cross\nOn which the Prince of Glory died,\nMy richest gain I count but loss,\nAnd pour contempt on all my pride.\n\nForbid it, Lord, that I should boast\nSave in the death of Christ, my God;\nAll the vain things that charm me most,\nI sacrifice them to His blood.\n\nSee, from His head, His hands, His feet,\nSorrow and love flow mingled down;\nDid e'er such love and sorrow meet,\nOr thorns compose so rich a crown?\n\nWere the whole realm of nature mine,\nThat were an offering far too small;\nLove so amazing, so divine,\nDemands my soul, my life, my all.` },
+  { n:41, title:'Sanctuary',                   cat:'worship',   lyrics:`Lord, prepare me to be a sanctuary,\nPure and holy, tried and true;\nWith thanksgiving, I'll be a living\nSanctuary for You.\n\nLord, prepare me to be a sanctuary,\nPure and holy, tried and true;\nWith thanksgiving, I'll be a living\nSanctuary for You.` },
+  { n:42, title:'Draw Me Close',               cat:'prayer',    lyrics:`Draw me close to You\nNever let me go\nI lay it all down again\nTo hear You say that I'm Your friend\n\nYou are my desire\nNo one else will do\n'Cause nothing else could take Your place\nTo feel the warmth of Your embrace\nHelp me find a way, bring me back to You\n\nYou're all I want\nYou're all I've ever needed\nYou're all I want\nHelp me know You are near` },
+  { n:43, title:'Great Are You Lord',          cat:'worship',   lyrics:`You give life, You are love\nYou bring light to the darkness\nYou give hope, You restore\nEvery heart that is broken\nGreat are You, Lord\n\nIt's Your breath in our lungs\nSo we pour out our praise\nPour out our praise\nIt's Your breath in our lungs\nSo we pour out our praise\nTo You only\n\nChorus:\nAll the earth will shout Your praise\nOur hearts will cry, these bones will sing\nGreat are You, Lord` },
+  { n:44, title:'Forever (We Sing Hallelujah)', cat:'praise',   lyrics:`The moon and stars they wept\nThe morning sun was dead\nThe Saviour of the world was fallen\nHis body on the cross\nHis blood poured out for us\nThe weight of every curse upon Him\n\nOne final breath He gave\nAs heaven looked away\nThe son of God was laid in darkness\nA battle in the grave\nThe war on death was waged\nThe power of hell forever broken\n\nChorus:\nHallelujah, hallelujah\nHallelujah, hallelujah\n\nAnd we will sing, hallelujah\nAnd we will sing, hallelujah` },
+  { n:45, title:'I Give You My Heart',         cat:'worship',   lyrics:`This is my desire, to honor You\nLord, with all my heart I worship You\nAll I have within me, I give You praise\nAll that I adore is in You\n\nChorus:\nLord, I give You my heart\nI give You my soul\nI live for You alone\nEvery breath that I take\nEvery moment I'm awake\nLord, have Your way in me` },
+  { n:46, title:'Oceans (Where Feet May Fail)', cat:'faith',    lyrics:`You call me out upon the waters\nThe great unknown where feet may fail\nAnd there I find You in the mystery\nIn oceans deep my faith will stand\n\nAnd I will call upon Your name\nAnd keep my eyes above the waves\nWhen oceans rise\nMy soul will rest in Your embrace\nFor I am Yours and You are mine\n\nChorus:\nSpirit lead me where my trust is without borders\nLet me walk upon the waters\nWherever You would call me\nTake me deeper than my feet could ever wander\nAnd my faith will be made stronger\nIn the presence of my Saviour` },
+  { n:47, title:'Good Good Father',            cat:'worship',   lyrics:`I've heard a thousand stories of what they think You're like\nBut I've heard the tender whisper of love in the dead of night\nAnd You tell me that You're pleased\nAnd that I'm never alone\n\nChorus:\nYou're a good, good Father\nIt's who You are, it's who You are, it's who You are\nAnd I'm loved by You\nIt's who I am, it's who I am, it's who I am` },
+  { n:48, title:'Way Maker',                   cat:'praise',    lyrics:`You are here, moving in our midst\nI worship You, I worship You\nYou are here, working in this place\nI worship You, I worship You\n\nChorus:\nWay Maker, Miracle Worker, Promise Keeper\nLight in the darkness, my God\nThat is who You are\n\nYou are here, touching every heart\nI worship You, I worship You\nYou are here, healing every heart\nI worship You, I worship You` },
+  { n:49, title:'Build My Life',               cat:'worship',   lyrics:`Worthy of every song we could ever sing\nWorthy of all the praise we could ever bring\nWorthy of every breath we could ever breathe\nWe live for You, we live for You\n\nJesus, the name above every other name\nJesus, the only one who could ever save\nWorthy of every breath we could ever breathe\nWe live for You, we live for You\n\nChorus:\nHoly, there is no one like You\nThere is none beside You\nOpen up my eyes in wonder\nAnd show me who You are\nAnd fill me with Your heart\nAnd lead me in Your love to those around me` },
+  { n:50, title:'Reckless Love',               cat:'worship',   lyrics:`Before I spoke a word, You were singing over me\nYou have been so, so good to me\nBefore I took a breath, You breathed Your life in me\nYou have been so, so kind to me\n\nChorus:\nO, the overwhelming, never-ending, reckless love of God\nOh, it chases me down, fights till I'm found\nLeaves the ninety-nine\nAnd I couldn't earn it\nI don't deserve it\nStill, You give Yourself away\nO, the overwhelming, never-ending, reckless love of God` },
+];
+
+let currentFilter = 'all';
+let currentHymn = null;
+
+function renderHymns(list) {
+  const grid = document.getElementById('hymnal-grid');
+  document.getElementById('hymn-count').textContent = list.length;
+  if (!list.length) {
+    grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:3rem;color:var(--text-muted);">No hymns found. Try a different search.</div>';
+    return;
+  }
+  grid.innerHTML = list.map(h => `
+    <div class="hymn-card" onclick="openHymn(${h.n - 1})">
+      <div class="hymn-card-number">${h.n}</div>
+      <div class="hymn-card-cat hymn-cat-${h.cat}">${h.cat}</div>
+      <h3 class="hymn-card-title">${h.title}</h3>
+      <p class="hymn-card-preview">${h.lyrics.split('\n')[0]}</p>
+      <span class="hymn-card-cta">Read Lyrics →</span>
+    </div>`).join('');
+}
+
+function searchHymns(q) {
+  const s = q.toLowerCase().trim();
+  const filtered = HYMNS.filter(h =>
+    (currentFilter === 'all' || h.cat === currentFilter) &&
+    (h.title.toLowerCase().includes(s) || h.lyrics.toLowerCase().includes(s))
+  );
+  renderHymns(filtered);
+}
+
+function filterHymns(cat, btn) {
+  currentFilter = cat;
+  document.querySelectorAll('.hf-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const q = document.getElementById('hymnal-search').value;
+  searchHymns(q);
+}
+
+function openHymn(idx) {
+  currentHymn = HYMNS[idx];
+  document.getElementById('modal-number').textContent = 'Hymn ' + currentHymn.n;
+  document.getElementById('modal-title').textContent = currentHymn.title;
+  document.getElementById('modal-category').textContent = currentHymn.cat.charAt(0).toUpperCase() + currentHymn.cat.slice(1);
+  document.getElementById('modal-lyrics').innerHTML = currentHymn.lyrics
+    .split('\n\n').map(v => `<p class="hymn-verse">${v.replace(/\n/g,'<br/>')}</p>`).join('');
+  document.getElementById('hymn-modal').classList.add('show');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeHymn() {
+  document.getElementById('hymn-modal').classList.remove('show');
+  document.body.style.overflow = '';
+}
+
+function shareHymn() {
+  if (!currentHymn) return;
+  const msg = `${currentHymn.title}\n\n${currentHymn.lyrics.split('\n\n')[0]}\n\n— From RCCG Gospel Light Assembly Hymnal`;
+  if (navigator.share) {
+    navigator.share({ title: currentHymn.title, text: msg });
+  } else {
+    window.open('https://wa.me/?text=' + encodeURIComponent(msg), '_blank');
+  }
+}
+
+function printHymn() {
+  if (!currentHymn) return;
+  const w = window.open('', '_blank');
+  w.document.write(`<html><head><title>${currentHymn.title}</title><style>body{font-family:Georgia,serif;max-width:600px;margin:2rem auto;line-height:1.8}h1{font-size:1.8rem;margin-bottom:.25rem}p{margin:0 0 1.25rem}small{color:#666}</style></head><body><h1>${currentHymn.title}</h1><small>Hymn ${currentHymn.n} · ${currentHymn.cat}</small><hr/>${currentHymn.lyrics.split('\n\n').map(v=>`<p>${v.replace(/\n/g,'<br/>')}</p>`).join('')}<hr/><small>RCCG Gospel Light Assembly · Adamo, Ikorodu</small></body></html>`);
+  w.print();
+}
+
+document.addEventListener('DOMContentLoaded', () => { renderHymns(HYMNS); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeHymn(); });
+</script>
+</body>
+</html>

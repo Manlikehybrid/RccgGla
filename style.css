@@ -1017,27 +1017,113 @@ p { margin-bottom: 1rem; color: var(--text-muted); font-size: .97rem; }
   .strip-inner { grid-template-columns: repeat(2,1fr); }
   .units-grid { grid-template-columns: 1fr; }
 }
-@media (max-width: 680px) {
+/* ── TABLET (481px – 900px) ──────────────────── */
+@media (max-width: 900px) {
+  /* Nav: use hamburger on tablets too — they can't hover */
   .nav-links {
     display: none; flex-direction: column;
     position: absolute; top: 100%; left: 0; right: 0;
     background: rgba(6,13,26,.99); padding: 1rem 2rem;
-    gap: .1rem; border-bottom: 1px solid rgba(201,168,76,.1);
+    gap: .1rem; border-bottom: 1px solid rgba(201,168,76,.15);
+    max-height: 80vh; overflow-y: auto;
   }
   .nav-links.open { display: flex; }
   .nav-toggle { display: block; }
+  .theme-toggle { display: flex; } /* keep theme toggle visible on tablet */
+
+  /* Hero */
+  .hero-stats { max-width: 100%; padding: 1rem 1.25rem; }
+  .hero-title { font-size: clamp(2.8rem, 7vw, 5rem); }
+
+  /* Grids — tablet uses 2 columns */
+  .features-grid { grid-template-columns: repeat(2, 1fr); }
+  .sermons-grid  { grid-template-columns: repeat(2, 1fr); }
+  .ministries-grid { grid-template-columns: repeat(2, 1fr); }
+  .testimonies-grid { grid-template-columns: repeat(2, 1fr); }
+  .executives-grid { grid-template-columns: repeat(2, 1fr); }
+  .media-grid { grid-template-columns: repeat(2, 1fr); }
+  .units-grid { grid-template-columns: 1fr; }
+  .stewardship-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Footer */
+  .footer-top { grid-template-columns: 1fr 1fr; gap: 2rem; }
+
+  /* Service strip */
+  .strip-inner { grid-template-columns: repeat(2, 1fr); }
+
+  /* Gallery */
+  .gallery-mosaic { grid-template-columns: 1fr 1fr; }
+  .gallery-item.wide { grid-column: span 2; }
+
+  /* Media head card */
+  .media-head-card { flex-direction: column; text-align: center; }
+}
+
+/* ── MOBILE (max 480px) ────────────────────── */
+@media (max-width: 480px) {
+  /* Nav */
   .theme-toggle { display: none; }
+  .nav-inner { padding: .65rem 1.25rem; }
+  .brand-main { font-size: .88rem; }
+  .brand-sub { font-size: .58rem; }
+
+  /* Hero */
+  .hero-title { font-size: clamp(2.4rem, 12vw, 3.5rem); line-height: 1; }
+  .hero-sub { font-size: .9rem; }
+  .hero-content { padding: 7rem 1.25rem 3.5rem; }
+  .hero-stats { padding: .85rem 1rem; gap: 0; }
+  .hero-stat-num { font-size: 1.4rem; }
+  .hero-stat-label { font-size: .58rem; }
+  .hero-stat-divider { margin: 0 .5rem; }
+  .hero-actions { flex-direction: column; align-items: flex-start; gap: .75rem; }
+
+  /* All grids → single column on mobile */
   .features-grid, .sermons-grid, .ministries-grid,
-  .testimonies-grid, .executives-grid, .media-grid { grid-template-columns: 1fr; }
-  .strip-inner { grid-template-columns: 1fr 1fr; }
+  .testimonies-grid, .executives-grid, .media-grid,
+  .units-grid, .stewardship-grid, .sermons-full-grid { grid-template-columns: 1fr; }
+
+  /* Gallery */
   .gallery-mosaic { grid-template-columns: 1fr 1fr; }
   .gallery-item.wide { grid-column: span 1; aspect-ratio: 1; }
-  .footer-top { grid-template-columns: 1fr; gap: 2rem; }
-  .hero-actions { flex-direction: column; align-items: flex-start; }
-  .media-head-card { flex-direction: column; text-align: center; }
+
+  /* Service strip */
+  .strip-inner { grid-template-columns: 1fr; }
+  .strip-item { border-right: none; border-bottom: 1px solid rgba(10,22,40,.15); padding: .75rem 1.5rem; }
+  .strip-item:last-child { border-bottom: none; }
+
+  /* Footer */
+  .footer-top { grid-template-columns: 1fr; gap: 1.5rem; }
+  .footer-bottom { flex-direction: column; text-align: center; gap: .35rem; }
+
+  /* Forms */
   .form-row-2 { grid-template-columns: 1fr; }
-  .inner-section { padding: 4rem 1.5rem; }
-  .page-header { padding: 8rem 1.5rem 3.5rem; }
+
+  /* Sections */
+  .inner-section { padding: 3rem 1.25rem; }
+  .page-header { padding: 7.5rem 1.25rem 3rem; }
+  .page-header h1 { font-size: clamp(1.9rem, 8vw, 3rem); }
+
+  /* Cards */
+  .give-card { padding: 1.5rem; }
+  .prayer-form { padding: 1.5rem; }
+  .pastor-card .pastor-info { padding: 1.25rem; }
+
+  /* Contact grid */
+  .welcome-grid, .prayer-wrap, .contact-grid,
+  .about-grid { grid-template-columns: 1fr; }
+
+  /* Media head */
+  .media-head-card { flex-direction: column; text-align: center; padding: 1.5rem; }
+
+  /* Countdown boxes */
+  .countdown-box { min-width: 60px; padding: .6rem .75rem; }
+  .countdown-num { font-size: 1.8rem; }
+
+  /* Exec avatars */
+  .exec-avatar { height: 110px; }
+
+  /* Units section */
+  .unit-card { padding: 1.75rem 1.25rem; }
 }
 
 /* ══════════════════════════════════════════════
@@ -1569,6 +1655,19 @@ a.strip-item:hover strong { text-decoration: underline; text-underline-offset: 2
   text-align: center; padding: 1rem 0;
 }
 
+
+/* ── OPEN HEAVEN GRID ────────────────────────── */
+.oh-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+  margin-top: 2rem;
+}
+@media (max-width: 768px) {
+  .oh-grid { grid-template-columns: 1fr; }
+}
+
 /* ══════════════════════════════════════════════
    PRINT STYLES
 ══════════════════════════════════════════════ */
@@ -1820,8 +1919,8 @@ a.strip-item:hover strong { text-decoration: underline; text-underline-offset: 2
   display: block;
 }
 
-/* Mobile: dropdowns expand inline */
-@media (max-width: 680px) {
+/* Mobile + Tablet: dropdowns expand inline (tap to open) */
+@media (max-width: 900px) {
   .nav-dropdown {
     position: static;
     transform: none !important;
@@ -2070,4 +2169,723 @@ a:focus-visible, button:focus-visible {
   }
   .affirmation-toast.show { transform: translateY(0); }
   .affirmation-toast.hiding { transform: translateY(calc(100% + 2rem)); }
+}
+
+/* ── RESPONSIVE GRID UTILITY CLASSES ─────────── */
+.two-col-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+.three-col-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  align-items: start;
+}
+@media (max-width: 768px) {
+  .two-col-grid,
+  .three-col-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .sermons-full-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .sermons-full-grid { grid-template-columns: 1fr; }
+}
+
+/* ══════════════════════════════════════════════
+   DEVOTIONAL PAGE STYLES
+══════════════════════════════════════════════ */
+
+/* Bible Verse of the Day */
+.votd-card {
+  max-width: 760px;
+  margin: 0 auto;
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+  min-height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.votd-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--gold-dim), var(--gold), var(--gold-light), var(--gold));
+}
+.votd-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  color: var(--text-muted);
+  font-family: 'Barlow', sans-serif;
+  font-size: .9rem;
+}
+.votd-spinner {
+  width: 36px; height: 36px;
+  border: 3px solid var(--border);
+  border-top-color: var(--gold);
+  border-radius: 50%;
+  animation: spin .8s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.votd-content { text-align: center; }
+.votd-quote-mark {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 5rem;
+  color: var(--gold);
+  opacity: .25;
+  line-height: .6;
+  margin-bottom: .5rem;
+  display: block;
+}
+.votd-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: clamp(1.15rem, 2.2vw, 1.5rem);
+  color: var(--text);
+  line-height: 1.75;
+  margin-bottom: 1.25rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.votd-ref {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: .9rem;
+  font-weight: 800;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: .5rem;
+}
+.votd-date {
+  font-size: .78rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+.votd-actions {
+  display: flex;
+  gap: .75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.votd-share-btn {
+  background: var(--gold);
+  color: var(--blue-dark);
+  border: none;
+  padding: .6rem 1.25rem;
+  border-radius: 99px;
+  font-family: 'Barlow', sans-serif;
+  font-size: .82rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all .2s ease;
+}
+.votd-share-btn:hover { background: var(--gold-light); transform: translateY(-1px); }
+.votd-new-btn {
+  background: transparent;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  padding: .6rem 1.25rem;
+  border-radius: 99px;
+  font-family: 'Barlow', sans-serif;
+  font-size: .82rem;
+  cursor: pointer;
+  transition: all .2s ease;
+}
+.votd-new-btn:hover { border-color: var(--gold); color: var(--gold); }
+
+/* Open Heavens live grid */
+.oh-live-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+.oh-live-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+.oh-live-header {
+  background: linear-gradient(135deg, var(--blue-mid), var(--blue-light));
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+.oh-live-date {
+  font-family: 'Barlow', sans-serif;
+  font-size: .75rem;
+  color: rgba(255,255,255,.65);
+}
+.oh-live-body {
+  padding: 1.75rem;
+}
+.oh-live-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.oh-live-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.35rem;
+  color: var(--text);
+  margin-bottom: .35rem;
+}
+.oh-live-sub {
+  font-size: .78rem;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+  font-style: italic;
+}
+.oh-live-why {
+  padding: .5rem 0;
+}
+
+/* Prayer Points */
+.prayer-points-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+.pp-loading {
+  grid-column: 1/-1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 3rem;
+  color: var(--text-muted);
+  font-size: .9rem;
+}
+.pp-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: 16px;
+  padding: 1.75rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.pp-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+.pp-icon { font-size: 2rem; margin-bottom: .85rem; }
+.pp-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+.pp-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: .65rem;
+}
+.pp-list li {
+  font-size: .88rem;
+  color: var(--text-muted);
+  padding-left: 1.2rem;
+  position: relative;
+  line-height: 1.6;
+}
+.pp-list li::before {
+  content: '🙏';
+  position: absolute;
+  left: 0;
+  font-size: .7rem;
+  top: .15rem;
+}
+
+/* Resources grid */
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.resource-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: 14px;
+  padding: 1.75rem 1.5rem;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+  transition: all .25s ease;
+  box-shadow: var(--shadow-sm);
+}
+.resource-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(201,168,76,.3);
+}
+.resource-icon { font-size: 2.2rem; }
+.resource-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  color: var(--text);
+  margin: 0;
+}
+.resource-card p {
+  font-size: .82rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0;
+  flex: 1;
+}
+.resource-link {
+  font-family: 'Barlow', sans-serif;
+  font-size: .78rem;
+  font-weight: 700;
+  color: var(--gold);
+  margin-top: auto;
+}
+
+/* ══════════════════════════════════════════════
+   SUNDAY SCHOOL PAGE STYLES
+══════════════════════════════════════════════ */
+
+.ss-tabs {
+  display: flex;
+  gap: .75rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+.ss-tab {
+  padding: .75rem 2rem;
+  border: 2px solid var(--border);
+  background: transparent;
+  color: var(--text-muted);
+  font-family: 'Barlow', sans-serif;
+  font-size: .9rem;
+  font-weight: 700;
+  border-radius: 99px;
+  cursor: pointer;
+  transition: all .25s ease;
+}
+.ss-tab.active, .ss-tab:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--blue-dark);
+}
+
+.ss-hero-card {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: 20px;
+  padding: 2.5rem;
+  margin-bottom: 3rem;
+  box-shadow: var(--shadow-md);
+}
+.ss-hero-icon {
+  font-size: 4rem;
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--blue-mid), var(--blue-light));
+  border-radius: 16px;
+}
+.ss-hero-text h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.75rem;
+  color: var(--text);
+  margin: .35rem 0 .85rem;
+}
+.ss-hero-text p {
+  color: var(--text-muted);
+  line-height: 1.75;
+  max-width: 580px;
+}
+.ss-quarter-badge {
+  display: inline-block;
+  margin-top: 1rem;
+  background: rgba(201,168,76,.12);
+  border: 1px solid rgba(201,168,76,.3);
+  color: var(--gold);
+  font-family: 'Barlow', sans-serif;
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  padding: .4rem 1rem;
+  border-radius: 99px;
+}
+
+.ss-lessons-header {
+  margin-bottom: 1.5rem;
+}
+.ss-lessons-header h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  color: var(--text);
+  margin-bottom: .5rem;
+}
+.ss-lessons-header p { color: var(--text-muted); font-size: .9rem; }
+
+.ss-lessons-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 3rem;
+}
+.ss-lesson-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: 14px;
+  padding: 1.4rem;
+  position: relative;
+  transition: all .25s ease;
+}
+.ss-lesson-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+.ss-lesson-card.current {
+  border-color: var(--gold);
+  background: linear-gradient(135deg, var(--bg-card), rgba(201,168,76,.04));
+  box-shadow: 0 0 0 2px rgba(201,168,76,.2);
+}
+.ss-current-badge {
+  position: absolute;
+  top: -1px; right: 1rem;
+  background: var(--gold);
+  color: var(--blue-dark);
+  font-family: 'Barlow', sans-serif;
+  font-size: .62rem;
+  font-weight: 800;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: .2rem .65rem;
+  border-radius: 0 0 6px 6px;
+}
+.ss-lesson-week {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: .7rem;
+  font-weight: 800;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: .5rem;
+}
+.ss-lesson-title {
+  font-family: 'Playfair Display', serif;
+  font-size: .95rem;
+  color: var(--text);
+  margin-bottom: .5rem;
+}
+.ss-lesson-verse {
+  font-size: .76rem;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: .6rem;
+}
+.ss-lesson-aim {
+  font-size: .8rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin: 0;
+}
+
+.ss-download-section { margin-top: 1rem; }
+.ss-download-card {
+  background: linear-gradient(135deg, var(--blue-mid), var(--blue-light));
+  border-radius: 16px;
+  padding: 2rem;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.ss-dl-icon { font-size: 2.5rem; flex-shrink: 0; }
+.ss-dl-text { flex: 1; min-width: 200px; }
+.ss-dl-text h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: .35rem;
+}
+.ss-dl-text p { color: rgba(255,255,255,.7); font-size: .88rem; margin: 0; }
+.ss-dl-actions {
+  display: flex;
+  gap: .75rem;
+  flex-wrap: wrap;
+}
+
+/* ══════════════════════════════════════════════
+   HYMNAL PAGE STYLES
+══════════════════════════════════════════════ */
+
+.hymnal-search-wrap {
+  margin-bottom: 1rem;
+}
+.hymnal-search {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  background: var(--bg-form);
+  color: var(--text);
+  font-family: 'Barlow', sans-serif;
+  font-size: 1rem;
+  transition: border-color .2s ease;
+  outline: none;
+}
+.hymnal-search:focus { border-color: var(--gold); }
+.hymnal-stats {
+  margin-top: .6rem;
+  font-size: .82rem;
+  color: var(--text-muted);
+  text-align: right;
+}
+.hymnal-filters {
+  display: flex;
+  gap: .5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+.hf-btn {
+  padding: .4rem 1.1rem;
+  border: 1.5px solid var(--border);
+  background: transparent;
+  color: var(--text-muted);
+  font-family: 'Barlow', sans-serif;
+  font-size: .78rem;
+  font-weight: 700;
+  border-radius: 99px;
+  cursor: pointer;
+  transition: all .2s ease;
+  text-transform: capitalize;
+}
+.hf-btn.active, .hf-btn:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--blue-dark);
+}
+
+.hymnal-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+.hymn-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: 14px;
+  padding: 1.4rem;
+  cursor: pointer;
+  transition: all .25s ease;
+  position: relative;
+  overflow: hidden;
+}
+.hymn-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(201,168,76,.3);
+}
+.hymn-card-number {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  color: rgba(201,168,76,.15);
+  position: absolute;
+  top: .75rem;
+  right: 1rem;
+  line-height: 1;
+}
+.hymn-card-cat {
+  font-family: 'Barlow', sans-serif;
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: .2rem .6rem;
+  border-radius: 99px;
+  display: inline-block;
+  margin-bottom: .65rem;
+}
+.hymn-cat-praise    { background: rgba(255,193,7,.15);  color: #f59e0b; }
+.hymn-cat-worship   { background: rgba(99,102,241,.15); color: #818cf8; }
+.hymn-cat-salvation { background: rgba(239,68,68,.15);  color: #f87171; }
+.hymn-cat-faith     { background: rgba(34,197,94,.15);  color: #4ade80; }
+.hymn-cat-prayer    { background: rgba(201,168,76,.15); color: var(--gold); }
+.hymn-cat-christmas { background: rgba(239,68,68,.15);  color: #f87171; }
+.hymn-card-title {
+  font-family: 'Playfair Display', serif;
+  font-size: .95rem;
+  color: var(--text);
+  margin-bottom: .5rem;
+  line-height: 1.3;
+}
+.hymn-card-preview {
+  font-size: .78rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin: 0 0 .85rem;
+  font-style: italic;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.hymn-card-cta {
+  font-family: 'Barlow', sans-serif;
+  font-size: .75rem;
+  font-weight: 700;
+  color: var(--gold);
+}
+
+/* Hymn modal */
+.hymn-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.75);
+  z-index: 9800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .3s ease, visibility .3s ease;
+  backdrop-filter: blur(4px);
+}
+.hymn-modal.show { opacity: 1; visibility: visible; }
+.hymn-modal-box {
+  background: var(--bg-card);
+  border-radius: 20px;
+  max-width: 640px;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 2.5rem;
+  position: relative;
+  box-shadow: 0 40px 80px rgba(0,0,0,.5);
+}
+.hymn-modal-close {
+  position: absolute;
+  top: 1.25rem; right: 1.25rem;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: .85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .2s ease;
+}
+.hymn-modal-close:hover { background: var(--gold); color: var(--blue-dark); border-color: var(--gold); }
+.hymn-modal-number {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: .35rem;
+}
+.hymn-modal-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.75rem;
+  color: var(--text);
+  margin-bottom: .5rem;
+}
+.hymn-modal-category {
+  font-size: .75rem;
+  color: var(--text-muted);
+  margin-bottom: 1.75rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border);
+}
+.hymn-modal-lyrics { margin-bottom: 2rem; }
+.hymn-verse {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: var(--text);
+  margin-bottom: 1.25rem;
+}
+.hymn-modal-actions {
+  display: flex;
+  gap: .75rem;
+  border-top: 1px solid var(--border);
+  padding-top: 1.25rem;
+  flex-wrap: wrap;
+}
+
+/* ══════════════════════════════════════════════
+   RESPONSIVE — NEW PAGES
+══════════════════════════════════════════════ */
+@media (max-width: 1100px) {
+  .hymnal-grid { grid-template-columns: repeat(3, 1fr); }
+  .resources-grid { grid-template-columns: repeat(2, 1fr); }
+  .prayer-points-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 900px) {
+  .oh-live-grid { grid-template-columns: 1fr; }
+  .ss-lessons-grid { grid-template-columns: repeat(2, 1fr); }
+  .hymnal-grid { grid-template-columns: repeat(2, 1fr); }
+  .resources-grid { grid-template-columns: repeat(2, 1fr); }
+  .prayer-points-grid { grid-template-columns: 1fr; }
+  .ss-hero-card { flex-direction: column; align-items: flex-start; }
+}
+@media (max-width: 600px) {
+  .hymnal-grid { grid-template-columns: 1fr 1fr; }
+  .ss-lessons-grid { grid-template-columns: 1fr; }
+  .resources-grid { grid-template-columns: 1fr 1fr; }
+  .votd-card { padding: 1.75rem 1.25rem; }
+  .hymn-modal-box { padding: 1.75rem 1.25rem; }
+  .ss-download-card { flex-direction: column; }
+}
+@media (max-width: 420px) {
+  .hymnal-grid { grid-template-columns: 1fr; }
+  .resources-grid { grid-template-columns: 1fr; }
+}
+
+/* ══════════════════════════════════════════════
+   CARD LAYOUT FIX — ALL PAGES
+   Ensures cards never lose shape on any screen
+══════════════════════════════════════════════ */
+.feature-card, .ministry-card, .sermon-card, .testimony-card,
+.unit-card, .exec-card, .media-card, .tier-card, .gallery-item,
+.give-card, .bank-detail, .pp-card, .hymn-card, .ss-lesson-card,
+.resource-card, .oh-live-card, .votd-card, .contact-card {
+  box-sizing: border-box;
+  min-width: 0; /* prevent overflow in grid */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+/* Cards inside grids always take full width of their column */
+.features-grid > *, .sermons-grid > *, .ministries-grid > *,
+.testimonies-grid > *, .executives-grid > *, .media-grid > *,
+.units-grid > *, .stewardship-grid > *, .hymnal-grid > *,
+.ss-lessons-grid > *, .resources-grid > *, .prayer-points-grid > * {
+  width: 100%;
+  min-width: 0;
 }

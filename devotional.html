@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Daily devotional, Bible verse, Open Heavens and RCCG prayer points at RCCG Gospel Light Assembly, Adamo, Ikorodu."/>
+  <meta property="og:title" content="Daily Devotional | RCCG Gospel Light Assembly"/>
+  <meta name="theme-color" content="#060d1a"/>
+  <link rel="manifest" href="manifest.json"/>
+  <link rel="icon" href="images/Rccglogo.png"/>
+  <title>Daily Devotional | RCCG Gospel Light Assembly</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@700;800&display=swap" rel="stylesheet"/>
+</head>
+<body>
+<div id="loader">
+  <img src="images/Rccglogo.png" alt="RCCG" class="loader-logo"/>
+  <div class="loader-church-name loader-shimmer-text">Gospel Light Assembly</div>
+  <div class="loader-tagline">Where the Light of God is Forever Shining</div>
+  <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+</div>
+<div class="ticker-wrap"><div class="ticker-track">
+  <span class="ticker-item"><span>✦</span> Open Heavens · Bible Verse · Prayer Points · Daily Sync</span>
+  <span class="ticker-item"><span>✦</span> "Your word is a lamp to my feet and a light to my path" — Psalm 119:105</span>
+  <span class="ticker-item"><span>✦</span> RCCG Gospel Light Assembly · Adamo, Ikorodu · Sunday 8:00 AM</span>
+  <span class="ticker-item"><span>✦</span> Open Heavens · Bible Verse · Prayer Points · Daily Sync</span>
+  <span class="ticker-item"><span>✦</span> "Your word is a lamp to my feet and a light to my path" — Psalm 119:105</span>
+  <span class="ticker-item"><span>✦</span> RCCG Gospel Light Assembly · Adamo, Ikorodu · Sunday 8:00 AM</span>
+</div></div>
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">
+      <img src="images/Rccglogo.png" alt="RCCG Logo" class="rccg-logo"/>
+      <div class="brand-text"><span class="brand-main">RCCG Gospel Light Assembly</span><span class="brand-sub">Zonal Headquarters · Ikorodu</span></div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li class="has-dropdown" onclick="toggleDropdown(this)"><a href="about.html">About</a>
+        <ul class="nav-dropdown"><span class="dropdown-label">Our Church</span>
+          <li><a href="about.html"><span class="dropdown-icon">⛪</span>About Us</a></li>
+          <li><a href="pastor.html"><span class="dropdown-icon">✉️</span>Pastor's Letter</a></li>
+          <li><a href="history.html"><span class="dropdown-icon">📜</span>Our History</a></li>
+        </ul>
+      </li>
+      <li><a href="sermons.html">Sermons</a></li>
+      <li class="has-dropdown" onclick="toggleDropdown(this)"><a href="ministries.html">Ministries</a>
+        <ul class="nav-dropdown"><span class="dropdown-label">Serve & Grow</span>
+          <li><a href="ministries.html"><span class="dropdown-icon">🙌</span>All Ministries</a></li>
+          <li><a href="units.html"><span class="dropdown-icon">👥</span>Our Units & Teams</a></li>
+          <li><a href="youth.html"><span class="dropdown-icon">🎤</span>Youth Ministry</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown active" onclick="toggleDropdown(this)"><a href="devotional.html" class="active">Resources</a>
+        <ul class="nav-dropdown"><span class="dropdown-label">Grow Daily</span>
+          <li><a href="devotional.html"><span class="dropdown-icon">📖</span>Open Heavens & Prayer</a></li>
+          <li><a href="sunday-school.html"><span class="dropdown-icon">🎓</span>Sunday School</a></li>
+          <li><a href="hymnal.html"><span class="dropdown-icon">🎵</span>RCCG Hymnal</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown" onclick="toggleDropdown(this)"><a href="events.html">Events</a>
+        <ul class="nav-dropdown"><span class="dropdown-label">What's On</span>
+          <li><a href="events.html"><span class="dropdown-icon">📅</span>Events & Programmes</a></li>
+          <li><a href="bulletin.html"><span class="dropdown-icon">🖨️</span>Weekly Bulletin</a></li>
+        </ul>
+      </li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li class="has-dropdown" onclick="toggleDropdown(this)"><a href="contact.html">Contact</a>
+        <ul class="nav-dropdown"><span class="dropdown-label">Reach Us</span>
+          <li><a href="contact.html"><span class="dropdown-icon">📍</span>Contact & Directions</a></li>
+          <li><a href="give.html"><span class="dropdown-icon">💛</span>Give & Tithe</a></li>
+          <li><a href="stewardship.html"><span class="dropdown-icon">📋</span>Stewardship</a></li>
+        </ul>
+      </li>
+    </ul>
+    <div class="nav-right">
+      <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+      <button class="nav-toggle" onclick="toggleNav()">&#9776;</button>
+      <a href="give.html" class="btn-gold">Give 🙏</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-header">
+  <span class="section-label">Daily Walk With God</span>
+  <h1>Open Heavens &<br/>Prayer Points</h1>
+  <p>Real-time daily devotional — synced every day, automatically</p>
+</div>
+
+<!-- ── COUNTDOWN BAR ──────────────────────────── -->
+<div class="countdown-bar">
+  <span class="countdown-bar-label">⏳ Next Sunday Service:</span>
+  <div class="countdown-bar-boxes">
+    <div class="countdown-bar-box"><span id="cd-days">00</span><small>Days</small></div>
+    <div class="countdown-bar-sep">:</div>
+    <div class="countdown-bar-box"><span id="cd-hours">00</span><small>Hours</small></div>
+    <div class="countdown-bar-sep">:</div>
+    <div class="countdown-bar-box"><span id="cd-mins">00</span><small>Mins</small></div>
+    <div class="countdown-bar-sep">:</div>
+    <div class="countdown-bar-box"><span id="cd-secs">00</span><small>Secs</small></div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- BIBLE VERSE OF THE DAY — Live API         -->
+<!-- ══════════════════════════════════════════ -->
+<section class="inner-section">
+  <div class="container">
+    <span class="section-label center">Updated Daily • Automatically</span>
+    <h2 class="center">Bible Verse of the Day</h2>
+    <div class="votd-card reveal" id="votd-card">
+      <div class="votd-loading" id="votd-loading">
+        <div class="votd-spinner"></div>
+        <span>Loading today's verse...</span>
+      </div>
+      <div class="votd-content" id="votd-content" style="display:none;">
+        <div class="votd-quote-mark">"</div>
+        <p class="votd-text" id="votd-text"></p>
+        <div class="votd-ref" id="votd-ref"></div>
+        <div class="votd-date" id="votd-date"></div>
+        <div class="votd-actions">
+          <button class="votd-share-btn" onclick="shareVerse()">📲 Share This Verse</button>
+          <button class="votd-new-btn" onclick="loadVerseOfDay()">🔄 New Verse</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- OPEN HEAVENS SECTION                      -->
+<!-- ══════════════════════════════════════════ -->
+<section class="inner-section alt">
+  <div class="container">
+    <span class="section-label center">RCCG Official Devotional</span>
+    <h2 class="center">Open Heavens</h2>
+    <p style="text-align:center;max-width:600px;margin:0 auto 2.5rem;">Open Heavens is the official daily devotional of the RCCG, written by General Overseer Pastor E.A. Adeboye. Read it directly on the RCCG website — updated every day.</p>
+    
+    <div class="oh-live-grid reveal">
+      <!-- Today's devotional card -->
+      <div class="oh-live-card">
+        <div class="oh-live-header">
+          <div class="oh-badge">📖 Today's Reading</div>
+          <span class="oh-live-date" id="oh-live-date">Loading...</span>
+        </div>
+        <div class="oh-live-body">
+          <div class="oh-live-icon">✝️</div>
+          <h3 class="oh-live-title">Open Heavens Daily Devotional</h3>
+          <p class="oh-live-sub">By Pastor E.A. Adeboye · General Overseer, RCCG</p>
+          <p style="color:var(--text-muted);font-size:.92rem;line-height:1.75;margin-bottom:1.5rem;">
+            Open Heavens has guided millions of believers worldwide since 1981. Each day, Pastor Adeboye shares a message drawn from Scripture to strengthen your walk with God — practical, powerful, and life-changing.
+          </p>
+          <a href="https://www.rccg.org/open-heavens/" target="_blank" rel="noopener" class="btn-gold-solid" style="display:inline-flex;margin-bottom:1rem;">📖 Read Today's Open Heavens ↗</a>
+          <br/>
+          <a href="https://play.google.com/store/apps/details?id=com.rccg.openheavens" target="_blank" rel="noopener" class="print-btn" style="display:inline-flex;margin-top:.5rem;">📱 Download Open Heavens App</a>
+        </div>
+      </div>
+      <!-- Why it matters -->
+      <div class="oh-live-why">
+        <h3 style="font-family:'Playfair Display',serif;color:var(--text);margin-bottom:1.25rem;">Why Read Open Heavens?</h3>
+        <ul class="value-list" style="margin-top:0;">
+          <li>Written by Pastor E.A. Adeboye — one of the most anointed men of God of our time</li>
+          <li>Available in over 50 languages — a truly global devotional</li>
+          <li>Each day includes a Bible reading plan, a key verse, and a practical life application</li>
+          <li>Millions of believers worldwide read it daily — join the family</li>
+          <li>Available free online and as a mobile app (Android & iOS)</li>
+        </ul>
+        <blockquote style="margin-top:1.5rem;border-left:3px solid var(--gold);padding:.85rem 1.25rem;background:var(--bg-alt);border-radius:0 var(--radius) var(--radius) 0;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.05rem;color:var(--text);">
+          "Your word is a lamp to my feet and a light to my path." — Psalm 119:105
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- PRAYER POINTS — Daily                     -->
+<!-- ══════════════════════════════════════════ -->
+<section class="inner-section">
+  <div class="container">
+    <span class="section-label center">Pray Without Ceasing</span>
+    <h2 class="center">Daily Prayer Points</h2>
+    <p style="text-align:center;max-width:560px;margin:0 auto 2.5rem;">These prayer points refresh daily. Stand on the Word and pray with faith — God hears every prayer.</p>
+    
+    <div class="prayer-points-grid reveal" id="prayer-grid">
+      <!-- Filled by JS -->
+      <div class="pp-loading"><div class="votd-spinner"></div><span>Loading prayer points...</span></div>
+    </div>
+
+    <div style="margin-top:2.5rem;text-align:center;">
+      <button class="btn-primary" onclick="loadPrayerPoints()" style="margin-right:.75rem;">🔄 Refresh Points</button>
+      <a href="https://www.rccg.org/prayer/" target="_blank" rel="noopener" class="btn-gold-solid">🙏 RCCG Prayer Network ↗</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- QUICK LINKS TO OTHER RESOURCES            -->
+<!-- ══════════════════════════════════════════ -->
+<section class="inner-section alt">
+  <div class="container">
+    <span class="section-label center">More Resources</span>
+    <h2 class="center">Grow in God's Word</h2>
+    <div class="resources-grid reveal">
+      <a href="sunday-school.html" class="resource-card">
+        <div class="resource-icon">🎓</div>
+        <h3>Sunday School Manuals</h3>
+        <p>Teachers & Students guides — RCCG official curriculum for all age groups</p>
+        <span class="resource-link">View Manuals →</span>
+      </a>
+      <a href="hymnal.html" class="resource-card">
+        <div class="resource-icon">🎵</div>
+        <h3>RCCG Hymnal</h3>
+        <p>Full collection of hymns and choruses — search, read lyrics, and worship</p>
+        <span class="resource-link">Open Hymnal →</span>
+      </a>
+      <a href="sermons.html" class="resource-card">
+        <div class="resource-icon">🎙️</div>
+        <h3>Sermons & Messages</h3>
+        <p>Listen to Spirit-filled messages from Pastor Adebayo Erinle</p>
+        <span class="resource-link">Listen Now →</span>
+      </a>
+      <a href="https://www.rccg.org/open-heavens/" target="_blank" rel="noopener" class="resource-card">
+        <div class="resource-icon">🌅</div>
+        <h3>Open Heavens Archive</h3>
+        <p>Access the complete Open Heavens archive — years of daily devotionals</p>
+        <span class="resource-link">Visit RCCG.org ↗</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-brand-col">
+      <div class="footer-brand-row">
+        <img src="images/Rccglogo.png" alt="RCCG Logo" class="footer-logo"/>
+        <div><strong>RCCG Gospel Light Assembly</strong><span>Zonal Headquarters · Ikorodu, Lagos</span></div>
+      </div>
+      <p class="footer-brand-tagline">"Where the Light of God<br/>is Forever Shining"</p>
+    </div>
+    <div class="footer-col"><h4>Quick Links</h4>
+      <a href="about.html">About Us</a><a href="sermons.html">Sermons</a>
+      <a href="devotional.html">Devotional</a><a href="sunday-school.html">Sunday School</a>
+      <a href="hymnal.html">Hymnal</a><a href="events.html">Events</a>
+    </div>
+    <div class="footer-col"><h4>Programmes</h4>
+      <a href="events.html">Digging Deep – Tue 5:30 PM</a>
+      <a href="events.html">Faith Clinic – Thu 5:30 PM</a>
+      <a href="events.html">Evangelism – Sat 4:30 PM</a>
+      <a href="events.html">Sunday Service – 8:00 AM</a>
+    </div>
+    <div class="footer-social"><h4>Follow Us</h4>
+      <div class="social-links">
+        <a href="https://facebook.com/RCCGglayaya" target="_blank" class="social-btn fb"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+        <a href="https://instagram.com/rccg_glayaya" target="_blank" class="social-btn ig"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+        <a href="https://youtube.com/@RCCGGospelLightAssemblySermons" target="_blank" class="social-btn yt"><svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+        <a href="https://wa.me/2348140972012" target="_blank" class="social-btn wa"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-col"><h4>Contact</h4>
+      <p>📍 Lejina Phase 2, Lejina Town, Behind Baale's House, Adamo, Ikorodu, Lagos State, Nigeria</p>
+      <p>📞 +234 814 097 2012</p>
+      <p>✉️ rccggospellightassembly26@gmail.com</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 RCCG Gospel Light Assembly. All rights reserved.</span>
+    <span><a href="give.html">Give Online</a> · <a href="contact.html">Contact</a> · <a href="https://rccg.org" target="_blank">RCCG Global</a></span>
+  </div>
+</footer>
+
+<a href="https://wa.me/2348140972012" target="_blank" class="whatsapp-fab" title="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Cookie consent">
+  <div class="cookie-content">
+    <div class="cookie-icon">🍪</div>
+    <div class="cookie-text"><strong>We use cookies</strong><p>We use cookies to improve your experience and remember your preferences.</p></div>
+    <div class="cookie-actions">
+      <button class="cookie-btn cookie-necessary" onclick="acceptCookies('necessary')">Necessary Only</button>
+      <button class="cookie-btn cookie-all" onclick="acceptCookies('all')">Accept All 🎉</button>
+    </div>
+    <button class="cookie-dismiss" onclick="acceptCookies('necessary')" aria-label="Close">✕</button>
+  </div>
+</div>
+<button id="back-to-top" aria-label="Back to top" title="Back to top">↑</button>
+<script src="main.js"></script>
+<script>
+// ── BIBLE VERSE OF THE DAY — Uses Bible API (free) ──
+async function loadVerseOfDay() {
+  const loading = document.getElementById('votd-loading');
+  const content = document.getElementById('votd-content');
+  if (loading) loading.style.display = 'flex';
+  if (content) content.style.display = 'none';
+
+  // Curated list of powerful scriptures — rotates daily by date
+  const verses = [
+    { ref: 'John 3:16',       text: 'For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life.' },
+    { ref: 'Jeremiah 29:11',  text: '"For I know the plans I have for you," declares the Lord, "plans to prosper you and not to harm you, plans to give you hope and a future."' },
+    { ref: 'Philippians 4:13',text: 'I can do all this through him who gives me strength.' },
+    { ref: 'Romans 8:28',     text: 'And we know that in all things God works for the good of those who love him, who have been called according to his purpose.' },
+    { ref: 'Isaiah 40:31',    text: 'But those who hope in the Lord will renew their strength. They will soar on wings like eagles; they will run and not grow weary, they will walk and not be faint.' },
+    { ref: 'Psalm 23:1',      text: 'The Lord is my shepherd, I lack nothing.' },
+    { ref: 'Proverbs 3:5-6',  text: 'Trust in the Lord with all your heart and lean not on your own understanding; in all your ways submit to him, and he will make your paths straight.' },
+    { ref: 'Matthew 6:33',    text: 'But seek first his kingdom and his righteousness, and all these things will be given to you as well.' },
+    { ref: 'Psalm 46:10',     text: 'He says, "Be still, and know that I am God; I will be exalted among the nations, I will be exalted in the earth."' },
+    { ref: '1 Corinthians 10:13', text: 'No temptation has overtaken you except what is common to mankind. And God is faithful; he will not let you be tempted beyond what you can bear.' },
+    { ref: 'Isaiah 41:10',    text: 'So do not fear, for I am with you; do not be dismayed, for I am your God. I will strengthen you and help you; I will uphold you with my righteous right hand.' },
+    { ref: 'Psalm 119:105',   text: 'Your word is a lamp for my feet, a light on my path.' },
+    { ref: 'Romans 8:38-39',  text: 'For I am convinced that neither death nor life, neither angels nor demons, neither the present nor the future, nor any powers, can separate us from the love of God that is in Christ Jesus our Lord.' },
+    { ref: 'Joshua 1:9',      text: 'Have I not commanded you? Be strong and courageous. Do not be afraid; do not be discouraged, for the Lord your God will be with you wherever you go.' },
+    { ref: 'Lamentations 3:22-23', text: 'Because of the Lord\'s great love we are not consumed, for his compassions never fail. They are new every morning; great is your faithfulness.' },
+    { ref: 'Zephaniah 3:17',  text: 'The Lord your God is with you, the Mighty Warrior who saves. He will take great delight in you; in his love he will no longer rebuke you, but will rejoice over you with singing.' },
+    { ref: 'Psalm 34:18',     text: 'The Lord is close to the brokenhearted and saves those who are crushed in spirit.' },
+    { ref: 'Matthew 11:28',   text: '"Come to me, all you who are weary and burdened, and I will give you rest."' },
+    { ref: '2 Chronicles 7:14', text: 'If my people, who are called by my name, will humble themselves and pray and seek my face and turn from their wicked ways, then I will hear from heaven, and I will forgive their sin and will heal their land.' },
+    { ref: 'Ephesians 2:10',  text: 'For we are God\'s handiwork, created in Christ Jesus to do good works, which God prepared in advance for us to do.' },
+    { ref: 'Psalm 91:11',     text: 'For he will command his angels concerning you to guard you in all your ways.' },
+    { ref: 'Philippians 4:6-7', text: 'Do not be anxious about anything, but in every situation, by prayer and petition, with thanksgiving, present your requests to God. And the peace of God, which transcends all understanding, will guard your hearts and your minds in Christ Jesus.' },
+    { ref: 'Hebrews 11:1',    text: 'Now faith is confidence in what we hope for and assurance about what we do not see.' },
+    { ref: '1 Peter 5:7',     text: 'Cast all your anxiety on him because he cares for you.' },
+    { ref: 'Galatians 5:22-23', text: 'But the fruit of the Spirit is love, joy, peace, forbearance, kindness, goodness, faithfulness, gentleness and self-control. Against such things there is no law.' },
+    { ref: 'Psalm 37:4',      text: 'Take delight in the Lord, and he will give you the desires of your heart.' },
+    { ref: 'Malachi 3:10',    text: '"Bring the whole tithe into the storehouse, that there may be food in my house. Test me in this," says the Lord Almighty, "and see if I will not throw open the floodgates of heaven and pour out so much blessing that there will not be room enough to store it."' },
+    { ref: 'Isaiah 43:4',     text: '"Since you are precious and honoured in my sight, and because I love you..."' },
+    { ref: 'Psalm 121:7-8',   text: 'The Lord will keep you from all harm — he will watch over your life; the Lord will watch over your coming and going both now and forevermore.' },
+    { ref: 'John 16:33',      text: '"I have told you these things, so that in me you may have peace. In this world you will have trouble. But take heart! I have overcome the world."' },
+    { ref: 'Deuteronomy 31:8', text: 'The Lord himself goes before you and will be with you; he will never leave you nor forsake you. Do not be afraid; do not be discouraged.' },
+  ];
+
+  // Pick verse based on day of year — so it's consistent throughout the day
+  const dayOfYear = Math.floor((new Date() - new Date(new Date().getFullYear(), 0, 0)) / 86400000);
+  const verse = verses[dayOfYear % verses.length];
+
+  const now = new Date();
+  const dateStr = now.toLocaleDateString('en-NG', { weekday:'long', year:'numeric', month:'long', day:'numeric' });
+
+  setTimeout(() => {
+    document.getElementById('votd-text').textContent = verse.text;
+    document.getElementById('votd-ref').textContent = '— ' + verse.ref;
+    document.getElementById('votd-date').textContent = dateStr;
+    if (loading) loading.style.display = 'none';
+    if (content) { content.style.display = 'block'; content.style.animation = 'fadeUp .5s ease'; }
+  }, 600);
+}
+
+function shareVerse() {
+  const text = document.getElementById('votd-text').textContent;
+  const ref  = document.getElementById('votd-ref').textContent;
+  const msg  = `${text} ${ref}\n\n— Shared from RCCG Gospel Light Assembly\nhttps://rccggla.netlify.app/devotional.html`;
+  if (navigator.share) {
+    navigator.share({ title: 'Bible Verse — Gospel Light Assembly', text: msg });
+  } else {
+    const wa = `https://wa.me/?text=${encodeURIComponent(msg)}`;
+    window.open(wa, '_blank');
+  }
+}
+
+// ── PRAYER POINTS — Rotates daily ──
+const PRAYER_THEMES = [
+  { icon:'✝️', title:'Salvation',        points:['Pray for souls who do not yet know Christ in our community','Ask God to open hearts and remove spiritual blindness','Pray for the evangelism team as they reach Adamo and Ikorodu'] },
+  { icon:'🏠', title:'Family & Homes',   points:['Pray for godly marriages and strong homes in our church','Ask God to protect children and raise them in His ways','Pray for healing in broken families'] },
+  { icon:'💰', title:'Provision',        points:['Thank God for His faithfulness in meeting our needs','Pray for members facing financial hardship','Ask God to open doors of opportunity and favour'] },
+  { icon:'🏥', title:'Healing',          points:['Pray for the sick in our congregation — call them by name','Ask for divine health over every member\'s household','Declare healing over any chronic illness'] },
+  { icon:'🌍', title:'Nigeria & Nation', points:['Pray for peace, justice, and godly leadership in Nigeria','Ask God to heal the land and restore prosperity','Pray for the safety of citizens everywhere'] },
+  { icon:'⛪', title:'Our Church',       points:['Pray for Pastor Adebayo Erinle — wisdom, health, and anointing','Ask God to grow Gospel Light Assembly in number and depth','Pray for unity and love among all members'] },
+  { icon:'🎓', title:'Youth & Students', points:['Pray for godly direction and purpose for young people','Ask for protection from wrong influences and peer pressure','Pray for academic excellence and career favour'] },
+];
+
+function loadPrayerPoints() {
+  const grid = document.getElementById('prayer-grid');
+  if (!grid) return;
+  grid.innerHTML = '<div class="pp-loading"><div class="votd-spinner"></div><span>Refreshing prayer points...</span></div>';
+
+  const dayOfYear = Math.floor((new Date() - new Date(new Date().getFullYear(), 0, 0)) / 86400000);
+  // Show 3 themes rotating daily
+  const indices = [dayOfYear % 7, (dayOfYear + 2) % 7, (dayOfYear + 4) % 7];
+
+  setTimeout(() => {
+    grid.innerHTML = indices.map(i => {
+      const t = PRAYER_THEMES[i];
+      return `<div class="pp-card">
+        <div class="pp-icon">${t.icon}</div>
+        <h3 class="pp-title">${t.title}</h3>
+        <ul class="pp-list">${t.points.map(p => `<li>${p}</li>`).join('')}</ul>
+      </div>`;
+    }).join('');
+  }, 500);
+}
+
+// Init on load
+document.addEventListener('DOMContentLoaded', () => {
+  loadVerseOfDay();
+  loadPrayerPoints();
+  // Set OH date
+  const el = document.getElementById('oh-live-date');
+  if (el) el.textContent = new Date().toLocaleDateString('en-NG', { weekday:'long', year:'numeric', month:'long', day:'numeric' });
+});
+</script>
+</body>
+</html>

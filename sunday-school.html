@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="RCCG Sunday School manuals for Teachers and Students at Gospel Light Assembly, Adamo, Ikorodu."/>
+  <meta property="og:title" content="Sunday School | RCCG Gospel Light Assembly"/>
+  <meta name="theme-color" content="#060d1a"/>
+  <link rel="manifest" href="manifest.json"/>
+  <link rel="icon" href="images/Rccglogo.png"/>
+  <title>Sunday School | RCCG Gospel Light Assembly</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@700;800&display=swap" rel="stylesheet"/>
+</head>
+<body>
+<div id="loader">
+  <img src="images/Rccglogo.png" alt="RCCG" class="loader-logo"/>
+  <div class="loader-church-name loader-shimmer-text">Gospel Light Assembly</div>
+  <div class="loader-tagline">Where the Light of God is Forever Shining</div>
+  <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+</div>
+<div class="ticker-wrap"><div class="ticker-track">
+  <span class="ticker-item"><span>✦</span> Sunday School · Teachers & Students · RCCG Official Curriculum</span>
+  <span class="ticker-item"><span>✦</span> "Train up a child in the way he should go" — Proverbs 22:6</span>
+  <span class="ticker-item"><span>✦</span> RCCG Gospel Light Assembly · Adamo, Ikorodu · Sunday 8:00 AM</span>
+  <span class="ticker-item"><span>✦</span> Sunday School · Teachers & Students · RCCG Official Curriculum</span>
+</div></div>
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">
+      <img src="images/Rccglogo.png" alt="RCCG Logo" class="rccg-logo"/>
+      <div class="brand-text"><span class="brand-main">RCCG Gospel Light Assembly</span><span class="brand-sub">Zonal Headquarters · Ikorodu</span></div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li class="has-dropdown" onclick="toggleDropdown(this)"><a href="about.html">About</a>
+        <ul class="nav-dropdown"><span class="dropdown-label">Our Church</span>
+          <li><a href="about.html"><span class="dropdown-icon">⛪</span>About Us</a></li>
+          <li><a href="pastor.html"><span class="dropdown-icon">✉️</span>Pastor's Letter</a></li>
+          <li><a href="history.html"><span class="dropdown-icon">📜</span>Our History</a></li>
+        </ul>
+      </li>
+      <li><a href="sermons.html">Sermons</a></li>
+      <li class="has-dropdown" onclick="toggleDropdown(this)"><a href="ministries.html">Ministries</a>
+        <ul class="nav-dropdown"><span class="dropdown-label">Serve & Grow</span>
+          <li><a href="ministries.html"><span class="dropdown-icon">🙌</span>All Ministries</a></li>
+          <li><a href="units.html"><span class="dropdown-icon">👥</span>Our Units & Teams</a></li>
+          <li><a href="youth.html"><span class="dropdown-icon">🎤</span>Youth Ministry</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown active" onclick="toggleDropdown(this)"><a href="devotional.html" class="active">Resources</a>
+        <ul class="nav-dropdown"><span class="dropdown-label">Grow Daily</span>
+          <li><a href="devotional.html"><span class="dropdown-icon">📖</span>Open Heavens & Prayer</a></li>
+          <li><a href="sunday-school.html"><span class="dropdown-icon">🎓</span>Sunday School</a></li>
+          <li><a href="hymnal.html"><span class="dropdown-icon">🎵</span>RCCG Hymnal</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown" onclick="toggleDropdown(this)"><a href="events.html">Events</a>
+        <ul class="nav-dropdown"><span class="dropdown-label">What's On</span>
+          <li><a href="events.html"><span class="dropdown-icon">📅</span>Events & Programmes</a></li>
+          <li><a href="bulletin.html"><span class="dropdown-icon">🖨️</span>Weekly Bulletin</a></li>
+        </ul>
+      </li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li class="has-dropdown" onclick="toggleDropdown(this)"><a href="contact.html">Contact</a>
+        <ul class="nav-dropdown"><span class="dropdown-label">Reach Us</span>
+          <li><a href="contact.html"><span class="dropdown-icon">📍</span>Contact & Directions</a></li>
+          <li><a href="give.html"><span class="dropdown-icon">💛</span>Give & Tithe</a></li>
+          <li><a href="stewardship.html"><span class="dropdown-icon">📋</span>Stewardship</a></li>
+        </ul>
+      </li>
+    </ul>
+    <div class="nav-right">
+      <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+      <button class="nav-toggle" onclick="toggleNav()">&#9776;</button>
+      <a href="give.html" class="btn-gold">Give 🙏</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-header">
+  <span class="section-label">RCCG Official Curriculum</span>
+  <h1>Sunday School<br/>Manuals</h1>
+  <p>Teachers Guide & Students Manual — current quarter, updated each new quarter</p>
+</div>
+
+<div class="countdown-bar">
+  <span class="countdown-bar-label">⏳ Next Sunday Service:</span>
+  <div class="countdown-bar-boxes">
+    <div class="countdown-bar-box"><span id="cd-days">00</span><small>Days</small></div>
+    <div class="countdown-bar-sep">:</div>
+    <div class="countdown-bar-box"><span id="cd-hours">00</span><small>Hours</small></div>
+    <div class="countdown-bar-sep">:</div>
+    <div class="countdown-bar-box"><span id="cd-mins">00</span><small>Mins</small></div>
+    <div class="countdown-bar-sep">:</div>
+    <div class="countdown-bar-box"><span id="cd-secs">00</span><small>Secs</small></div>
+  </div>
+</div>
+
+<!-- ── TAB SWITCHER ── -->
+<section class="inner-section">
+  <div class="container">
+    <div class="ss-tabs">
+      <button class="ss-tab active" onclick="switchTab('teachers')">👩‍🏫 Teachers Guide</button>
+      <button class="ss-tab" onclick="switchTab('students')">🎓 Students Manual</button>
+    </div>
+
+    <!-- TEACHERS -->
+    <div id="tab-teachers" class="ss-panel">
+      <div class="ss-hero-card reveal">
+        <div class="ss-hero-icon">👩‍🏫</div>
+        <div class="ss-hero-text">
+          <span class="section-label">For Sunday School Teachers</span>
+          <h2>Teachers Guide</h2>
+          <p>The RCCG Sunday School Teachers Guide is the official quarterly curriculum for Sunday School teachers across all RCCG parishes worldwide. It provides lesson plans, discussion questions, memory verses, and teaching objectives aligned with RCCG's doctrinal standards.</p>
+          <div class="ss-quarter-badge" id="teacher-quarter">Loading current quarter...</div>
+        </div>
+      </div>
+
+      <div class="ss-lessons-header">
+        <h3>This Quarter's Lessons</h3>
+        <p>The RCCG Sunday School curriculum runs quarterly. Each lesson is taught on Sunday mornings before the main service.</p>
+      </div>
+
+      <div class="ss-lessons-grid" id="teacher-lessons">
+        <!-- Filled by JS -->
+      </div>
+
+      <div class="ss-download-section reveal">
+        <div class="ss-download-card">
+          <div class="ss-dl-icon">📥</div>
+          <div class="ss-dl-text">
+            <h3>Download Official Manual</h3>
+            <p>Access the current quarter's Teachers Guide directly from the RCCG Sunday School Department.</p>
+          </div>
+          <div class="ss-dl-actions">
+            <a href="https://www.rccg.org/sunday-school/" target="_blank" rel="noopener" class="btn-gold-solid">📖 Access on RCCG.org ↗</a>
+            <a href="https://wa.me/2348140972012?text=Please%20send%20me%20the%20Sunday%20School%20Teachers%20Guide" target="_blank" rel="noopener" class="btn-primary">📲 Request via WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STUDENTS -->
+    <div id="tab-students" class="ss-panel" style="display:none;">
+      <div class="ss-hero-card reveal">
+        <div class="ss-hero-icon">🎓</div>
+        <div class="ss-hero-text">
+          <span class="section-label">For Sunday School Students</span>
+          <h2>Students Manual</h2>
+          <p>The RCCG Sunday School Students Manual is designed to help every member — young and old — grow in the knowledge of God's Word. With clear lessons, memory verses, and practical applications, it makes Bible study engaging and transformative.</p>
+          <div class="ss-quarter-badge" id="student-quarter">Loading current quarter...</div>
+        </div>
+      </div>
+
+      <div class="ss-lessons-header">
+        <h3>This Quarter's Topics</h3>
+        <p>Follow along with your class as you study the Word together. Each lesson builds on the last — never miss a Sunday!</p>
+      </div>
+
+      <div class="ss-lessons-grid" id="student-lessons">
+        <!-- Filled by JS -->
+      </div>
+
+      <div class="ss-download-section reveal">
+        <div class="ss-download-card">
+          <div class="ss-dl-icon">📥</div>
+          <div class="ss-dl-text">
+            <h3>Get Your Students Manual</h3>
+            <p>Pick up a physical copy from the church office every Sunday, or access the digital version below.</p>
+          </div>
+          <div class="ss-dl-actions">
+            <a href="https://www.rccg.org/sunday-school/" target="_blank" rel="noopener" class="btn-gold-solid">📖 Access on RCCG.org ↗</a>
+            <a href="https://wa.me/2348140972012?text=Please%20send%20me%20the%20Sunday%20School%20Students%20Manual" target="_blank" rel="noopener" class="btn-primary">📲 Request via WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── SUNDAY SCHOOL INFO ── -->
+<section class="inner-section alt">
+  <div class="container">
+    <span class="section-label center">Every Sunday Morning</span>
+    <h2 class="center">About Sunday School at Gospel Light</h2>
+    <div class="two-col-grid reveal">
+      <div>
+        <h3 style="font-family:'Playfair Display',serif;margin-bottom:1rem;">When & Where</h3>
+        <ul class="value-list">
+          <li>📅 Every Sunday before the main service</li>
+          <li>⏰ Begins at 7:30 AM</li>
+          <li>📍 Main auditorium — Lejina Phase 2, Adamo, Ikorodu</li>
+          <li>👥 Open to all age groups — children, teens, adults</li>
+          <li>📚 Manuals available at the church office</li>
+        </ul>
+        <a href="contact.html" class="btn-primary" style="display:inline-flex;margin-top:1.5rem;">📍 Get Directions →</a>
+      </div>
+      <div>
+        <h3 style="font-family:'Playfair Display',serif;margin-bottom:1rem;">Why Sunday School Matters</h3>
+        <blockquote style="border-left:3px solid var(--gold);padding:.85rem 1.25rem;background:var(--bg-alt);border-radius:0 var(--radius) var(--radius) 0;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;color:var(--text);margin-bottom:1.25rem;">
+          "Train up a child in the way he should go, and when he is old he will not depart from it." — Proverbs 22:6
+        </blockquote>
+        <p style="color:var(--text-muted);">Sunday School is the backbone of Biblical education in RCCG. It equips every member with foundational doctrine, builds community, and ensures that the Word of God takes deep root in every heart.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-brand-col">
+      <div class="footer-brand-row">
+        <img src="images/Rccglogo.png" alt="RCCG" class="footer-logo"/>
+        <div><strong>RCCG Gospel Light Assembly</strong><span>Zonal Headquarters · Ikorodu, Lagos</span></div>
+      </div>
+      <p class="footer-brand-tagline">"Where the Light of God<br/>is Forever Shining"</p>
+    </div>
+    <div class="footer-col"><h4>Quick Links</h4>
+      <a href="index.html">Home</a><a href="devotional.html">Devotional</a>
+      <a href="sunday-school.html">Sunday School</a><a href="hymnal.html">Hymnal</a>
+      <a href="sermons.html">Sermons</a><a href="give.html">Give</a>
+    </div>
+    <div class="footer-col"><h4>Resources</h4>
+      <a href="devotional.html">Open Heavens</a>
+      <a href="devotional.html">Bible Verse of the Day</a>
+      <a href="devotional.html">Prayer Points</a>
+      <a href="sunday-school.html">Sunday School Manuals</a>
+      <a href="hymnal.html">RCCG Hymnal</a>
+    </div>
+    <div class="footer-social"><h4>Follow Us</h4>
+      <div class="social-links">
+        <a href="https://facebook.com/RCCGglayaya" target="_blank" class="social-btn fb"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+        <a href="https://instagram.com/rccg_glayaya" target="_blank" class="social-btn ig"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+        <a href="https://youtube.com/@RCCGGospelLightAssemblySermons" target="_blank" class="social-btn yt"><svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+        <a href="https://wa.me/2348140972012" target="_blank" class="social-btn wa"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-col"><h4>Contact</h4>
+      <p>📍 Lejina Phase 2, Adamo, Ikorodu, Lagos</p>
+      <p>📞 +234 814 097 2012</p>
+      <p>✉️ rccggospellightassembly26@gmail.com</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 RCCG Gospel Light Assembly. All rights reserved.</span>
+    <span><a href="give.html">Give Online</a> · <a href="contact.html">Contact</a> · <a href="https://rccg.org" target="_blank">RCCG Global</a></span>
+  </div>
+</footer>
+
+<a href="https://wa.me/2348140972012" target="_blank" class="whatsapp-fab" title="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<div id="cookie-banner" class="cookie-banner" role="dialog">
+  <div class="cookie-content">
+    <div class="cookie-icon">🍪</div>
+    <div class="cookie-text"><strong>We use cookies</strong><p>We use cookies to improve your experience.</p></div>
+    <div class="cookie-actions">
+      <button class="cookie-btn cookie-necessary" onclick="acceptCookies('necessary')">Necessary Only</button>
+      <button class="cookie-btn cookie-all" onclick="acceptCookies('all')">Accept All 🎉</button>
+    </div>
+    <button class="cookie-dismiss" onclick="acceptCookies('necessary')">✕</button>
+  </div>
+</div>
+<button id="back-to-top" aria-label="Back to top">↑</button>
+<script src="main.js"></script>
+<script>
+function switchTab(tab) {
+  document.querySelectorAll('.ss-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.ss-panel').forEach(p => p.style.display = 'none');
+  document.getElementById('tab-' + tab).style.display = 'block';
+  event.target.classList.add('active');
+}
+
+function getQuarter() {
+  const m = new Date().getMonth();
+  const y = new Date().getFullYear();
+  if (m < 3) return { q: 'Q1', label: 'January – March ' + y };
+  if (m < 6) return { q: 'Q2', label: 'April – June ' + y };
+  if (m < 9) return { q: 'Q3', label: 'July – September ' + y };
+  return { q: 'Q4', label: 'October – December ' + y };
+}
+
+const TEACHER_LESSONS = [
+  { week: 1,  title: 'The Authority of Scripture',       verse: '2 Timothy 3:16-17',   aim: 'Help students understand the Bible as God\'s inspired Word and final authority' },
+  { week: 2,  title: 'The Nature of God',                verse: 'Exodus 3:14',          aim: 'Explore the attributes of God — His omniscience, omnipotence, and omnipresence' },
+  { week: 3,  title: 'Jesus Christ: Lord and Saviour',   verse: 'John 14:6',            aim: 'Affirm the deity of Christ and His exclusive role as Saviour' },
+  { week: 4,  title: 'The Holy Spirit: Our Comforter',   verse: 'John 16:7',            aim: 'Teach the role of the Holy Spirit in the life of a believer' },
+  { week: 5,  title: 'Salvation by Grace Through Faith', verse: 'Ephesians 2:8-9',      aim: 'Clarify the doctrine of salvation — not by works but by grace through faith' },
+  { week: 6,  title: 'Baptism and the Lord\'s Supper',   verse: 'Matthew 28:19',        aim: 'Explain the purpose and significance of the two ordinances of the Church' },
+  { week: 7,  title: 'The Church: Body of Christ',       verse: '1 Corinthians 12:27',  aim: 'Show students the importance of the local church in God\'s plan' },
+  { week: 8,  title: 'Prayer: Communicating with God',   verse: 'Philippians 4:6',      aim: 'Equip students with practical tools for effective prayer' },
+  { week: 9,  title: 'Evangelism: Sharing Your Faith',   verse: 'Matthew 28:19-20',     aim: 'Motivate and equip students to share the gospel confidently' },
+  { week: 10, title: 'Stewardship: Managing God\'s Gift', verse: 'Malachi 3:10',        aim: 'Teach biblical principles of giving, tithing, and financial stewardship' },
+  { week: 11, title: 'Christian Living & Holiness',      verse: '1 Peter 1:15-16',      aim: 'Challenge students to pursue holiness in everyday conduct' },
+  { week: 12, title: 'The Second Coming of Christ',      verse: '1 Thessalonians 4:16', aim: 'Build hope and urgency around the return of Jesus Christ' },
+  { week: 13, title: 'Review & Testimonies',             verse: 'Revelation 12:11',     aim: 'Consolidate quarter\'s lessons through testimony and discussion' },
+];
+
+const STUDENT_LESSONS = [
+  { week: 1,  title: 'Can I Trust the Bible?',           verse: 'Psalm 119:105', summary: 'The Bible is God\'s love letter to you — true, reliable, and alive' },
+  { week: 2,  title: 'Who Is God?',                      verse: 'Psalm 46:1',    summary: 'God is your Father, Provider, and the most powerful Being in existence' },
+  { week: 3,  title: 'Jesus: My Lord and Friend',        verse: 'John 15:15',    summary: 'Jesus came to save you and calls you His friend' },
+  { week: 4,  title: 'The Holy Spirit in My Life',       verse: 'Acts 1:8',      summary: 'The Holy Spirit gives you power to live for God every day' },
+  { week: 5,  title: 'How Am I Saved?',                  verse: 'Romans 10:9',   summary: 'Salvation is a free gift — believe in your heart, confess with your mouth' },
+  { week: 6,  title: 'Baptism: What It Means',           verse: 'Romans 6:4',    summary: 'Baptism declares publicly that you have died to sin and risen with Christ' },
+  { week: 7,  title: 'Why I Need the Church',            verse: 'Hebrews 10:25', summary: 'God designed you to grow in community — you need your church family' },
+  { week: 8,  title: 'How to Pray Effectively',          verse: 'Matthew 6:9',   summary: 'Prayer is a conversation with God — He loves to hear from you' },
+  { week: 9,  title: 'Telling Others About Jesus',       verse: 'Romans 1:16',   summary: 'The gospel is good news — share it boldly and without shame' },
+  { week: 10, title: 'Money, Giving, and God',           verse: 'Luke 6:38',     summary: 'God is your source — when you give, He gives back pressed down and overflowing' },
+  { week: 11, title: 'Living Holy Every Day',            verse: 'Romans 12:1',   summary: 'Holiness is not boring — it\'s the most powerful life you can live' },
+  { week: 12, title: 'Jesus Is Coming Back!',            verse: 'John 14:3',     summary: 'Jesus promised to return — live ready, live excited, live hopeful' },
+  { week: 13, title: 'What Has God Done for Me?',        verse: 'Psalm 103:2',   summary: 'Close the quarter with gratitude — count your blessings one by one' },
+];
+
+document.addEventListener('DOMContentLoaded', () => {
+  const q = getQuarter();
+
+  document.getElementById('teacher-quarter').textContent = `📅 ${q.label} — ${q.q} Curriculum`;
+  document.getElementById('student-quarter').textContent = `📅 ${q.label} — ${q.q} Curriculum`;
+
+  const weekNow = Math.min(Math.floor((new Date().getDate()) / 7) + 1, 13);
+
+  document.getElementById('teacher-lessons').innerHTML = TEACHER_LESSONS.map(l => `
+    <div class="ss-lesson-card ${l.week === weekNow ? 'current' : ''}">
+      ${l.week === weekNow ? '<div class="ss-current-badge">This Week</div>' : ''}
+      <div class="ss-lesson-week">Week ${l.week}</div>
+      <h4 class="ss-lesson-title">${l.title}</h4>
+      <div class="ss-lesson-verse">📖 ${l.verse}</div>
+      <p class="ss-lesson-aim"><strong>Teaching Aim:</strong> ${l.aim}</p>
+    </div>`).join('');
+
+  document.getElementById('student-lessons').innerHTML = STUDENT_LESSONS.map(l => `
+    <div class="ss-lesson-card ${l.week === weekNow ? 'current' : ''}">
+      ${l.week === weekNow ? '<div class="ss-current-badge">This Week</div>' : ''}
+      <div class="ss-lesson-week">Week ${l.week}</div>
+      <h4 class="ss-lesson-title">${l.title}</h4>
+      <div class="ss-lesson-verse">📖 ${l.verse}</div>
+      <p class="ss-lesson-aim">${l.summary}</p>
+    </div>`).join('');
+});
+</script>
+</body>
+</html>
