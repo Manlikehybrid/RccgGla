@@ -46,18 +46,29 @@
           <li><a href="about.html"><span class="dropdown-icon">⛪</span>About Us</a></li>
           <li><a href="pastor.html"><span class="dropdown-icon">✉️</span>Pastor's Letter</a></li>
           <li><a href="history.html"><span class="dropdown-icon">📜</span>Our History</a></li>
+          <li><a href="growth.html"><span class="dropdown-icon">📈</span>Growth &amp; Vision</a></li>
         </ul>
       </li>
 
       <li><a href="sermons.html">Sermons</a></li>
 
-      <li class="has-dropdown" onclick="toggleDropdown(this)">
+            <li class="has-dropdown" onclick="toggleDropdown(this)">
         <a href="ministries.html">Ministries</a>
-        <ul class="nav-dropdown">
-          <span class="dropdown-label">Serve & Grow</span>
+        <ul class="nav-dropdown nav-dropdown--wide">
+          <span class="dropdown-label">All Ministries</span>
           <li><a href="ministries.html"><span class="dropdown-icon">🙌</span>All Ministries</a></li>
-          <li><a href="units.html"><span class="dropdown-icon">👥</span>Our Units & Teams</a></li>
-          <li><a href="youth.html"><span class="dropdown-icon">🎤</span>Youth Ministry</a></li>
+          <li><a href="units.html"><span class="dropdown-icon">👥</span>Units & Teams</a></li>
+          <div class="dropdown-divider"></div>
+          <span class="dropdown-label">Our Ministry Units</span>
+          <li><a href="choir.html"><span class="dropdown-icon">🎵</span>Choir & Praise Team</a></li>
+          <li><a href="children.html"><span class="dropdown-icon">👶</span>Children's Ministry</a></li>
+          <li><a href="youth.html"><span class="dropdown-icon">🧑‍🤝‍🧑</span>Youth Ministry</a></li>
+          <li><a href="women.html"><span class="dropdown-icon">👩</span>Women's Fellowship</a></li>
+          <li><a href="men.html"><span class="dropdown-icon">👨</span>Men's Fellowship</a></li>
+          <li><a href="evangelism.html"><span class="dropdown-icon">🌍</span>Evangelism & Missions</a></li>
+          <li><a href="prayer.html"><span class="dropdown-icon">🤲</span>Prayer Ministry</a></li>
+          <li><a href="welfare.html"><span class="dropdown-icon">💛</span>Welfare & Visitation</a></li>
+          <li><a href="media.html"><span class="dropdown-icon">🖥️</span>Media & Technical</a></li>
         </ul>
       </li>
 
@@ -112,6 +123,19 @@
 </div>
 <section class="inner-section"><div class="container"><span class="section-label">Every Week</span><h2>Weekly Programme</h2>
 <div class="events-list">
+<div class="event-item reveal" style="border-left:3px solid var(--gold);">
+  <div class="event-date-box" style="background:linear-gradient(135deg,var(--blue-mid),var(--blue-light));">
+    <div class="day" style="font-size:.85rem;line-height:1.1;">3rd</div>
+    <div class="month">SUN</div>
+  </div>
+  <div class="event-info">
+    <span style="display:inline-block;background:rgba(201,168,76,.15);color:var(--gold);font-family:'Barlow',sans-serif;font-size:.65rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:.2rem .6rem;border-radius:99px;margin-bottom:.5rem;">🎤 Monthly</span>
+    <h4>Youth Sunday Service</h4>
+    <p>📍 Gospel Light Assembly · 8:00 AM · Every <strong>third Sunday of the month</strong>, the Youth Ministry leads the entire Sunday service — worship, testimony, preaching, and praise. Come and be inspired by the next generation rising!</p>
+    <a href="youth.html" style="display:inline-flex;margin-top:.75rem;font-family:'Barlow',sans-serif;font-size:.8rem;font-weight:700;color:var(--gold);text-decoration:none;">Youth Ministry →</a>
+  </div>
+</div>
+
 <div class="event-item reveal"><div class="event-date-box"><div class="day">TUE</div><div class="month">Weekly</div></div><div class="event-info"><h4>Digging Deep – Bible Study</h4><p>📍 Gospel Light Assembly · 5:30 – 6:30 PM · Come and dig into the Word of God with us every Tuesday evening.</p></div></div>
 <div class="event-item reveal"><div class="event-date-box"><div class="day">THU</div><div class="month">Weekly</div></div><div class="event-info"><h4>Faith Clinic – Prayer Service</h4><p>📍 Gospel Light Assembly · 5:30 – 6:30 PM · A powerful gathering of faith, intercession, and healing.</p></div></div>
 <div class="event-item reveal"><div class="event-date-box"><div class="day">SAT</div><div class="month">Weekly</div></div><div class="event-info"><h4>Community Evangelism Outreach</h4><p>📍 Lejina Town & Surroundings · 4:30 – 5:30 PM · Join us as we take the gospel to the streets of Adamo, Ikorodu.</p></div></div>
@@ -189,4 +213,19 @@
 </div>
 <button id="back-to-top" aria-label="Back to top" title="Back to top">↑</button>
 
+
+<!-- ── PWA INSTALL PROMPT ─────────────────────── -->
+<div id="pwa-install-banner" class="pwa-banner" style="display:none;" role="banner">
+  <div class="pwa-banner-content">
+    <img src="images/Rccglogo.png" alt="GLA" width="36" height="36" style="border-radius:8px;"/>
+    <div class="pwa-banner-text">
+      <strong>Add to Home Screen</strong>
+      <span>Access Gospel Light Assembly instantly — like an app</span>
+    </div>
+    <div class="pwa-banner-actions">
+      <button onclick="installPWA()" class="pwa-install-btn">Install</button>
+      <button onclick="dismissPWA()" class="pwa-dismiss-btn" aria-label="Dismiss">✕</button>
+    </div>
+  </div>
+</div>
 <script src="main.js"></script></body></html>

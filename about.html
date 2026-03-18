@@ -48,18 +48,29 @@
           <li><a href="about.html"><span class="dropdown-icon">⛪</span>About Us</a></li>
           <li><a href="pastor.html"><span class="dropdown-icon">✉️</span>Pastor's Letter</a></li>
           <li><a href="history.html"><span class="dropdown-icon">📜</span>Our History</a></li>
+          <li><a href="growth.html"><span class="dropdown-icon">📈</span>Growth &amp; Vision</a></li>
         </ul>
       </li>
 
       <li><a href="sermons.html">Sermons</a></li>
 
-      <li class="has-dropdown" onclick="toggleDropdown(this)">
+            <li class="has-dropdown" onclick="toggleDropdown(this)">
         <a href="ministries.html">Ministries</a>
-        <ul class="nav-dropdown">
-          <span class="dropdown-label">Serve & Grow</span>
+        <ul class="nav-dropdown nav-dropdown--wide">
+          <span class="dropdown-label">All Ministries</span>
           <li><a href="ministries.html"><span class="dropdown-icon">🙌</span>All Ministries</a></li>
-          <li><a href="units.html"><span class="dropdown-icon">👥</span>Our Units & Teams</a></li>
-          <li><a href="youth.html"><span class="dropdown-icon">🎤</span>Youth Ministry</a></li>
+          <li><a href="units.html"><span class="dropdown-icon">👥</span>Units & Teams</a></li>
+          <div class="dropdown-divider"></div>
+          <span class="dropdown-label">Our Ministry Units</span>
+          <li><a href="choir.html"><span class="dropdown-icon">🎵</span>Choir & Praise Team</a></li>
+          <li><a href="children.html"><span class="dropdown-icon">👶</span>Children's Ministry</a></li>
+          <li><a href="youth.html"><span class="dropdown-icon">🧑‍🤝‍🧑</span>Youth Ministry</a></li>
+          <li><a href="women.html"><span class="dropdown-icon">👩</span>Women's Fellowship</a></li>
+          <li><a href="men.html"><span class="dropdown-icon">👨</span>Men's Fellowship</a></li>
+          <li><a href="evangelism.html"><span class="dropdown-icon">🌍</span>Evangelism & Missions</a></li>
+          <li><a href="prayer.html"><span class="dropdown-icon">🤲</span>Prayer Ministry</a></li>
+          <li><a href="welfare.html"><span class="dropdown-icon">💛</span>Welfare & Visitation</a></li>
+          <li><a href="media.html"><span class="dropdown-icon">🖥️</span>Media & Technical</a></li>
         </ul>
       </li>
 
@@ -116,6 +127,34 @@
     <div class="countdown-bar-box"><span id="cd-secs">00</span><small>Secs</small></div>
   </div>
 </div>
+
+<!-- ── FOUNDING YEAR BADGES ─────────────────────── -->
+<section class="inner-section" style="padding:2.5rem 2rem;background:linear-gradient(135deg,var(--blue-dark),var(--blue-mid));">
+  <div class="container">
+    <div class="founding-badges">
+      <div class="founding-badge">
+        <div class="founding-badge-num">7+</div>
+        <div class="founding-badge-label">Years in Ikorodu</div>
+      </div>
+      <div class="founding-badge-divider"></div>
+      <div class="founding-badge">
+        <div class="founding-badge-num">1952</div>
+        <div class="founding-badge-label">RCCG Founded</div>
+      </div>
+      <div class="founding-badge-divider"></div>
+      <div class="founding-badge">
+        <div class="founding-badge-num">197+</div>
+        <div class="founding-badge-label">RCCG Countries</div>
+      </div>
+      <div class="founding-badge-divider"></div>
+      <div class="founding-badge">
+        <div class="founding-badge-num">∞</div>
+        <div class="founding-badge-label">God's Faithfulness</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="inner-section"><div class="container" class="welcome-grid">
   <div class="reveal"><span class="section-label">Our Identity</span><div class="ornament-divider" style="justify-content:flex-start;max-width:80px;margin:0 0 1rem;"><span class="ornament-symbol">✦</span></div>
       <h2>More Than a Church —<br/>A Family of Believers</h2><p>Gospel Light Assembly is a Zonal Headquarters of the Redeemed Christian Church of God (RCCG), located in Lejina Phase 2, Adamo, Ikorodu, Lagos. We are a warm, Spirit-filled community dedicated to glorifying God and transforming our community through the power of the gospel.</p><p>We believe the church is not a building — it is people transformed by the love of Christ. Our mission is to carry the light of God into every home, street, and heart in Ikorodu and beyond.</p><ul class="value-list"><li>Unwavering commitment to the authority of the Holy Bible</li><li>Prayer as the foundation of everything we do</li><li>Fervent evangelism and reaching the unreached</li><li>Discipleship and spiritual growth for every member</li><li>Genuine fellowship, love, and care for one another</li><li>Excellence in worship and service to God</li></ul></div>
@@ -206,5 +245,20 @@
   </div>
 </div>
 <button id="back-to-top" aria-label="Back to top" title="Back to top">↑</button>
+
+<!-- ── PWA INSTALL PROMPT ─────────────────────── -->
+<div id="pwa-install-banner" class="pwa-banner" style="display:none;" role="banner">
+  <div class="pwa-banner-content">
+    <img src="images/Rccglogo.png" alt="GLA" width="36" height="36" style="border-radius:8px;"/>
+    <div class="pwa-banner-text">
+      <strong>Add to Home Screen</strong>
+      <span>Access Gospel Light Assembly instantly — like an app</span>
+    </div>
+    <div class="pwa-banner-actions">
+      <button onclick="installPWA()" class="pwa-install-btn">Install</button>
+      <button onclick="dismissPWA()" class="pwa-dismiss-btn" aria-label="Dismiss">✕</button>
+    </div>
+  </div>
+</div>
 <script src="main.js"></script>
 </body></html>

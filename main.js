@@ -378,3 +378,58 @@ if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('sw.js').catch(() => {});
   });
 }
+
+// ══ VISITOR / FIRST-TIME REGISTRATION FORM ════════════════════
+function handleVisitorForm(e) {
+  e.preventDefault();
+  const btn = e.target.querySelector('button[type="submit"]');
+  const orig = btn.textContent;
+  const data = new FormData(e.target);
+  const name = data.get('firstName') + ' ' + data.get('lastName');
+  btn.textContent = '✓ Thank you, ' + data.get('firstName') + '! We will be in touch.';
+  btn.style.cssText = 'background:#2e7d32;color:#fff;width:100%;justify-content:center;';
+  btn.disabled = true;
+  // WhatsApp notification to church (optional)
+  setTimeout(() => {
+    btn.textContent = orig;
+    btn.style.cssText = '';
+    btn.disabled = false;
+    e.target.reset();
+  }, 5000);
+}
+
+// ══ PWA INSTALL PROMPT ════════════════════════════════════════
+let _pwaPrompt = null;
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  _pwaPrompt = e;
+  // Show banner after 5 seconds if not dismissed before
+  const dismissed = localStorage.getItem('gla-pwa-dismissed');
+  if (!dismissed) {
+    setTimeout(() => {
+      const banner = document.getElementById('pwa-install-banner');
+      if (banner) banner.style.display = 'block';
+    }, 5000);
+  }
+});
+
+function installPWA() {
+  const banner = document.getElementById('pwa-install-banner');
+  if (banner) banner.style.display = 'none';
+  if (_pwaPrompt) {
+    _pwaPrompt.prompt();
+    _pwaPrompt.userChoice.then(result => {
+      if (result.outcome === 'accepted') {
+        console.log('GLA PWA installed');
+      }
+      _pwaPrompt = null;
+    });
+  }
+}
+
+function dismissPWA() {
+  const banner = document.getElementById('pwa-install-banner');
+  if (banner) banner.style.display = 'none';
+  localStorage.setItem('gla-pwa-dismissed', '1');
+}

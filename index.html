@@ -86,18 +86,29 @@
           <li><a href="about.html"><span class="dropdown-icon">⛪</span>About Us</a></li>
           <li><a href="pastor.html"><span class="dropdown-icon">✉️</span>Pastor's Letter</a></li>
           <li><a href="history.html"><span class="dropdown-icon">📜</span>Our History</a></li>
+          <li><a href="growth.html"><span class="dropdown-icon">📈</span>Growth &amp; Vision</a></li>
         </ul>
       </li>
 
       <li><a href="sermons.html">Sermons</a></li>
 
-      <li class="has-dropdown" onclick="toggleDropdown(this)">
+            <li class="has-dropdown" onclick="toggleDropdown(this)">
         <a href="ministries.html">Ministries</a>
-        <ul class="nav-dropdown">
-          <span class="dropdown-label">Serve & Grow</span>
+        <ul class="nav-dropdown nav-dropdown--wide">
+          <span class="dropdown-label">All Ministries</span>
           <li><a href="ministries.html"><span class="dropdown-icon">🙌</span>All Ministries</a></li>
-          <li><a href="units.html"><span class="dropdown-icon">👥</span>Our Units & Teams</a></li>
-          <li><a href="youth.html"><span class="dropdown-icon">🎤</span>Youth Ministry</a></li>
+          <li><a href="units.html"><span class="dropdown-icon">👥</span>Units & Teams</a></li>
+          <div class="dropdown-divider"></div>
+          <span class="dropdown-label">Our Ministry Units</span>
+          <li><a href="choir.html"><span class="dropdown-icon">🎵</span>Choir & Praise Team</a></li>
+          <li><a href="children.html"><span class="dropdown-icon">👶</span>Children's Ministry</a></li>
+          <li><a href="youth.html"><span class="dropdown-icon">🧑‍🤝‍🧑</span>Youth Ministry</a></li>
+          <li><a href="women.html"><span class="dropdown-icon">👩</span>Women's Fellowship</a></li>
+          <li><a href="men.html"><span class="dropdown-icon">👨</span>Men's Fellowship</a></li>
+          <li><a href="evangelism.html"><span class="dropdown-icon">🌍</span>Evangelism & Missions</a></li>
+          <li><a href="prayer.html"><span class="dropdown-icon">🤲</span>Prayer Ministry</a></li>
+          <li><a href="welfare.html"><span class="dropdown-icon">💛</span>Welfare & Visitation</a></li>
+          <li><a href="media.html"><span class="dropdown-icon">🖥️</span>Media & Technical</a></li>
         </ul>
       </li>
 
@@ -140,7 +151,9 @@
 </nav>
 
 <!-- ── HERO ────────────────────────────── -->
-<section class="hero">
+<section class="hero" id="hero">
+  <!-- To add a real church photo: replace the hero-bg div src with your image path -->
+  <div class="hero-photo-overlay" aria-hidden="true"></div>
   <canvas id="particle-canvas" class="hero-particles"></canvas>
   <div class="hero-gradient"></div>
   <div class="hero-cross">✝</div>
@@ -378,6 +391,53 @@
   </div>
 </section>
 
+
+<!-- ── COMMUNITY PRAYER WALL ────────────────────── -->
+<section class="inner-section alt">
+  <div class="container">
+    <span class="section-label center">Standing Together in Prayer</span>
+    <h2 class="center">Community Prayer Wall</h2>
+    <p style="text-align:center;max-width:560px;margin:0 auto 2.5rem;color:var(--text-muted);">Our church family is praying. Add your voice — every prayer matters.</p>
+    <div class="prayer-wall-grid" id="prayer-wall">
+      <div class="pw-card pw-card--featured">
+        <div class="pw-icon">🙏</div>
+        <div class="pw-category">Health & Healing</div>
+        <p class="pw-text">"Lord, we ask for complete healing and restoration. By Your stripes we are healed."</p>
+        <div class="pw-meta">Gospel Light Family · Isaiah 53:5</div>
+      </div>
+      <div class="pw-card">
+        <div class="pw-icon">💛</div>
+        <div class="pw-category">Provision & Favour</div>
+        <p class="pw-text">"Father, open doors of opportunity and bless the work of our hands."</p>
+        <div class="pw-meta">Gospel Light Family · Ps. 37:4</div>
+      </div>
+      <div class="pw-card">
+        <div class="pw-icon">🕊️</div>
+        <div class="pw-category">Peace & Family</div>
+        <p class="pw-text">"Lord, restore peace to every home and strengthen every family in our church."</p>
+        <div class="pw-meta">Gospel Light Family · Phil. 4:7</div>
+      </div>
+      <div class="pw-card">
+        <div class="pw-icon">🌍</div>
+        <div class="pw-category">Salvation</div>
+        <p class="pw-text">"God, save our loved ones who don't yet know You. Draw them by Your Spirit."</p>
+        <div class="pw-meta">Gospel Light Family · John 3:16</div>
+      </div>
+      <div class="pw-card">
+        <div class="pw-icon">🔥</div>
+        <div class="pw-category">Spiritual Growth</div>
+        <p class="pw-text">"Fill us fresh with Your Holy Spirit. Revive us, Lord, for Your glory."</p>
+        <div class="pw-meta">Gospel Light Family · Acts 1:8</div>
+      </div>
+      <div class="pw-card pw-card--cta">
+        <div class="pw-cta-icon">✍️</div>
+        <p class="pw-cta-text">Share your prayer request and we will stand with you in agreement.</p>
+        <a href="#prayer-section" onclick="document.getElementById('prayer-section')?.scrollIntoView({behavior:'smooth'});return false;" class="btn-gold-solid" style="margin-top:1rem;display:inline-flex;font-size:.85rem;">Submit a Request →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ── LIVE STREAM ─────────────────────── -->
 <section class="livestream-section">
   <div class="container center">
@@ -394,6 +454,99 @@
       </iframe>
     </div>
     <p style="color:rgba(255,255,255,.4); font-size:.8rem; margin-top:1rem;">RCCG GOSPEL LIGHT ASSEMBLY YOUTUBE STREAM</p>
+  </div>
+</section>
+
+
+
+<!-- ── FIRST-TIME VISITOR FORM ──────────────────── -->
+<section class="inner-section" id="visit-form-section">
+  <div class="container">
+    <div class="two-col-grid" style="align-items:start;">
+      <div>
+        <span class="section-label">New Here?</span>
+        <h2>We'd Love to Know You</h2>
+        <p style="color:var(--text-muted);line-height:1.8;margin-bottom:1.5rem;">Whether it's your first Sunday or you're considering making Gospel Light Assembly your church home — let us know you're here. Our team will personally reach out to welcome you.</p>
+        <ul class="value-list">
+          <li>Personal welcome from our Pastoral team</li>
+          <li>Information about our ministries and units</li>
+          <li>Invitation to our next members class</li>
+          <li>Added to our church family WhatsApp community</li>
+        </ul>
+      </div>
+      <div class="visitor-form-card">
+        <h3 style="font-family:'Playfair Display',serif;font-size:1.25rem;color:var(--text);margin-bottom:1.5rem;">📋 Visitor / New Member Form</h3>
+        <form onsubmit="handleVisitorForm(event)" class="prayer-form" style="gap:1rem;display:flex;flex-direction:column;">
+          <div class="form-row-2">
+            <div>
+              <label>First Name *</label>
+              <input type="text" name="firstName" required placeholder="Your first name"/>
+            </div>
+            <div>
+              <label>Last Name *</label>
+              <input type="text" name="lastName" required placeholder="Your last name"/>
+            </div>
+          </div>
+          <div>
+            <label>Phone Number *</label>
+            <input type="tel" name="phone" required placeholder="+234 000 000 0000"/>
+          </div>
+          <div>
+            <label>Email Address</label>
+            <input type="email" name="email" placeholder="your@email.com"/>
+          </div>
+          <div>
+            <label>How did you hear about us?</label>
+            <select name="source">
+              <option value="">Select one...</option>
+              <option>Friend or Family Member</option>
+              <option>Social Media</option>
+              <option>This Website</option>
+              <option>I've always attended</option>
+              <option>Evangelism Outreach</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div>
+            <label>I am interested in:</label>
+            <select name="interest">
+              <option value="">Select one...</option>
+              <option>Just visiting</option>
+              <option>Becoming a member</option>
+              <option>Joining a ministry or unit</option>
+              <option>Learning more about the church</option>
+            </select>
+          </div>
+          <button type="submit" class="btn-gold-solid" style="width:100%;justify-content:center;margin-top:.5rem;">
+            Submit Registration ✝️
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── WHATSAPP COMMUNITY ───────────────────────── -->
+<section class="inner-section" style="background:linear-gradient(135deg,#075e54,#128c7e);padding:3.5rem 2rem;">
+  <div class="container center">
+    <div class="wa-community-wrap reveal">
+      <div class="wa-community-icon">
+        <svg viewBox="0 0 24 24" width="48" height="48" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      </div>
+      <h2 style="color:#fff;font-family:'Playfair Display',serif;margin:.75rem 0 .5rem;font-size:clamp(1.5rem,3vw,2.2rem);">Join Our WhatsApp Community</h2>
+      <p style="color:rgba(255,255,255,.8);max-width:520px;margin:0 auto 1.75rem;font-size:.95rem;line-height:1.7;">Stay connected with Gospel Light Assembly. Get service updates, prayer points, Open Heavens, and announcements — directly on WhatsApp.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <a href="https://wa.me/2348140972012?text=Hello!%20I%20would%20like%20to%20join%20the%20Gospel%20Light%20Assembly%20WhatsApp%20community" target="_blank" rel="noopener"
+           style="display:inline-flex;align-items:center;gap:.6rem;background:#fff;color:#075e54;font-family:'Barlow',sans-serif;font-weight:800;font-size:.92rem;padding:.85rem 1.75rem;border-radius:99px;text-decoration:none;transition:transform .2s ease,box-shadow .2s ease;box-shadow:0 4px 16px rgba(0,0,0,.2);">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="#25d366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Join Our WhatsApp Community
+        </a>
+        <a href="tel:2348140972012"
+           style="display:inline-flex;align-items:center;gap:.6rem;background:transparent;color:#fff;font-family:'Barlow',sans-serif;font-weight:700;font-size:.92rem;padding:.85rem 1.75rem;border-radius:99px;text-decoration:none;border:2px solid rgba(255,255,255,.5);transition:all .2s ease;">
+          📞 Call Us Directly
+        </a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -493,6 +646,21 @@
   </div>
 </div>
 <button id="back-to-top" aria-label="Back to top" title="Back to top">↑</button>
+
+<!-- ── PWA INSTALL PROMPT ─────────────────────── -->
+<div id="pwa-install-banner" class="pwa-banner" style="display:none;" role="banner">
+  <div class="pwa-banner-content">
+    <img src="images/Rccglogo.png" alt="GLA" width="36" height="36" style="border-radius:8px;"/>
+    <div class="pwa-banner-text">
+      <strong>Add to Home Screen</strong>
+      <span>Access Gospel Light Assembly instantly — like an app</span>
+    </div>
+    <div class="pwa-banner-actions">
+      <button onclick="installPWA()" class="pwa-install-btn">Install</button>
+      <button onclick="dismissPWA()" class="pwa-dismiss-btn" aria-label="Dismiss">✕</button>
+    </div>
+  </div>
+</div>
 <script src="main.js"></script>
 </body>
 </html>

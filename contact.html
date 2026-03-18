@@ -46,18 +46,29 @@
           <li><a href="about.html"><span class="dropdown-icon">⛪</span>About Us</a></li>
           <li><a href="pastor.html"><span class="dropdown-icon">✉️</span>Pastor's Letter</a></li>
           <li><a href="history.html"><span class="dropdown-icon">📜</span>Our History</a></li>
+          <li><a href="growth.html"><span class="dropdown-icon">📈</span>Growth &amp; Vision</a></li>
         </ul>
       </li>
 
       <li><a href="sermons.html">Sermons</a></li>
 
-      <li class="has-dropdown" onclick="toggleDropdown(this)">
+            <li class="has-dropdown" onclick="toggleDropdown(this)">
         <a href="ministries.html">Ministries</a>
-        <ul class="nav-dropdown">
-          <span class="dropdown-label">Serve & Grow</span>
+        <ul class="nav-dropdown nav-dropdown--wide">
+          <span class="dropdown-label">All Ministries</span>
           <li><a href="ministries.html"><span class="dropdown-icon">🙌</span>All Ministries</a></li>
-          <li><a href="units.html"><span class="dropdown-icon">👥</span>Our Units & Teams</a></li>
-          <li><a href="youth.html"><span class="dropdown-icon">🎤</span>Youth Ministry</a></li>
+          <li><a href="units.html"><span class="dropdown-icon">👥</span>Units & Teams</a></li>
+          <div class="dropdown-divider"></div>
+          <span class="dropdown-label">Our Ministry Units</span>
+          <li><a href="choir.html"><span class="dropdown-icon">🎵</span>Choir & Praise Team</a></li>
+          <li><a href="children.html"><span class="dropdown-icon">👶</span>Children's Ministry</a></li>
+          <li><a href="youth.html"><span class="dropdown-icon">🧑‍🤝‍🧑</span>Youth Ministry</a></li>
+          <li><a href="women.html"><span class="dropdown-icon">👩</span>Women's Fellowship</a></li>
+          <li><a href="men.html"><span class="dropdown-icon">👨</span>Men's Fellowship</a></li>
+          <li><a href="evangelism.html"><span class="dropdown-icon">🌍</span>Evangelism & Missions</a></li>
+          <li><a href="prayer.html"><span class="dropdown-icon">🤲</span>Prayer Ministry</a></li>
+          <li><a href="welfare.html"><span class="dropdown-icon">💛</span>Welfare & Visitation</a></li>
+          <li><a href="media.html"><span class="dropdown-icon">🖥️</span>Media & Technical</a></li>
         </ul>
       </li>
 
@@ -118,7 +129,7 @@
 <div class="contact-row"><div class="contact-icon">⏰</div><div><strong>Service Times</strong><p>Tuesday · 5:30 PM – Digging Deep<br/>Thursday · 5:30 PM – Faith Clinic<br/>Saturday · 4:30 PM – Evangelism<br/>Sunday · 8:00 AM – Sunday Service</p></div></div>
 <div class="map-embed-wrap" style="margin-top:1.5rem; border-radius:12px; overflow:hidden; border:1px solid var(--border); box-shadow:var(--shadow-sm);">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.2!2d3.6459!3d6.6195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sLejina+Phase+2%2C+Adamo%2C+Ikorodu%2C+Lagos!5e0!3m2!1sen!2sng!4v1700000000000!5m2!1sen!2sng"
+          src="https://maps.google.com/maps?q=Adamo+Ikorodu+Lagos+Nigeria&t=&z=15&ie=UTF8&iwloc=&output=embed"
           width="100%" height="280" style="border:0; display:block;"
           allowfullscreen="" loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
@@ -210,4 +221,19 @@
 </div>
 <button id="back-to-top" aria-label="Back to top" title="Back to top">↑</button>
 
+
+<!-- ── PWA INSTALL PROMPT ─────────────────────── -->
+<div id="pwa-install-banner" class="pwa-banner" style="display:none;" role="banner">
+  <div class="pwa-banner-content">
+    <img src="images/Rccglogo.png" alt="GLA" width="36" height="36" style="border-radius:8px;"/>
+    <div class="pwa-banner-text">
+      <strong>Add to Home Screen</strong>
+      <span>Access Gospel Light Assembly instantly — like an app</span>
+    </div>
+    <div class="pwa-banner-actions">
+      <button onclick="installPWA()" class="pwa-install-btn">Install</button>
+      <button onclick="dismissPWA()" class="pwa-dismiss-btn" aria-label="Dismiss">✕</button>
+    </div>
+  </div>
+</div>
 <script src="main.js"></script></body></html>

@@ -46,18 +46,29 @@
           <li><a href="about.html"><span class="dropdown-icon">⛪</span>About Us</a></li>
           <li><a href="pastor.html"><span class="dropdown-icon">✉️</span>Pastor's Letter</a></li>
           <li><a href="history.html"><span class="dropdown-icon">📜</span>Our History</a></li>
+          <li><a href="growth.html"><span class="dropdown-icon">📈</span>Growth &amp; Vision</a></li>
         </ul>
       </li>
 
       <li><a href="sermons.html" class="active">Sermons</a></li>
 
-      <li class="has-dropdown" onclick="toggleDropdown(this)">
+            <li class="has-dropdown" onclick="toggleDropdown(this)">
         <a href="ministries.html">Ministries</a>
-        <ul class="nav-dropdown">
-          <span class="dropdown-label">Serve & Grow</span>
+        <ul class="nav-dropdown nav-dropdown--wide">
+          <span class="dropdown-label">All Ministries</span>
           <li><a href="ministries.html"><span class="dropdown-icon">🙌</span>All Ministries</a></li>
-          <li><a href="units.html"><span class="dropdown-icon">👥</span>Our Units & Teams</a></li>
-          <li><a href="youth.html"><span class="dropdown-icon">🎤</span>Youth Ministry</a></li>
+          <li><a href="units.html"><span class="dropdown-icon">👥</span>Units & Teams</a></li>
+          <div class="dropdown-divider"></div>
+          <span class="dropdown-label">Our Ministry Units</span>
+          <li><a href="choir.html"><span class="dropdown-icon">🎵</span>Choir & Praise Team</a></li>
+          <li><a href="children.html"><span class="dropdown-icon">👶</span>Children's Ministry</a></li>
+          <li><a href="youth.html"><span class="dropdown-icon">🧑‍🤝‍🧑</span>Youth Ministry</a></li>
+          <li><a href="women.html"><span class="dropdown-icon">👩</span>Women's Fellowship</a></li>
+          <li><a href="men.html"><span class="dropdown-icon">👨</span>Men's Fellowship</a></li>
+          <li><a href="evangelism.html"><span class="dropdown-icon">🌍</span>Evangelism & Missions</a></li>
+          <li><a href="prayer.html"><span class="dropdown-icon">🤲</span>Prayer Ministry</a></li>
+          <li><a href="welfare.html"><span class="dropdown-icon">💛</span>Welfare & Visitation</a></li>
+          <li><a href="media.html"><span class="dropdown-icon">🖥️</span>Media & Technical</a></li>
         </ul>
       </li>
 
@@ -278,4 +289,19 @@
 </div>
 <button id="back-to-top" aria-label="Back to top" title="Back to top">↑</button>
 
+
+<!-- ── PWA INSTALL PROMPT ─────────────────────── -->
+<div id="pwa-install-banner" class="pwa-banner" style="display:none;" role="banner">
+  <div class="pwa-banner-content">
+    <img src="images/Rccglogo.png" alt="GLA" width="36" height="36" style="border-radius:8px;"/>
+    <div class="pwa-banner-text">
+      <strong>Add to Home Screen</strong>
+      <span>Access Gospel Light Assembly instantly — like an app</span>
+    </div>
+    <div class="pwa-banner-actions">
+      <button onclick="installPWA()" class="pwa-install-btn">Install</button>
+      <button onclick="dismissPWA()" class="pwa-dismiss-btn" aria-label="Dismiss">✕</button>
+    </div>
+  </div>
+</div>
 <script src="main.js"></script></body></html>
