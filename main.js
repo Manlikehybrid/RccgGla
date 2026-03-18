@@ -84,18 +84,12 @@ document.addEventListener('DOMContentLoaded', () => {
   //  Always fixed. Hidden until user scrolls 400px down.
   const bttBtn = document.getElementById('back-to-top');
   if (bttBtn) {
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 400) {
-        bttBtn.style.opacity = '1';
-        bttBtn.style.visibility = 'visible';
-        bttBtn.style.transform = 'translateY(0)';
-      } else {
-        bttBtn.style.opacity = '0';
-        bttBtn.style.visibility = 'hidden';
-        bttBtn.style.transform = 'translateY(8px)';
-      }
-    }, { passive: true });
-
+    // Use class toggle only — no inline styles competing with CSS
+    const toggleBTT = () => {
+      bttBtn.classList.toggle('show', window.scrollY > 400);
+    };
+    window.addEventListener('scroll', toggleBTT, { passive: true });
+    window.addEventListener('resize', toggleBTT, { passive: true });
     bttBtn.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
@@ -142,7 +136,7 @@ function toggleNav() {
 }
 
 function toggleDropdown(li) {
-  if (window.innerWidth > 680) return;
+  if (window.innerWidth > 900) return; // match nav breakpoint
   const wasOpen = li.classList.contains('open');
   document.querySelectorAll('.has-dropdown.open').forEach(el => el.classList.remove('open'));
   if (!wasOpen) li.classList.add('open');
@@ -259,6 +253,64 @@ function initParticles() {
     });
     requestAnimationFrame(draw);
   })();
+}
+
+
+// ══ PERFORMANCE: Debounce scroll handler ════════════════════════
+function debounce(fn, delay) {
+  let t;
+  return (...args) => {
+    clearTimeout(t);
+    t = setTimeout(() => fn(...args), delay);
+  };
+}
+
+// ══ LAZY LOAD: Images with IntersectionObserver ════════════════
+function initLazyImages() {
+  const lazyImgs = document.querySelectorAll('img[data-src]');
+  if (!lazyImgs.length) return;
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const img = e.target;
+        img.src = img.dataset.src;
+        img.removeAttribute('data-src');
+        obs.unobserve(img);
+      }
+    });
+  }, { rootMargin: '200px' });
+  lazyImgs.forEach(img => obs.observe(img));
+}
+
+// ══ PRELOAD: Prefetch nav links on hover ════════════════════════
+function initPrefetch() {
+  const links = document.querySelectorAll('.nav-links a, .btn-gold, .btn-primary');
+  links.forEach(link => {
+    link.addEventListener('mouseenter', () => {
+      const href = link.getAttribute('href');
+      if (href && href.endsWith('.html') && !href.startsWith('http')) {
+        const prefetch = document.createElement('link');
+        prefetch.rel = 'prefetch';
+        prefetch.href = href;
+        if (!document.querySelector(`link[href="${href}"]`)) {
+          document.head.appendChild(prefetch);
+        }
+      }
+    }, { once: true });
+  });
+}
+
+// ══ SMOOTH ANCHOR SCROLLING ══════════════════════════════════
+function initSmoothAnchors() {
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
 }
 
 // ══════════════════════════════════════════════════════════
