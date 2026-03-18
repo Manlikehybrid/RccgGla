@@ -123,7 +123,7 @@ img { max-width: 100%; display: block; }
   animation: shimmer-text 2s linear infinite;
 }
 @keyframes shimmer-bar  { 0%{background-position:100% 0} 100%{background-position:-100% 0} }
-@keyframes shimmer-text { 0%{background-position:100% 0} 100%{background-position:-100% 0} }
+
 @keyframes pulse-logo   { 0%,100%{box-shadow:0 0 0 0 rgba(201,168,76,.4)} 50%{box-shadow:0 0 0 18px rgba(201,168,76,0)} }
 
 /* ── ANNOUNCEMENT POPUP ─────────────────────── */
@@ -1019,166 +1019,6 @@ p { margin-bottom: 1rem; color: var(--text-muted); font-size: .97rem; }
 
 
 /* ══════════════════════════════════════════════
-   COOKIE CONSENT BANNER
-══════════════════════════════════════════════ */
-.cookie-banner {
-  position: fixed;
-  bottom: 1.5rem;
-  left: 50%;
-  transform: translateX(-50%) translateY(calc(100% + 2rem));
-  z-index: 9600;
-  width: min(680px, calc(100vw - 2rem));
-  background: var(--blue-deep);
-  border: 1px solid rgba(201,168,76,.3);
-  border-radius: 16px;
-  box-shadow: 0 20px 60px rgba(0,0,0,.5);
-  opacity: 0;
-  visibility: hidden;
-  transition: transform .5s cubic-bezier(.34,1.56,.64,1), opacity .4s ease, visibility .4s ease;
-}
-[data-theme="light"] .cookie-banner {
-  background: #ffffff;
-  border-color: rgba(201,168,76,.25);
-  box-shadow: 0 24px 64px rgba(0,0,0,.18);
-}
-.cookie-banner.show {
-  transform: translateX(-50%) translateY(0);
-  opacity: 1;
-  visibility: visible;
-}
-.cookie-content {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
-  gap: 1.25rem;
-  padding: 1.4rem 1.75rem;
-  position: relative;
-}
-.cookie-icon {
-  font-size: 2.2rem;
-  flex-shrink: 0;
-  line-height: 1;
-}
-.cookie-text strong {
-  display: block;
-  font-family: 'Playfair Display', serif;
-  font-size: 1rem;
-  color: var(--text);
-  margin-bottom: .3rem;
-}
-.cookie-text p {
-  font-size: .82rem;
-  color: var(--text-muted);
-  margin: 0;
-  line-height: 1.55;
-}
-.cookie-actions {
-  display: flex;
-  gap: .65rem;
-  flex-shrink: 0;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-}
-.cookie-btn {
-  font-family: 'Barlow', sans-serif;
-  font-weight: 700;
-  font-size: .8rem;
-  padding: .6rem 1.2rem;
-  border-radius: var(--radius);
-  border: none;
-  cursor: pointer;
-  transition: all var(--transition);
-  white-space: nowrap;
-}
-.cookie-necessary {
-  background: var(--border);
-  color: var(--text-muted);
-  border: 1.5px solid var(--border);
-}
-[data-theme="dark"] .cookie-necessary {
-  background: rgba(255,255,255,.07);
-  color: rgba(255,255,255,.65);
-  border-color: rgba(255,255,255,.12);
-}
-.cookie-necessary:hover {
-  border-color: var(--gold);
-  color: var(--gold);
-  background: rgba(201,168,76,.08);
-}
-.cookie-all {
-  background: var(--gold);
-  color: var(--blue-dark);
-}
-.cookie-all:hover {
-  background: var(--gold-light);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 16px rgba(201,168,76,.35);
-}
-.cookie-dismiss {
-  position: absolute;
-  top: .75rem; right: .75rem;
-  background: none; border: none;
-  color: var(--text-muted);
-  cursor: pointer; font-size: .85rem;
-  width: 26px; height: 26px;
-  display: flex; align-items: center; justify-content: center;
-  border-radius: 50%;
-  transition: all var(--transition);
-  line-height: 1;
-}
-.cookie-dismiss:hover { background: rgba(0,0,0,.08); color: var(--text); }
-[data-theme="dark"] .cookie-dismiss:hover { background: rgba(255,255,255,.08); }
-
-/* Cookie preferences detail (optional expand) */
-.cookie-details {
-  padding: 0 1.75rem 1.4rem;
-  border-top: 1px solid var(--border);
-  margin-top: .5rem;
-  display: none;
-}
-.cookie-details.open { display: block; }
-.cookie-toggle-row {
-  display: flex; align-items: center; justify-content: space-between;
-  padding: .75rem 0;
-  border-bottom: 1px solid var(--border);
-}
-.cookie-toggle-row:last-child { border: none; }
-.cookie-toggle-label { font-size: .85rem; color: var(--text); font-weight: 600; }
-.cookie-toggle-desc { font-size: .75rem; color: var(--text-muted); }
-/* toggle switch */
-.cookie-switch { position: relative; width: 40px; height: 22px; flex-shrink: 0; }
-.cookie-switch input { opacity: 0; width: 0; height: 0; }
-.cookie-switch-slider {
-  position: absolute; inset: 0;
-  background: rgba(0,0,0,.15); border-radius: 99px;
-  transition: background var(--transition); cursor: pointer;
-}
-[data-theme="dark"] .cookie-switch-slider { background: rgba(255,255,255,.15); }
-.cookie-switch-slider::before {
-  content: ''; position: absolute;
-  width: 16px; height: 16px; left: 3px; bottom: 3px;
-  background: #fff; border-radius: 50%;
-  transition: transform var(--transition);
-}
-.cookie-switch input:checked + .cookie-switch-slider { background: var(--gold); }
-.cookie-switch input:checked + .cookie-switch-slider::before { transform: translateX(18px); }
-.cookie-switch input:disabled + .cookie-switch-slider { opacity: .6; cursor: not-allowed; }
-
-@media (max-width: 600px) {
-  .cookie-content {
-    grid-template-columns: auto 1fr;
-    grid-template-rows: auto auto;
-    gap: .85rem;
-    padding: 1.25rem;
-  }
-  .cookie-actions {
-    grid-column: 1 / -1;
-    width: 100%;
-  }
-  .cookie-btn { flex: 1; text-align: center; }
-}
-
-/* ══════════════════════════════════════════════
    SOCIAL MEDIA LINKS (footer)
 ══════════════════════════════════════════════ */
 .footer-social h4 {
@@ -1416,7 +1256,7 @@ a.strip-item:hover strong { text-decoration: underline; text-underline-offset: 2
 /* Mobile: slide from bottom instead */
 
 
-/* Cookie banner — see primary definition above */
+
 
 /* ══════════════════════════════════════════════
    BACK TO TOP BUTTON
@@ -1547,7 +1387,6 @@ a.strip-item:hover strong { text-decoration: underline; text-underline-offset: 2
 /* ══ PERFORMANCE — GPU ACCELERATION FOR FIXED ELEMENTS ══════ */
 #back-to-top,
 .whatsapp-fab,
-.cookie-banner,
 .affirmation-toast,
 #announcement-popup {
   will-change: transform, opacity;
@@ -1809,7 +1648,6 @@ p {
 
 @media print {
   .navbar, .ticker-wrap, .whatsapp-fab,
-  #back-to-top, .cookie-banner, #affirmation-toast,
   #announcement-popup, #popup-overlay,
   .hero-scroll-hint, .countdown-strip,
   .cta-banner, .livestream-section,
@@ -3225,10 +3063,7 @@ h2.center { max-width: 680px; margin-left: auto; margin-right: auto; }
     width: 48px;
     height: 48px;
   }
-  .cookie-btn {
-    min-height: 44px;
-    padding: .65rem 1.25rem;
-  }
+  
 }
 
 /* ══ SCROLLBAR CUSTOM ════════════════════════════════════════ */
@@ -3243,3 +3078,203 @@ h2.center { max-width: 680px; margin-left: auto; margin-right: auto; }
   border-radius: 99px;
 }
 ::-webkit-scrollbar-thumb:hover { background: var(--gold); }
+
+/* ══════════════════════════════════════════════════════════
+   FLOATING ELEMENTS — POSITION FIXED
+   These are positioned relative to the VIEWPORT (browser window)
+   not the page. They stay visible at all times while scrolling.
+   
+   IMPORTANT: html and body must have NO overflow set.
+   Any overflow on html/body breaks position:fixed in all browsers.
+═══════════════════════════════════════════════════════════ */
+
+/* ── WHATSAPP FLOATING BUTTON ──────────────────────────────
+   Always visible. Bottom-right corner. Never hidden.        */
+.whatsapp-fab {
+  position: fixed !important;
+  bottom: 1.75rem !important;
+  right: 1.75rem !important;
+  width: 58px;
+  height: 58px;
+  background: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(37,211,102,.5);
+  z-index: 9000 !important;
+  cursor: pointer;
+  transition: transform .25s ease, box-shadow .25s ease;
+  text-decoration: none;
+  /* No animation that could affect visibility */
+}
+.whatsapp-fab:hover {
+  transform: scale(1.1) translateY(-2px);
+  box-shadow: 0 8px 28px rgba(37,211,102,.65);
+}
+.whatsapp-fab svg {
+  width: 30px;
+  height: 30px;
+  fill: #fff;
+  pointer-events: none;
+}
+
+/* ── BACK TO TOP BUTTON ────────────────────────────────────
+   Hidden until user scrolls 400px. Then slides in above WA. */
+#back-to-top {
+  position: fixed !important;
+  bottom: 6.5rem !important;
+  right: 1.75rem !important;
+  width: 46px;
+  height: 46px;
+  background: var(--blue-mid);
+  border: 1.5px solid rgba(201,168,76,.4);
+  border-radius: 10px;
+  color: var(--gold);
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 8900 !important;
+  /* Hidden by default */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity .3s ease, visibility .3s ease, transform .35s cubic-bezier(.34,1.56,.64,1), background .2s ease;
+  box-shadow: 0 4px 16px rgba(0,0,0,.2);
+  text-decoration: none;
+  border: none;
+}
+/* JS adds .show class when scrollY > 400 */
+#back-to-top.show {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) !important;
+}
+#back-to-top:hover {
+  background: var(--gold);
+  color: var(--blue-dark);
+  transform: translateY(-2px) !important;
+}
+
+/* ── DAILY AFFIRMATION TOAST ───────────────────────────────
+   Slides in from bottom-LEFT of the SCREEN.
+   position:fixed means it appears on screen regardless of 
+   how far down the user has scrolled.                       */
+.affirmation-toast {
+  position: fixed !important;
+  bottom: 1.75rem !important;
+  left: 1.75rem !important;
+  z-index: 8800 !important;
+  width: min(340px, calc(100vw - 3.5rem));
+  background: linear-gradient(135deg, #0a1628, #12274f);
+  border: 1px solid rgba(201,168,76,.4);
+  border-left: 4px solid var(--gold);
+  border-radius: 14px;
+  box-shadow: 0 16px 48px rgba(0,0,0,.55);
+  padding: 1.25rem 1.4rem;
+  /* Start off-screen to the LEFT */
+  transform: translateX(calc(-100% - 2rem));
+  opacity: 0;
+  transition: transform .55s cubic-bezier(.34,1.4,.64,1), opacity .4s ease;
+  pointer-events: auto;
+}
+[data-theme="light"] .affirmation-toast {
+  background: linear-gradient(135deg, #ffffff, #fdf9f0);
+  border-color: rgba(201,168,76,.35);
+  border-left-color: var(--gold);
+  box-shadow: 0 16px 48px rgba(6,13,26,.14);
+}
+/* JS adds .show — slides in from left */
+.affirmation-toast.show {
+  transform: translateX(0) !important;
+  opacity: 1 !important;
+}
+/* JS adds .hiding — slides back out */
+.affirmation-toast.hiding {
+  transform: translateX(calc(-100% - 2rem)) !important;
+  opacity: 0 !important;
+  transition: transform .4s ease, opacity .3s ease;
+}
+
+/* Mobile: affirmation slides up from bottom instead */
+@media (max-width: 520px) {
+  .affirmation-toast {
+    left: 1rem !important;
+    right: 1rem !important;
+    bottom: 1rem !important;
+    width: auto !important;
+    transform: translateY(calc(100% + 2rem)) !important;
+  }
+  .affirmation-toast.show {
+    transform: translateY(0) !important;
+  }
+  .affirmation-toast.hiding {
+    transform: translateY(calc(100% + 2rem)) !important;
+  }
+}
+
+/* Affirmation internals */
+.affirmation-inner {
+  display: flex;
+  gap: .85rem;
+  align-items: flex-start;
+}
+.affirmation-icon {
+  font-size: 1.75rem;
+  flex-shrink: 0;
+  line-height: 1;
+}
+.affirmation-body {
+  flex: 1;
+  min-width: 0;
+}
+.affirmation-verse {
+  display: block;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: .7rem;
+  font-weight: 800;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: .4rem;
+}
+.affirmation-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: .95rem;
+  color: #e8e4dc;
+  line-height: 1.6;
+  margin: 0;
+}
+[data-theme="light"] .affirmation-text {
+  color: var(--text);
+}
+.affirmation-close {
+  position: absolute;
+  top: .6rem;
+  right: .65rem;
+  background: none;
+  border: none;
+  color: rgba(255,255,255,.35);
+  font-size: .78rem;
+  cursor: pointer;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all .2s ease;
+  padding: 0;
+}
+.affirmation-close:hover {
+  background: rgba(255,255,255,.1);
+  color: rgba(255,255,255,.8);
+}
+[data-theme="light"] .affirmation-close { color: rgba(0,0,0,.3); }
+[data-theme="light"] .affirmation-close:hover {
+  background: rgba(0,0,0,.06);
+  color: rgba(0,0,0,.7);
+}
